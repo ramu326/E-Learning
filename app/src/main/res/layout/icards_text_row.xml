@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    |<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_itr_all_topics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto_regular"
+        android:lineSpacingExtra="5dp"
+        android:text="Chief Minister K Chandrashekhar Rao on Thursday announced ex gratia of Rs 5 lakh to the kin of persons who died in rain-related incidents in the State. He also instructed officials to provide relief to people affected by rains and floods on a war-footing, and asked them to distribute rice, pulses and other essential items besides three blankets to every household on behalf of the State government.
+
+Officials said 50 persons including 11 in GHMC area had lost their lives in rain-related incidents till Thursday. The crop loss across the State was estimated at Rs 2,000 crore. The Chief Minister also released Rs 5 crore to the Greater Hyderabad Municipal Corporation (GHMC) to speed up relief operations.
+
+The Chief Minister annnounced the decision at a high level review meeting at Pragathi Bhavan here to take stock of the ongoing relief works in the State. He issued specific directions to be implemented in the GHMC considering the impact the rains had on the city.
+
+He assured the people that new houses will be given to those whose houses had collapsed during the deluge and the government will undertake repairs to partially damaged houses free of cost. He made it clear that the new houses will be built on alternative sites since the houses that collapsed were constructed on drains (nalas) in the city. He directed the officers to pump out water from low-lying areas and cellars of apartment complexes and cautioned them not to restore power till the last drop of water was drained out as restoration of power supply in such areas could cause death"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

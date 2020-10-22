@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1efef"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ial_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/btn_bg"
+                android:backgroundTint="@color/barcolor"
+                android:gravity="center"
+                android:text="Bookmarks(23)"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp"></TextView>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:checked="true"
+                android:textColor="@color/barcolor"
+                android:textOff="Off"
+                android:textOn="Autoplay"
+                android:thumbTint="@color/barcolor"
+                android:trackTint="@color/barcolor"></Switch>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ial_audios"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:paddingVertical="24dp"
+        android:background="#f1efef"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:maxHeight="4dp"
+            android:minHeight="4dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/seek_style"
+            android:progressTint="@color/barcolor"
+            android:thumb="@drawable/seek_thumb"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="373dp"></SeekBar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            android:background="#f1efef"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="12dp"
+                android:adjustViewBounds="true"
+                android:background="#f1efef"
+                android:src="@drawable/rewind"></ImageView>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginHorizontal="12dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/play"></ImageView>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginHorizontal="12dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/forward"></ImageView>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="32dp"
+                android:layout_marginHorizontal="12dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/share_white"
+                android:backgroundTint="@color/barcolor"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
