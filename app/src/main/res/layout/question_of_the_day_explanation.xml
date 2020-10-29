@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="5dp"
+                android:text="Question of the day"
+                android:textColor="@color/barcolor" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28dp"
+                android:layout_toLeftOf="@id/tvText"
+                android:background="@color/orange" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="28dp"
+                android:layout_toRightOf="@id/tvText"
+                android:background="@color/orange" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:lineHeight="24dp"
+            android:paddingHorizontal="12dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start"
+            android:textColor="#4d4d4d"
+            android:text="Which of the Following is an A typical Vitamin? artery doppler finding which will most significantly the intra uterine?"
+            android:textAlignment="textStart"
+            android:textSize="16sp">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginTop="16dp"
+            android:paddingVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/ll_bg_tv_bt"
+            android:gravity="left|center"
+            android:paddingHorizontal="10dp"
+            android:text="A. Enter your option"
+            android:textColor="#8c8c8c"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginTop="16dp"
+            android:paddingVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/ll_bg_tv_bt"
+            android:gravity="left|center"
+            android:paddingHorizontal="10dp"
+            android:text="A. Enter your option"
+            android:textColor="#8c8c8c"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginTop="16dp"
+            android:paddingVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/ll_bg_tv_bt"
+            android:gravity="left|center"
+            android:paddingHorizontal="10dp"
+            android:text="A. Enter your option"
+            android:textColor="#8c8c8c"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginTop="16dp"
+            android:paddingVertical="8dp"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/ll_bg_tv_bt"
+            android:gravity="left|center"
+            android:paddingHorizontal="10dp"
+            android:text="A. Enter your option"
+            android:textColor="#8c8c8c"
+            android:textStyle="bold"></TextView>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginHorizontal="12dp"
+        android:id="@+id/rl_layout"
+        android:layout_marginVertical="12dp"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/tvText_expa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Explanation"
+            android:textAlignment="center"
+            android:textColor="@color/barcolor"
+            android:textSize="12sp"
+            android:paddingBottom="12dp"
+            android:gravity="center_horizontal" />
+
+        <View
+            android:id="@+id/view_one"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="7dp"
+            android:layout_toLeftOf="@id/tvText_expa"
+            android:layout_toRightOf="@id/view_ver_one"
+            android:background="@color/barcolor" />
+
+        <View
+            android:id="@+id/view_ver_one"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_one"
+            android:layout_marginLeft="6dp"
+            android:layout_above="@+id/view_horizantal"
+            android:background="@color/barcolor" />
+
+        <View
+            android:id="@+id/view_two"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="6dp"
+            android:layout_toRightOf="@id/tvText_expa"
+            android:background="@color/barcolor" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/view_two"
+            android:layout_above="@+id/view_horizantal"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="7dp"
+            android:id="@+id/view_ver_two"
+            android:background="@color/barcolor"
+            android:layout_marginRight="6dp">
+        </View>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/barcolor"
+            android:id="@+id/view_horizantal"
+            android:layout_below="@+id/relativeLayout4"
+            android:layout_marginHorizontal="6dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"></View>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/ll_dca_marks_layout"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="match_parent"
+            android:gravity="start"
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/ll_dca_marks_layout"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:lineHeight="16dp"
+                android:paddingBottom="16dp"
+                android:text="Google News is a news aggregator service developed by Google. It presents a continuous flow of articles organized from thousands of publishers and magazines"
+                android:id="@+id/tv_srl_view_solution"
+                android:textAllCaps="false"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="14sp"></TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/barcolor"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_bg_white"
+        android:backgroundTint="#ccffff"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="Related Module"></TextView>
+</LinearLayout>

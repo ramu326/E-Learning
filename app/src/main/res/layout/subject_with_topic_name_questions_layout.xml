@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 <RelativeLayout
     android:layout_width="match_parent"
     app:layout_constraintEnd_toEndOf="parent"
@@ -44,11 +42,16 @@
         android:backgroundTint="@color/black"
 ></ImageView>
 </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/relative_question"
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/relative_question">
+            >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -482,6 +485,7 @@
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="center"
                     android:text="Next"
+                    android:id="@+id/tv_next"
                     android:layout_centerInParent="true"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -490,7 +494,7 @@
 
             </RelativeLayout>
         </LinearLayout>
+    </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
