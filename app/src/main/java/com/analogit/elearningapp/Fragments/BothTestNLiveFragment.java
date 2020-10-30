@@ -60,11 +60,12 @@ public class BothTestNLiveFragment extends Fragment {
 
                 switch (position){
                     case 0:
-                        tab.setText("LiveTest");
+                        tab.setText("Test Hall");
+
 
                         break;
                     case 1:
-                        tab.setText("Live Class");
+                        tab.setText("Class Room");
                         break;
                     default:
                         break;
