@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">E LearningApp</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="notes">Notes</string>
+    <string name="icards">iCards</string>
+    <string name="downlads">Downloads</string>
+    <string name="testndiscussion">Test&amp;Discussion</string>
+    <string name="videos">Videos</string>
+    <string name="anatomy">Anatomy</string>
+    <string name="introduction">Introduction to Human Body</string>
+    <string name="followmoringround">Follow Morning Rounds</string>
+    <string name="golive">Go Live</string>
+    <string name="quizdailychallenge">Quiz-Daily Challenge</string>
+    <string name="hytdailytest">HYT-Daily Test</string>
+    <string name="appwall">App Wall</string>
+    <string name="wallposter">Wall Poster</string>
+    <string name="mydoubts">My Doubts</string>
+    <string name="groupdiscussion">Group Discussion</string>
+    <string name="extendyourvalidity">Extend Your validity</string>
+    <string name="share">Share</string>
+    <string name="earncoins">Earn Coins</string>
+    <string name="faqs">FAQS</string>
+    <string name="rateus">Rate Us</string>
+    <string name="about">About</string>
+    <string name="contactus">Contact Us</string>
+    <string name="termsconditions">Terms&amp;Conditions</string>
+    <string name="settings">Settings</string>
+    <string name="username">Username</string>
+    <string name="mobileno">Mobile No.</string>
+    <string name="email">Gmail</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="home">Home</string>
+    <string name="reset">RESET-T&amp;D,Q-BANK,BOOKMARK</string>
+    <string name="upsc">UPSC GRAND TEST1</string>
+    <string name="test">Test</string>
+    <string name="time">time</string>
+    <string name="starttest">Start Test</string>
+    <string name="yes">YES</string>
+    <string name="exit">EXIT</string>
+    <string name="review">Review</string>
+    <string name="rest">If you want to one more attempt click the <font color='#16d3df'>REST</font> button</string>
+    <string name="dailog">Are you sure want to Start the Test?</string>
+    <string name="firstAttempt">1st Attempt</string>
+    <string name="secondattempt">2nd Attempt</string>
+    <string name="thirdattempt">3rd Attempt</string>
+    <string name="accuracyone">Accuracy: <font color='#008000'>70%</font></string>
+    <string name="accuracytwo">Accuracy: <font color='#FFA500'>70%</font></string>
+    <string name="accuracythird">Accuracy: <font color='#FFC0CB'>70%</font></string>
+    <string name="hermatologgy">Td n Hermatology</string>
+    <string name="testname">LiveTest</string>
+    <string name="teketest">TakeTest</string>
+    <string name="allsub">AllSubjects</string>
+    <string name="alltest">All Test</string>
+    <string name="grandtest">Grand Test</string>
+    <string name="recalltest">Recall Test</string>
+    <string name="prevtest">Prev. Test</string>
+    <string name="swt">SWT</string>
+    <string name="percent"> Completed</string>
+    <string name="allexamss">2020 Exams</string>
+    <string name="joingroup">Are you want to \n Join the Anatomy Group</string>
+    <string name="study">What Would you like <to></to> <font color='#e76735'>Study </font>\ntoday?</string>
+
+    <string name="longtest">We can easily send email in android via intent. You need to write few lines of code only as given below</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="are_you_want_to_pause_or_submit_the_test">Are you want to pause or \n Submit the Test?</string>
+    <string name="once_submitted_you_cannot_go_back_to_n_answer_anymore_questions">Once submitted you cannot go back to \n answer anymore questions.</string>
+    <string name="press_ok_to_continue">Press "OK" to Continue</string>
+    <string name="review_custom_modules">Review Custom Modules</string>
+    <string name="date">20-12-2020</string>
+    <string name="view_solution">View Solution</string>
+    <string name="custom_module_title6">Custom Module Title6</string>
+    <string name="are_you_want_to_pause_or_submit_the_qbank">Are you want to pause or \n Submit the QBank</string>
+    <string name="are_you_want_to_pause_or_quit_the_quit">Are you want to pause or \n Quit the Quit?</string>
+    <!--    <string name="t_d"> <![CDATA[  T&d]]></string>-->
+    <string name="all_subjects">All Subjects</string>
+    <string name="which_of_the_following_is_an_a_typical_vitamin">Which of the following is an A Typical Vitamin?</string>
+    <string name="view_all"><font color='#008000'>View</font> <font color='#006400'></font> All</string>
+    <string name="resume">Resume</string>
+    <string name="meet_the_master_minds">Meet the <font color='#000000'>Master Minds</font></string>
+    <string name="t_d"><![CDATA[T&D]]></string>
+    <string name="leader_board_list">Leader Board List</string>
+    <string name="Rs">\u20B9</string>
+    <string name="obstetrics_gynaecology"><![CDATA[obstetrics & gynaecology]]></string>
+
+    <!--    <string name="string_resource">This [img src=dra/] is an icon.</string>-->
+
+</resources>

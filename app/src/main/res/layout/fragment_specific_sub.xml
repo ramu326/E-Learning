@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Anatomy"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:background="@color/barcolor"
+        android:layout_height="80dp"></TextView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginTop="15dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:background="@drawable/btn_bg_white"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="All"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="12sp">
+
+            </TextView>
+            <TextView
+                android:layout_width="100dp"
+                android:background="@drawable/btn_bg_white"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Completed"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="12sp">
+
+            </TextView>
+            <TextView
+                android:layout_width="100dp"
+                android:background="@drawable/btn_bg_white"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Paused"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="12sp">
+
+            </TextView>
+            <TextView
+                android:layout_width="120dp"
+                android:background="@drawable/btn_bg_white"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="In Completed"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="12sp">
+
+            </TextView>
+            <TextView
+                android:layout_width="100dp"
+                android:background="@drawable/btn_bg_white"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Update"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textSize="12sp">
+
+            </TextView>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rec_fss_all"></androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</LinearLayout>

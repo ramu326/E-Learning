@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="horizontal"
+    android:id="@+id/ll_srtdone"
+    android:layout_marginTop="6dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="16dp"
+    android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:id="@+id/iv_srtdone_cal"
+            android:background="@drawable/date_cal">
+        </ImageView>
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:background="@drawable/start_resume_bg_one"
+         android:paddingHorizontal="24dp"
+         android:layout_height="80dp">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/tv_test_name"
+             android:text="Hyt test1"
+             android:textSize="16dp"
+             android:layout_marginTop="8dp"
+             android:textColor="@color/black"
+             android:textAllCaps="true"
+             android:fontFamily="@font/roboto_regular"></TextView>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/tv_test_no_mcqs"
+             android:text="100 mcqs"
+             android:layout_marginTop="8dp"
+             android:layout_below="@id/tv_test_name"
+             android:textSize="12dp"
+             android:textColor="@color/lightblack"
+             android:textAllCaps="true"
+             android:fontFamily="@font/roboto_regular"></TextView>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/tv_test_syllabus"
+             android:text="Syllabus"
+             android:layout_marginTop="8dp"
+             android:layout_below="@id/tv_test_no_mcqs"
+             android:textSize="12dp"
+             android:layout_marginBottom="4dp"
+             android:textColor="@color/lightblack"
+             android:textAllCaps="false"
+             android:fontFamily="@font/roboto_regular"></TextView>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/tv_test_all"
+             android:text="Syllabus "
+             android:layout_marginTop="8dp"
+             android:layout_marginLeft="8dp"
+             android:layout_marginBottom="4dp"
+             android:layout_below="@id/tv_test_no_mcqs"
+             android:layout_toRightOf="@id/tv_test_syllabus"
+             android:textSize="12dp"
+             android:textColor="@color/lightblack"
+             android:textAllCaps="false"
+             android:fontFamily="@font/roboto_regular"></TextView>
+
+     </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item android:title="@string/reset"
+            android:id="@+id/menu_reset">
+
+        </item>
+
+    </group>
+
+
+<group android:id="@+id/menu_group_below_top"
+    android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_fm_round"
+            android:actionLayout="@layout/home_layout"
+            android:title="@string/followmoringround">
+
+        </item>
+        <item
+            android:id="@+id/menu_golive"
+            android:title="@string/golive">
+        </item>
+        <item android:title="@string/quizdailychallenge"
+            android:id="@+id/menu_qd_challenge">
+        </item>
+        <item android:title="@string/hytdailytest"
+            android:id="@+id/menu_hyttest">
+        </item>
+        <item android:title="@string/appwall"
+            android:id="@+id/menu_appwall">
+        </item>
+        <item android:title="@string/wallposter"
+            android:id="@+id/menu_wallposter">
+        </item>
+        <item android:title="@string/mydoubts"
+            android:id="@+id/menu_mydoubts">
+
+        </item>
+        <item android:title="@string/groupdiscussion"
+            android:id="@+id/menu_group_discussion">
+
+        </item>
+        <item android:title="@string/extendyourvalidity"
+            android:id="@+id/menu_extend_validity">
+        </item>
+</group>
+    <group android:id="@+id/menu_group"
+        android:checkableBehavior="single">
+        <item android:title="@string/share"
+            app:itemIconTint="@color/lightblack"
+
+            app:itemTextColor="@color/lightblack"
+            android:id="@+id/menu_share">
+        </item>
+        <item android:title="@string/earncoins"
+            android:id="@+id/menu_eran_coins">
+
+        </item>
+        <item android:title="@string/faqs"
+            android:id="@+id/menu_faqs">
+
+        </item>
+        <item android:title="@string/rateus"
+            android:id="@+id/menu_rateus">
+        </item>
+        <item android:title="@string/about"
+            android:id="@+id/menu_about">
+
+        </item>
+        <item android:title="@string/contactus"
+            android:id="@+id/menu_contact">
+
+        </item>
+        <item android:title="@string/termsconditions"
+            android:id="@+id/menu_terms_condition">
+
+        </item>
+    </group>
+<group android:id="@+id/menu_bottom"
+    android:checkableBehavior="none">
+    <item android:id="@+id/menu_settnigs"
+        android:title="@string/settings"
+
+
+        >
+
+    </item>
+</group>
+
+    <group android:id="@+id/bottom"
+        android:checkableBehavior="single">
+      </group>
+</menu>

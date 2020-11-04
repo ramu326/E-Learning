@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0da5af</color>
+    <color name="colorPrimaryDark">#0da5af</color>
+    <color name="yellow">#ebe895</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="skyblue">#5fdde5</color>
+    <color name="sblue">#16d3df</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="lightblack">#bbbbbb</color>
+    <color name="darkblue">#326492</color>
+    <color name="dblack">#bbbbbb</color>
+    <color name="grey">#EBEBF1</color>
+    <color name="red">#FF0000</color>
+    <color name="barcolor">#0da5af</color>
+    <color name="green">#008000</color>
+    <color name="orange">#FFA500</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="blue">#0000FF</color>
+    <color name="playblue">#388bf8</color>
+    <color name="lightpink">#fffee0</color>
+    <color name="antmycolor">#1a3369</color>
+    <color name="phylogycolor">#ef9549</color>
+    <color name="microcolor">#42b9cd</color>
+    <color name="opthocolor">#335d9c</color>
+    <color name="radiocolor">#494d57</color>
+    <color name="biochecolor">#1590c5</color>
+    <color name="dermocolor">#ec89a4</color>
+    <color name="entcolor">#e76735</color>
+    <color name="psycolor">#1662bc</color>
+    <color name="comcolor">#096c04</color>
+    <color name="gencolor">#56c972</color>
+    <color name="forcolor">#335d9c</color>
+    <color name="pedcolor">#2e7fd0</color>
+    <color name="obcolor">#ec87a3</color>
+    <color name="anescolor">#037ce0</color>
+    <color name="genmcolor">#0575db</color>
+    <color name="orthocolor">#f2653a</color>
+    <color name="pathcolor">#a20808</color>
+    <color name="pharmcolor">#0c225e</color>
+
+</resources>

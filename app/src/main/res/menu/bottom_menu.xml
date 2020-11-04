@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bottom_home"
+        android:enabled="true"
+        android:icon="@drawable/dhone_round"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/bottom_qbank"
+        android:enabled="true"
+        android:icon="@drawable/qbank"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/bottom_youtube"
+        android:enabled="true"
+        android:icon="@drawable/shorts"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/bottom_td"
+        android:enabled="true"
+        android:icon="@drawable/td"
+        android:title=""
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/bottom_stock"
+        android:enabled="true"
+        android:icon="@drawable/play"
+        android:title=""
+        app:showAsAction="ifRoom" />
+</menu>

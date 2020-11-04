@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/barcolor"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_rml_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/picture"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/doctor"
+                    android:transitionName="picture" />
+
+                <TextView
+                    android:id="@+id/tv_rml_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Rank:"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_rml_rank_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/picture"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/tv_rml_rank"
+                    android:gravity="center"
+                    android:text="123456"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_rml_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_rml_rank"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="App Cash:"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_rml_cash_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_rml_rank_no"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/tv_rml_cash"
+                    android:gravity="center"
+                    android:text="99998"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"></TextView>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/quiz_tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@id/picture"
+                    android:scrollbars="none"
+                    app:tabIndicatorColor="@color/barcolor"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/black">
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/quiz_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/quiz_tablayout"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@id/picture">
+
+                </androidx.viewpager2.widget.ViewPager2>
+
+                <TextView
+                    android:id="@+id/tv_daily_qiuz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/quiz_view_pager"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/tv_rml_rank_no"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="daily Quiz 19"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"></TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="start"
+                    android:paddingBottom="4dp"
+                    android:background="@drawable/half_shape"
+                    android:layout_toRightOf="@+id/tv_daily_qiuz"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_leader_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_arrow_down"
+                        android:gravity="start|center"
+                        android:text="@string/leader_board_list"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="6dp"
+                        tools:ignore="RtlCompat"></TextView>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/picture_leader"
+                        android:layout_width="60dp"
+                        android:layout_below="@id/tv_leader_board"
+                        android:layout_height="40dp"
+                        android:src="@drawable/doctor"
+                        android:transitionName="picture" />
+
+
+                    <TextView
+                        android:id="@+id/tv_leader_board_cash_symbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/Rs"
+                        android:layout_marginTop="12dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tv_leader_board"
+                        android:layout_toRightOf="@id/picture_leader"
+                        tools:ignore="RtlCompat"></TextView>
+                    <TextView
+                        android:id="@+id/tv_leader_board_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="99999"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="4dp"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_below="@id/tv_leader_board"
+                        android:layout_toRightOf="@id/tv_leader_board_cash_symbol"
+                        tools:ignore="RtlCompat"></TextView>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/rec_rnl_rank"
+
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/analysis"
+        android:layout_height="wrap_content"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        android:layout_marginHorizontal="5dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="8dp"
+        android:text="Urban  was launched in November 2014.anil kumar rebba ankush"
+        android:layout_height="wrap_content"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingVertical="6dp"
+        android:background="#eee9e9"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/card_back"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:text="TEST"
+            android:layout_height="40dp"></TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rml_rec_sub"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/rec_rml_one"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</LinearLayout>

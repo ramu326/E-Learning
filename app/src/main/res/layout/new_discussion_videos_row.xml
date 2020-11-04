@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="85dp"
+            android:background="@drawable/dis_image"></ImageView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_height="80dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Imaging: X-RAY IVP AND Chest"
+                android:textSize="16dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/tv_dis_video_name"
+                android:lineHeight="20dp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto_regular"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Syllabus "
+                android:textSize="12dp"
+                android:layout_below="@id/tv_dis_video_name"
+                android:layout_marginTop="6dp"
+                android:id="@+id/tv_dis_video_syllabus"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto_regular"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anatomy "
+                android:textSize="12dp"
+                android:layout_toRightOf="@id/tv_dis_video_syllabus"
+                android:layout_below="@id/tv_dis_video_name"
+                android:layout_marginTop="4dp"
+                android:id="@+id/tv_dis_video_syllabus_name"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto_regular"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
