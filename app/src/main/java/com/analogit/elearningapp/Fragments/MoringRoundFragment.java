@@ -19,10 +19,12 @@ import com.analogit.elearningapp.R;
 public class MoringRoundFragment extends Fragment {
  private View v;
 private RecyclerView recyclerView;
+int position;
 private RecyclerMorningConAdapter recyclerMorningConAdapter;
 
-    public MoringRoundFragment() {
+    public MoringRoundFragment(int position) {
         // Required empty public constructor
+        this.position=position;
     }
 
 

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="4dp"
+    android:layout_marginVertical="4dp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginHorizontal="16dp"
+    android:outlineAmbientShadowColor="@color/black"
+    android:background="@drawable/card_back"
+    android:backgroundTint="@color/white"
+   >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:paddingVertical="16dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:paddingVertical="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="start"
+        android:adjustViewBounds="true"
+        android:src="@drawable/anatomy">
+    </ImageView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anatomy"
+            android:textSize="18sp"
+            android:id="@+id/tv_anatomy_sub"
+            android:layout_gravity="center"
+            android:textColor="#333333"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto_regular"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/57 completed"
+            android:textSize="12sp"
+            android:layout_below="@id/tv_anatomy_sub"
+            android:id="@+id/tv_anatomy_sub_videos"
+            android:layout_gravity="center"
+            android:textColor="#999999"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto_regular"></TextView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_arrow_forward"
+            android:backgroundTint="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"></ImageView>
+    </RelativeLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>

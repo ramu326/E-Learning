@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tab_select_bg"
+    android:backgroundTint="@color/white"
+    android:paddingVertical="4dp"
+    android:id="@+id/ll_subject_topic_modules"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="8dp"
+    android:paddingHorizontal="20dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/anatomy"></ImageView>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/roboto_medium"
+    android:textSize="16sp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="6dp"
+    android:paddingVertical="16dp"
+    android:textColor="@color/black"
+    android:text="Skeleton"></TextView>
+</LinearLayout>

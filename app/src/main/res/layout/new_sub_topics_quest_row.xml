@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="16dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="general ebbryyology"
+        android:textAllCaps="true"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:textColor="#737373"></TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:id="@+id/ll_new_sub_go_qutions_module"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/ana_pb_bg"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="24dp"
+            android:layout_gravity="center"
+            android:id="@+id/iv_qwamr_qbank"
+            android:src="@drawable/allqbank">
+
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Anatomy"
+                android:layout_alignParentLeft="true"
+                android:textAllCaps="false"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_medium"
+                android:id="@+id/tv_new_sub_with_topic"
+                android:textSize="18dp"
+                android:textColor="#333333"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Questions:"
+                android:id="@+id/tv_new_question"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/tv_new_sub_with_topic"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="#999999"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="124"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/tv_new_question"
+                android:id="@+id/tv_new_question_nub"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="4dp"
+                android:layout_below="@id/tv_new_sub_with_topic"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="#999999"></TextView>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/view_quest_bar"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@id/tv_new_sub_with_topic"
+                android:layout_toRightOf="@id/tv_new_question_nub"
+                android:background="#999999"></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 5.0"
+                android:id="@+id/tv_new_question_star"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/ic_star"
+                android:drawableTint="#808080"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/view_quest_bar"
+                android:layout_below="@id/tv_new_sub_with_topic"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:textColor="#808080"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

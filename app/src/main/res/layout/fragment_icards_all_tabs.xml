@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ededed"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.IcardsAllTabsFragment">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingBottom="42dp"
+       android:background="@drawable/relative_layout_bg_curve"></RelativeLayout>
+   <com.google.android.material.tabs.TabLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:scrollbars="horizontal"
+       app:tabMode="auto"
+       app:tabIndicatorHeight="0dp"
+     android:fillViewport="false"
+       android:layout_marginRight="12dp"
+       android:layout_marginTop="48dp"
+       app:tabTextAppearance="@style/tab_text"
+       android:background="#ededed"
+       app:tabIndicatorColor="@color/barcolor"
+       app:tabSelectedTextColor="@color/barcolor"
+       android:id="@+id/fragment_icard_tab_layout"
+       app:tabTextColor="#8c8c8c"></com.google.android.material.tabs.TabLayout>
+<androidx.viewpager2.widget.ViewPager2
+    android:layout_width="match_parent"
+    android:id="@+id/fragment_icard_view_pager"
+    android:layout_height="wrap_content"></androidx.viewpager2.widget.ViewPager2>
+</LinearLayout>

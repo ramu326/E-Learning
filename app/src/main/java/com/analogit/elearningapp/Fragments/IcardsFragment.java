@@ -50,7 +50,8 @@ public class IcardsFragment extends Fragment {
                 FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
                 fr.replace(R.id.content,new IcardAudioFragment());
                 fr.addToBackStack(null);
-                fr.commit();            }
+                fr.commit();
+            }
         });
         return v;
     }
