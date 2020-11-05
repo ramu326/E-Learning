@@ -2,35 +2,29 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:id="@+id/asr_ll_one"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:background="#eee9e9"
-        android:id="@+id/asr_ll_one"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:paddingBottom="3dp"
-            android:paddingHorizontal="10dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
             android:textAlignment="center"
             android:hint="Anatomy"
-            android:layout_marginHorizontal="4dp"
+            android:layout_marginHorizontal="12dp"
             android:background="@drawable/btn_bg_white"
             android:id="@+id/tv_asr_subjects"
             android:backgroundTint="@color/white"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
-            android:gravity="center_horizontal">
+            android:gravity="center">
 
         </TextView>
 
-    </LinearLayout>
+
 
 
 </LinearLayout>

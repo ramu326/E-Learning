@@ -84,6 +84,10 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_settings.png"
     },
     {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_play_arrow.xml.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_play_arrow.xml"
+    },
+    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_play_black.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_play_black.png"
     },
@@ -180,16 +184,16 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_case_sheet.png"
     },
     {
-        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_regular_bg_bt.xml.flat",
-        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\regular_bg_bt.xml"
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_icards_topics_row.xml.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\icards_topics_row.xml"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ana_pb_bg.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\ana_pb_bg.xml"
     },
     {
-        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_icards_topics_row.xml.flat",
-        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\icards_topics_row.xml"
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_regular_bg_bt.xml.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\regular_bg_bt.xml"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_settings.xml.flat",
@@ -208,24 +212,28 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_play_arrow.png"
     },
     {
-        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_custom_module.xml.flat",
-        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\fragment_custom_module.xml"
-    },
-    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_double_arrow.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_double_arrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_custom_module.xml.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\fragment_custom_module.xml"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_lock.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_lock.xml"
     },
     {
-        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_play_arrow.xml.flat",
-        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_play_arrow.xml"
-    },
-    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_before.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_before.png"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_g_image.jpg.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\g_image.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_play_arrow.xml.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_play_arrow.xml"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
@@ -244,12 +252,12 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_play_circle.xml"
     },
     {
-        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_notes.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notes.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_appwall_down.png.flat",
@@ -548,12 +556,12 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_play_circle.png"
     },
     {
-        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_more.png.flat",
-        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_more.png"
-    },
-    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_icards_zoom_images.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\fragment_icards_zoom_images.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_more.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_more.png"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_forward_black.png.flat",
@@ -896,6 +904,10 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\fragment_daily_challenge.xml"
     },
     {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_play_arrow.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_play_arrow.png"
+    },
+    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_live_test_latest_layout.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\live_test_latest_layout.xml"
     },
@@ -952,6 +964,10 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_pause.png"
     },
     {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_baseline_play_arrow.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_play_arrow.png"
+    },
+    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_note_add.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_note_add.png"
     },
@@ -1002,6 +1018,10 @@
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_back.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_play_arrow.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_play_arrow.png"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_close.png.flat",
@@ -1182,6 +1202,10 @@
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_whitemeu.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\whitemeu.png"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_images_bank.xml.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\fragment_images_bank.xml"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\font_roboto_black.ttf.flat",
@@ -1408,6 +1432,10 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\icards_text_layout.xml"
     },
     {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_baseline_play_arrow.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_play_arrow.png"
+    },
+    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_bookmark.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_bookmark.png"
     },
@@ -1496,16 +1524,16 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_play_circle.png"
     },
     {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_generalsurgery.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\generalsurgery.png"
+    },
+    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_brain.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\brain.png"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_play_arrow.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_play_arrow.png"
-    },
-    {
-        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_generalsurgery.png.flat",
-        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\generalsurgery.png"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_note.png.flat",
@@ -1550,6 +1578,10 @@
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_back_black.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_back_black.png"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_test_discussion_second_row.xml.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\test_discussion_second_row.xml"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_anatomy_swt_test_layout.xml.flat",
@@ -1676,6 +1708,10 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_baseline_note_add_24.png"
     },
     {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_date_month_cal.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\date_month_cal.png"
+    },
+    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_offnlive_layout.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\offnlive_layout.xml"
     },
@@ -1754,6 +1790,10 @@
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_moring_round.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\layout\\fragment_moring_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_play_arrow.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_play_arrow.png"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rigt_left_bg.xml.flat",
@@ -2092,6 +2132,10 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_baseline_note_add_24.png"
     },
     {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_baseline_play_arrow.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_baseline_play_arrow.png"
+    },
+    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_icards.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_icards.png"
     },
@@ -2412,6 +2456,10 @@
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\more.png"
     },
     {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hd_image_bank.jpg.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\hd_image_bank.jpg"
+    },
+    {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_appwall_down.xml.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_appwall_down.xml"
     },
@@ -2426,6 +2474,10 @@
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_date_cal.png.flat",
         "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\date_cal.png"
+    },
+    {
+        "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_goldg.png.flat",
+        "source": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\src\\main\\res\\drawable\\goldg.png"
     },
     {
         "merged": "C:\\Users\\Aneel\\AndroidStudioProjects\\ELearningApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_seek_thumb.xml.flat",

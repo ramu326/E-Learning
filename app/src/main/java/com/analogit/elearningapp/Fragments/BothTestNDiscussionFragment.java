@@ -38,6 +38,7 @@ public class BothTestNDiscussionFragment  extends Fragment {
                 switch (position){
                     case 0:
                         tab.setText("Test");
+                      //  tab.getCustomView().getResources().getDrawable(R.drawable.tab_select_bg);
                         break;
                     case 1:
                         tab.setText("Discussion");

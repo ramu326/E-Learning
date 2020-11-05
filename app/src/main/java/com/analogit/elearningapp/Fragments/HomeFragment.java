@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
     private  ImageView iv_Recall,viewAppwall,liveViewall;
     private CardView daily_challenge;
     private  ImageView icards;
-    private CardView cardView;
+    CardView cardView,imageBankCard;
     private TextView seeExplanation,schedule;
 
     public HomeFragment() {
@@ -80,19 +80,16 @@ public class HomeFragment extends Fragment {
       Imenu=v.findViewById(R.id.iv_fh_menu_style);
       Isearch=v.findViewById(R.id.iv_fh_searh);
       Igroup=v.findViewById(R.id.iv_fh_group);
-
-        daily_challenge=v.findViewById(R.id.todays_challenge);
+      daily_challenge=v.findViewById(R.id.todays_challenge);
        videorView=v.findViewById(R.id.rec_fh_live_rec);
         apprwall=v.findViewById(R.id.rec_dr_wall);
       DrView=v.findViewById(R.id.fh_rec_doctors);
-      //LrView=v.findViewById(R.id.fh_lecture_rec);
       carouselView=v.findViewById(R.id.fh_carousel);
      seeExplanation=v.findViewById(R.id.tv_see_explanation);
-    //  viewAllWall=v.findViewById(R.id.iv_fh_view_wall);
-     // viewAppwall=v.findViewById(R.id.iv_fh_wall_view);
-    //  liveViewall=v.findViewById(R.id.fh_live_all);
+
         schedule=v.findViewById(R.id.tv_fh_live_all);
-     // icards=v.findViewById(R.id.fh_card_image_bank);
+
+        imageBankCard=v.findViewById(R.id.image_bank_card_view);
       cardView=v.findViewById(R.id.card_fh);
         ((MainActivity)(getActivity())).bottomNavigationView.setVisibility(View.VISIBLE);
 
@@ -126,7 +123,15 @@ seeExplanation.setOnClickListener(new View.OnClickListener() {
 });
 
 
-
+imageBankCard.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
+        fr.replace(R.id.content,new ImagesBankFragment());
+        fr.addToBackStack(null);
+        fr.commit();
+    }
+});
 
 cardView.setOnClickListener(new View.OnClickListener() {
     @Override

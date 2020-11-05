@@ -92,10 +92,10 @@ public class MainActivity extends AppCompatActivity {
                         transaction3.commit();
                         break;
                     case R.id.bottom_stock:
-                       // GraphFragment graphFragment=new GraphFragment();
-                        IcardsZoomImagesFragment icardsZoomImagesFragment=new IcardsZoomImagesFragment();
+                       GraphFragment graphFragment=new GraphFragment();
+
                         FragmentTransaction transaction4=getSupportFragmentManager().beginTransaction();
-                        transaction4.replace(R.id.content,icardsZoomImagesFragment);
+                        transaction4.replace(R.id.content,graphFragment);
 
                         transaction4.commit();
                         break;

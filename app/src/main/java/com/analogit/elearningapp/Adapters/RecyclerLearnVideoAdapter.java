@@ -24,7 +24,7 @@ public class RecyclerLearnVideoAdapter extends ListAdapter<LearnVideosModel,Recy
     @NonNull
     @Override
     public MyViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.icards_zoom_image_row,parent,false));
+        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.new_learn_videos_row,parent,false));
     }
 
     @Override

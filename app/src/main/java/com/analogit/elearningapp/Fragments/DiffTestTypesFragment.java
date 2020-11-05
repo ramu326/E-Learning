@@ -39,9 +39,13 @@ public class DiffTestTypesFragment extends Fragment {
         v= inflater.inflate(R.layout.fragment_diff_test_types, container, false);
          rView_one=v.findViewById(R.id.diff_test_rec);
         rView_three=v.findViewById(R.id.diff_test_type_rec);
+
         rView_one.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
         recyclerTnDOneAdapter=new RecyclerTnDOneAdapter(this);
         rView_one.setAdapter(recyclerTnDOneAdapter);
+
+
+
         rView_three.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
         recyclerTnDThreeAdapter=new RecyclerTnDThreeAdapter(this);
         rView_three.setAdapter(recyclerTnDThreeAdapter);

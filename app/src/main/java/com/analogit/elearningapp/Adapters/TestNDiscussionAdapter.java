@@ -9,7 +9,7 @@ import com.analogit.elearningapp.Fragments.AllTandDFragment;
 import com.analogit.elearningapp.Fragments.BothTestNDiscussionFragment;
 
 public class TestNDiscussionAdapter extends FragmentStateAdapter {
-    public TestNDiscussionAdapter(@NonNull BothTestNDiscussionFragment fragmentActivity) {
+    public TestNDiscussionAdapter(@NonNull Fragment fragmentActivity) {
         super(fragmentActivity);
     }
 

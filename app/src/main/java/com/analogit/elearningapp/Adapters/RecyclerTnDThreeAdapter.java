@@ -28,7 +28,7 @@ public class RecyclerTnDThreeAdapter extends ListAdapter<TndThreeModel,RecyclerT
     @NonNull
     @Override
     public MyViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.start_resume_test_dis_row_three,parent,false));
+        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.test_discussion_second_row,parent,false));
     }
 
     @Override

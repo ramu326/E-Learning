@@ -5,9 +5,71 @@
     android:background="@drawable/tab_unselect_bg"
     android:backgroundTint="#ededed"
     android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:paddingVertical="42dp"
+        android:background="@drawable/relative_layout_bg_curve"></RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/ll_back_bg"
+    android:backgroundTint="#bfe2e5"
+    android:layout_gravity="center"
+    android:layout_marginTop="20dp"
+    android:gravity="center"
+    android:layout_marginHorizontal="20dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#006666"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_baseline_play_arrow"></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Image Based Discussion"
+        android:paddingVertical="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor=" #006666"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"></TextView>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ll_back_bg"
+        android:backgroundTint="#bfe2e5"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#006666"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_baseline_play_arrow"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" WallPoster Discussion"
+            android:paddingVertical="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor=" #006666"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"></TextView>
+    </LinearLayout>
 
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
     android:layout_height="match_parent"
     android:id="@+id/learn_rec"></androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

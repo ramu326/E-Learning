@@ -1650,6 +1650,7 @@ drawable daily_challenge
 drawable daily_qs_bg_bt
 drawable dailychallenge
 drawable date_cal
+drawable date_month_cal
 drawable dermatology
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1669,13 +1670,16 @@ drawable facebooki
 drawable first
 drawable foresic
 drawable forward
+drawable g_image
 drawable generalmedicine
 drawable generalsurgery
+drawable goldg
 drawable green
 drawable gridview
 drawable group
 drawable group_white
 drawable half_shape
+drawable hd_image_bank
 drawable headphone
 drawable home
 drawable home_image
@@ -1691,6 +1695,7 @@ drawable ic_back
 drawable ic_back_black
 drawable ic_baseline_note
 drawable ic_baseline_note_add_24
+drawable ic_baseline_play_arrow
 drawable ic_baseline_star
 drawable ic_before
 drawable ic_book
@@ -2104,8 +2109,6 @@ id honorRequest
 id horizontal
 id ial_audios
 id ial_rec
-id ibc_card_one
-id ibc_card_two
 id ibl_sub_rec
 id icon
 id icon_group
@@ -2116,8 +2119,11 @@ id image
 id imageView
 id imageView2
 id imageView3
+id image_bank_card_view
+id image_bank_rec
 id image_slider_viewpager
 id image_zoom_view
+id imagebank_sub_rec
 id indicator
 id info
 id invisible
@@ -2168,6 +2174,7 @@ id iv_sheet
 id iv_slv_more
 id iv_srtdone_cal
 id iv_sub_image
+id iv_td
 id iv_tq_back
 id iv_tq_bookmark
 id iv_wpl_back
@@ -2188,6 +2195,7 @@ id linearLayout
 id linearLayout2
 id linear_layout
 id linear_layout_lcr
+id linear_layout_test_discussion
 id listMode
 id list_item
 id live_class_latest_rec
@@ -2461,6 +2469,8 @@ id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_dis_tablayout
 id test_dis_view_pager
+id test_discussion_mcqs
+id test_discussion_syllabus
 id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id test_tablayout
@@ -2808,6 +2818,7 @@ layout fragment_home
 layout fragment_icards_all_tabs
 layout fragment_icards_topic
 layout fragment_icards_zoom_images
+layout fragment_images_bank
 layout fragment_moring_round
 layout fragment_morning_round_tabs
 layout fragment_new_discussion
@@ -2933,6 +2944,7 @@ layout test_design_checkbox
 layout test_design_radiobutton
 layout test_dis_all_types_tabs
 layout test_discussion_layout
+layout test_discussion_second_row
 layout test_reflow_chipgroup
 layout test_rivew_layout
 layout test_toolbar
