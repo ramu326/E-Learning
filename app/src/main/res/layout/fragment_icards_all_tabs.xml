@@ -6,24 +6,31 @@
     android:orientation="vertical"
     android:background="#ededed"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.IcardsAllTabsFragment">
-   <RelativeLayout
+    tools:context=".Fragments.IcardsAllTabsFragment">-
+
+   <TextView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:paddingBottom="42dp"
-       android:background="@drawable/relative_layout_bg_curve"></RelativeLayout>
+       android:gravity="center"
+       android:text="Icards"
+       android:textAlignment="center"
+       android:textSize="20sp"
+       android:fontFamily="@font/roboto_medium"
+       android:textColor="@color/black"
+       android:paddingVertical="12dp"></TextView>
+
    <com.google.android.material.tabs.TabLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:scrollbars="horizontal"
        app:tabMode="auto"
        app:tabIndicatorHeight="0dp"
-     android:fillViewport="false"
-       android:layout_marginRight="12dp"
        android:layout_marginTop="48dp"
        app:tabTextAppearance="@style/tab_text"
        android:background="#ededed"
-       app:tabIndicatorColor="@color/barcolor"
+       app:tabIndicatorFullWidth="false"
+       app:tabPaddingStart="25dp"
+       app:tabPaddingTop="20dp"
        app:tabSelectedTextColor="@color/barcolor"
        android:id="@+id/fragment_icard_tab_layout"
        app:tabTextColor="#8c8c8c"></com.google.android.material.tabs.TabLayout>

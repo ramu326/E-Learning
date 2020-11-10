@@ -48,6 +48,7 @@
         android:background="@drawable/card_back"
         card_view:cardUseCompatPadding="true"
         app:cardElevation="20dp"
+        android:id="@+id/card_view_slove_exam"
         android:layout_marginTop="60dp"
         android:layout_marginHorizontal="16dp"
         app:cardCornerRadius="4dp"

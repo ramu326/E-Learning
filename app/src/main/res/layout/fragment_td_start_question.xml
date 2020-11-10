@@ -290,6 +290,7 @@
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:paddingHorizontal="32dp"
+            android:id="@+id/test_discussion_tv_mark"
             android:background="@drawable/btn_bg_white"
             android:backgroundTint="@color/barcolor"></TextView>
         <TextView

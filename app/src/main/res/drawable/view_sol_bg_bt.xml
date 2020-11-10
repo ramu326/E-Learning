@@ -3,8 +3,8 @@
     >
     <stroke
         android:width="0.8dp"
-        android:color="@color/barcolor" />
-    <corners android:radius="0dp" />
+        android:color="@color/black" />
+    <corners android:radius="10dp" />
 
     <padding
         android:bottom="10dp"

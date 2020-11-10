@@ -7,21 +7,19 @@
     android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:layout_width="match_parent"
+        android:background="@drawable/main_bottom_shape"
         android:layout_height="wrap_content">
    <LinearLayout
        android:layout_width="match_parent"
-
        app:layout_constraintTop_toTopOf="parent"
        android:paddingVertical="16dp"
        android:gravity="center"
-       app:layout_constraintBottom_toTopOf="@+id/ll_bottom_sheet_two"
-       android:id="@+id/ll_bottom_sheet"
+       app:layout_constraintBottom_toTopOf="@+id/ll_bottom_sheet_main_two"
+       android:id="@+id/ll_main_bottom_sheet"
        android:orientation="vertical"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
-       android:background="@drawable/bottom_sheet_shape"
        android:backgroundTint="#ddfafa"
        android:layout_height="wrap_content">
        <RelativeLayout
@@ -70,15 +68,15 @@
        android:textColor="@color/black"
        android:textSize="16sp"
        android:layout_centerHorizontal="true"
-       android:id="@+id/number_tv"
+       android:id="@+id/number_tv_main_bottom_sheet"
        android:text="15"></TextView>
    <View
        android:layout_width="30dp"
        android:layout_marginTop="4dp"
        android:layout_height="1dp"
-       android:id="@+id/bs_view_one"
+       android:id="@+id/bs_view_one_main_bottom_sheet"
        android:layout_centerHorizontal="true"
-       android:layout_below="@id/number_tv"
+       android:layout_below="@id/number_tv_main_bottom_sheet"
        android:background="@color/lightblack"></View>
    <TextView
        android:layout_width="wrap_content"
@@ -88,7 +86,7 @@
        android:textSize="16sp"
        android:layout_marginTop="4dp"
        android:layout_centerHorizontal="true"
-       android:layout_below="@id/bs_view_one"
+       android:layout_below="@id/bs_view_one_main_bottom_sheet"
        android:text="Not Viewed"></TextView>
 </RelativeLayout>
          <RelativeLayout
@@ -105,15 +103,15 @@
                 android:textColor="@color/green"
                 android:textSize="16sp"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/number_one_tv"
+                android:id="@+id/number_one_tv_main_bottom_sheet"
                 android:text="26"></TextView>
             <View
                 android:layout_width="30dp"
                 android:layout_marginTop="4dp"
                 android:layout_height="1dp"
-                android:id="@+id/bs_view_two"
+                android:id="@+id/bs_view_two_main_bottom_sheet"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/number_one_tv"
+                android:layout_below="@id/number_one_tv_main_bottom_sheet"
                 android:background="@color/lightblack"></View>
             <TextView
                 android:layout_width="wrap_content"
@@ -123,7 +121,7 @@
                 android:textSize="16sp"
                 android:layout_marginTop="4dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/bs_view_two"
+                android:layout_below="@id/bs_view_two_main_bottom_sheet"
                 android:text="Correct"></TextView>
          </RelativeLayout>
          <RelativeLayout
@@ -140,15 +138,15 @@
                 android:textColor="@color/red"
                 android:textSize="16sp"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/number_two_tv"
+                android:id="@+id/number_two_tv_main_bottom_sheet"
                 android:text="26"></TextView>
             <View
                 android:layout_width="30dp"
                 android:layout_marginTop="4dp"
                 android:layout_height="1dp"
-                android:id="@+id/bs_view_three"
+                android:id="@+id/bs_view_three_main_bottom_sheet"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/number_two_tv"
+                android:layout_below="@id/number_two_tv_main_bottom_sheet"
                 android:background="@color/lightblack"></View>
             <TextView
                 android:layout_width="wrap_content"
@@ -158,7 +156,7 @@
                 android:textSize="16sp"
                 android:layout_marginTop="4dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/bs_view_three"
+                android:layout_below="@id/bs_view_three_main_bottom_sheet"
                 android:text="In Correct"></TextView>
          </RelativeLayout>
          <RelativeLayout
@@ -175,15 +173,15 @@
                 android:textColor="#FFD700"
                 android:textSize="16sp"
                 android:layout_centerHorizontal="true"
-                android:id="@+id/number_three_tv"
+                android:id="@+id/number_three_tv_main_bottom_sheet"
                 android:text="26"></TextView>
             <View
                 android:layout_width="30dp"
                 android:layout_marginTop="4dp"
                 android:layout_height="1dp"
-                android:id="@+id/bs_view_four"
+                android:id="@+id/bs_view_four_main_bottom_sheet"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/number_three_tv"
+                android:layout_below="@id/number_three_tv_main_bottom_sheet"
                 android:background="@color/lightblack"></View>
             <TextView
                 android:layout_width="wrap_content"
@@ -193,7 +191,7 @@
                 android:textSize="16sp"
                 android:layout_marginTop="4dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/bs_view_four"
+                android:layout_below="@id/bs_view_four_main_bottom_sheet"
                 android:text="Skipped"></TextView>
          </RelativeLayout>
       </LinearLayout>
@@ -204,32 +202,33 @@
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintLeft_toLeftOf="parent"
        android:paddingBottom="16dp"
+       android:background="@drawable/main_bottom_shape"
+       android:backgroundTint="@color/barcolor"
        android:layout_marginBottom="16dp"
        app:layout_constraintRight_toRightOf="parent"
-       app:layout_constraintTop_toBottomOf="@id/ll_bottom_sheet"
+       app:layout_constraintTop_toBottomOf="@id/ll_main_bottom_sheet"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:orientation="vertical"
-       android:id="@+id/ll_bottom_sheet_two"
+       android:id="@+id/ll_bottom_sheet_main_two"
 
        >
 
        <androidx.recyclerview.widget.RecyclerView
-           android:id="@+id/rec_bottom_sheet_question"
+           android:id="@+id/main_bottom_sheet_rec_bottom_sheet_question"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:layout_alignParentLeft="true"
            android:layout_alignParentRight="true"
-
            android:layout_marginLeft="3dp"
            android:layout_marginRight="-3dp"
-           android:background="@drawable/tab_select_bg"></androidx.recyclerview.widget.RecyclerView>
+           ></androidx.recyclerview.widget.RecyclerView>
 
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="Quit"
-           android:id="@+id/tv_quit"
+           android:id="@+id/tv_main_bottom_sheet_quit"
            android:layout_centerInParent="true"
            android:layout_centerVertical="true"
            android:background="@drawable/btn_bg_white"
@@ -238,23 +237,9 @@
            android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
            android:backgroundTint="@color/barcolor"
-           android:layout_below="@id/rec_bottom_sheet_question"
+           android:layout_below="@id/main_bottom_sheet_rec_bottom_sheet_question"
            android:textColor="@color/black"></TextView>
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Submit"
-           android:textSize="16sp"
-           android:id="@+id/tv_submit"
-           android:layout_toRightOf="@id/tv_quit"
-           android:layout_centerInParent="true"
-           android:layout_centerVertical="true"
-           android:layout_centerHorizontal="true"
-           android:paddingHorizontal="42dp"
-           android:gravity="center"
-           android:layout_marginTop="18dp"
-           android:layout_below="@id/rec_bottom_sheet_question"
-           android:textColor="@color/black"></TextView>
+     
 
    </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

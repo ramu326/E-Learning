@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ededed"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools">
 
@@ -11,7 +12,8 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     android:layout_marginHorizontal="12dp"
-    android:layout_marginVertical="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="20dp"
     android:id="@+id/relative_question"
     app:layout_constraintLeft_toLeftOf="parent"
     android:layout_height="wrap_content">
@@ -26,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_toRightOf="@id/iv_pause"
         android:id="@+id/rec_all_ques"
-        android:layout_toLeftOf="@id/iv_notes"
+        android:layout_toLeftOf="@id/iv_attempted_question"
         android:layout_marginLeft="12dp"
         android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 
@@ -37,7 +39,7 @@
         android:padding="16dp"
         android:layout_alignParentRight="true"
         android:layout_marginRight="12dp"
-        android:id="@+id/iv_notes"
+        android:id="@+id/iv_attempted_question"
         android:background="@drawable/ic_notes"
         android:backgroundTint="@color/black"
 ></ImageView>
@@ -50,15 +52,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:orientation="vertical"
             >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="20dp">
 
             <TextView
                 android:id="@+id/tv_qt_serial_number"
@@ -106,12 +109,12 @@
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="20dp"
+                android:id="@+id/card_view_option_one"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/card_back"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:outlineAmbientShadowColor="@color/black"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="10dp"
                 card_view:cardUseCompatPadding="true">
 
                 <RelativeLayout
@@ -169,7 +172,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:outlineAmbientShadowColor="@color/black"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="10dp"
+
                 card_view:cardUseCompatPadding="true">
 
                 <RelativeLayout
@@ -228,7 +231,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:outlineAmbientShadowColor="@color/black"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="10dp"
+
                 card_view:cardUseCompatPadding="true">
 
                 <RelativeLayout
@@ -287,7 +290,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:outlineAmbientShadowColor="@color/black"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="10dp"
+
                 card_view:cardUseCompatPadding="true">
 
                 <RelativeLayout
@@ -335,10 +338,19 @@
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/ll_explanation_with_percent"
+                android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:id="@+id/relative_percent_answer"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp">
 
@@ -412,7 +424,6 @@
                 android:textAlignment="textStart"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="16sp"
-
                 card_view:ignore="RtlCompat"></TextView>
 
             <TextView
@@ -427,7 +438,6 @@
                 android:textAlignment="textStart"
                 android:textColor="@android:color/black"
                 android:textSize="14sp"
-
                 card_view:ignore="RtlCompat"></TextView>
 
             <LinearLayout
@@ -468,6 +478,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
                     android:fontFamily="@font/roboto_regular"
                     android:src="@drawable/ic_arrow_back"
                     android:text="Candidates:"
@@ -476,16 +489,18 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="4dp"
+                    android:paddingHorizontal="36dp"
+                    android:paddingVertical="12dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:background="@drawable/edit_bg"
                     android:drawableRight="@drawable/ic_forward"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="center"
-                    android:text="Next"
-                    android:id="@+id/tv_next"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Next "
+                    android:id="@+id/topic_tv_next"
                     android:layout_centerInParent="true"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -493,6 +508,7 @@
                     android:textSize="16sp"></TextView>
 
             </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

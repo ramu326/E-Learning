@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ededed"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:background="@color/barcolor"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Grand Test"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_height="wrap_content"></TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+      
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Rank:"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="4567"
+            android:textColor="@color/barcolor"
+            android:textSize="16sp"
+            android:layout_marginLeft="3dp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_height="wrap_content"></TextView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="12dp"
+        android:gravity="start|center"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Accuracy:"
+            android:layout_alignParentLeft="true"
+
+            android:id="@+id/test_discussion_accuracy"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="40%"
+            android:layout_toRightOf="@id/test_discussion_accuracy"
+            android:textAllCaps="true"
+            android:id="@+id/test_discussion_acc_per"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/barcolor"
+            android:textSize="16sp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Avg.Time:"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/test_discussion_acc_per"
+            android:textAllCaps="false"
+            android:id="@+id/test_discussion_avg_time"
+            android:textColor="@color/black"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="50s/Q"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/test_discussion_avg_time"
+            android:textAllCaps="false"
+            android:id="@+id/test_discussion_avg_time_sec"
+            android:textColor="@color/barcolor"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Strength:"
+            android:layout_toRightOf="@id/test_discussion_avg_time_sec"
+            android:textAllCaps="false"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/test_discussion_strnght"
+            android:textColor="@color/black"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Weak"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/test_discussion_strnght"
+            android:id="@+id/tv_rlr_strenth"
+            android:textAllCaps="false"
+            android:textColor="@color/red"
+            android:textSize="16sp"></TextView>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="start|center"
+        android:gravity="start|center"
+        android:id="@+id/ll_rlr_marks_layout"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_bold">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_regular">
+
+            </TextView>
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@color/lightblack"></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/green"
+                android:fontFamily="@font/roboto_regular">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_regular">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/red"
+                android:fontFamily="@font/roboto_regular">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="InCorrect"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_regular">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/orange"
+                android:fontFamily="@font/roboto_regular">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skipped"
+                android:textColor="@color/orange"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_regular">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/lightblack"
+                android:fontFamily="@font/roboto_regular">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Viewed"
+                android:textColor="@color/lightblack"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_regular">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_marginTop="24dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/test_discussion_rec_subjects"></androidx.recyclerview.widget.RecyclerView>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:tabIndicatorColor="@color/barcolor"
+        app:tabSelectedTextColor="@color/barcolor"
+        app:tabMode="auto"
+        app:tabTextColor="@color/black"
+        android:id="@+id/test_discussion_tablayout"></com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:id="@+id/test_discussion_viewpager"
+        android:layout_height="wrap_content"></androidx.viewpager2.widget.ViewPager2>
+
+
+
+</LinearLayout>

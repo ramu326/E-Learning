@@ -40,8 +40,8 @@ private TextView next;
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.subject_with_topic_name_questions_layout, container, false);
        recyclerView=view.findViewById(R.id.rec_all_ques);
-       ivMenu=view.findViewById(R.id.iv_notes);
-       next=view.findViewById(R.id.tv_next);
+       ivMenu=view.findViewById(R.id.iv_attempted_question);
+       next=view.findViewById(R.id.topic_tv_next);
 
         ((MainActivity)getActivity()).bottomNavigationView.setVisibility(View.GONE);
 

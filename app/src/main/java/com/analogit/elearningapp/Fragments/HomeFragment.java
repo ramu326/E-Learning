@@ -57,7 +57,7 @@ public class HomeFragment extends Fragment {
     private CarouselView carouselView;
     private  ImageView iv_Recall,viewAppwall,liveViewall;
     private CardView daily_challenge;
-    private  ImageView icards;
+    private  ImageView ivwallposter;
     CardView cardView,imageBankCard;
     private TextView seeExplanation,schedule;
 
@@ -88,6 +88,16 @@ public class HomeFragment extends Fragment {
      seeExplanation=v.findViewById(R.id.tv_see_explanation);
 
         schedule=v.findViewById(R.id.tv_fh_live_all);
+        ivwallposter=v.findViewById(R.id.wallposter_image);
+        ivwallposter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
+                fr.replace(R.id.content,new WallPosterZoomFragment());
+                fr.addToBackStack(null);
+                fr.commit();
+            }
+        });
 
         imageBankCard=v.findViewById(R.id.image_bank_card_view);
       cardView=v.findViewById(R.id.card_fh);

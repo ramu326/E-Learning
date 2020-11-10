@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#fceff3"
+    android:background="#ededed"
     xmlns:card_view="http://schemas.android.com/tools"
     android:orientation="vertical">
     <LinearLayout
@@ -34,11 +34,9 @@
             android:layout_width="wrap_content"
             android:id="@+id/tv_dcal_dc"
             android:text="Daily \n BoostUP Quiz"
-            android:layout_toRightOf="@id/iv_dcal_bulb"
-            android:textColor="@color/blue"
+            android:textColor="@color/black"
             android:gravity="center"
             android:textSize="24sp"
-            android:layout_marginLeft="24dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_height="wrap_content"></TextView>
@@ -66,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="16dp"
+            android:backgroundTint="@color/white"
             android:background="@drawable/view_sol_bg_bt"
             android:orientation="horizontal">
             <TextView
@@ -100,6 +99,7 @@
             android:textAllCaps="false"
             android:paddingHorizontal="12dp"
             android:background="@drawable/reset_bg_bt"
+            android:backgroundTint="@color/white"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_marginLeft="12dp"
@@ -108,12 +108,7 @@
             android:fontFamily="@font/roboto_regular"
             android:layout_alignParentRight="true"
             android:id="@+id/tv_dcal_leader_board"></TextView>
-<!--        <ImageView-->
-<!--            android:layout_width="30dp"-->
-<!--            android:background="@drawable/ic_bookmark"-->
-<!--            android:backgroundTint="@color/black"-->
-<!--            android:layout_alignParentRight="true"-->
-<!--            android:layout_height="32dp"></ImageView>-->
+
 
     </RelativeLayout>
         <RelativeLayout

@@ -3,42 +3,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#ededed"
     tools:context=".Fragments.ImagesBankFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="image bank"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_medium"
+            android:fitsSystemWindows="true"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingVertical="12dp"></TextView>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bookmark"></ImageView>
+    </RelativeLayout>
+
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_marginTop="12dp"
     android:layout_height="wrap_content"
     android:id="@+id/imagebank_sub_rec"></androidx.recyclerview.widget.RecyclerView>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_height="wrap_content">
-        <TextView
+
+
+    <androidx.appcompat.widget.SwitchCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingVertical="8dp"
-            android:paddingHorizontal="12dp"
-            android:text="Bookmark "
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textSize="14sp"
-            android:drawableLeft="@drawable/ic_bookmark"
-            android:textColor="@color/barcolor"
-            android:background="@drawable/book_mark"
-            android:layout_alignParentLeft="true"></TextView>
-        <ImageView
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:adjustViewBounds="true"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="4dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/gridview"></ImageView>
-    </RelativeLayout>
+            android:id="@+id/switch_compact_gried"
+            android:layout_gravity="right"
+            android:textOff="OFF"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="6dp"
+            android:textOn="..."
+            app:showText="true"
+            android:layout_alignParentRight="true"></androidx.appcompat.widget.SwitchCompat>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/image_bank_rec_gried_view"></androidx.recyclerview.widget.RecyclerView>
+
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

@@ -27,7 +27,7 @@ public class QBankFragment extends Fragment {
     RecyclerView rView;
     RecyclerSubjectsAdapter recyclerSubjectsAdapter;
     View v;
-    TextView CosModule;
+    TextView qLab,customModule;
 
     public QBankFragment() {
         // Required empty public constructor
@@ -50,27 +50,37 @@ public class QBankFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        Log.d("qbankkkkkk","jel2jelwqkdfwqefcelw");
+
        v=inflater.inflate(R.layout.question_with_all_modules_layout, container, false);
         rView=v.findViewById(R.id.qwam_layout_rec);
-      //  CosModule=v.findViewById(R.id.tv_qw_all_custom_module);
+       qLab=v.findViewById(R.id.tv_qbank_qlab);
+       customModule=v.findViewById(R.id.tv_qbank_custom_module);
          recyclerSubjectsAdapter=new RecyclerSubjectsAdapter(this);
          rView.setAdapter(recyclerSubjectsAdapter);
          rView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
 
-       // ((MainActivity)(getActivity())).bottomNavigationView.setVisibility(View.GONE);
+
         ((MainActivity)getActivity()).bottomNavigationView.setVisibility(View.VISIBLE);
 
-//        CosModule.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
-//                fr.replace(R.id.content,new CustomModuleFragment());
-//                fr.addToBackStack(null);
-//                fr.commit();
-//            }
-//        });
+        qLab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
+                fr.replace(R.id.content,new QbankQlabFragment());
+                fr.addToBackStack(null);
+                fr.commit();
+            }
+        });
 
+        customModule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
+                fr.replace(R.id.content,new CustomModuleFragment());
+                fr.addToBackStack(null);
+                fr.commit();
+            }
+        });
         return v;
     }
 }

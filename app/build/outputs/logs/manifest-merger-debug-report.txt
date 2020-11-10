@@ -7,6 +7,7 @@ INJECTED from C:\Users\Aneel\AndroidStudioProjects\ELearningApp\app\src\main\And
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\86e1e5d883ec66c1063a0d9a82a27792\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.material:material:1.2.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\d776e52f087aabc381b0b4907fc988e8\material-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.synnapps:carouselview:0.1.4] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\4dc564e0081b90e01d426215ab3f86db\jetified-carouselview-0.1.4\AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.chrisbanes:PhotoView:2.3.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\8df55a6785da9be5dfdb19df74337a47\jetified-PhotoView-2.3.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\bf96d2b5a86ecd602a621e7e96856420\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\be0f08ddbc7b2ceb9beb29e6b731c207\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:3.0.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\29f9dd559fc99613d355b166e0be69dd\jetified-circleimageview-3.0.0\AndroidManifest.xml:2:1-11:12
@@ -154,6 +155,8 @@ MERGED from [com.google.android.material:material:1.2.0] C:\Users\Aneel\.gradle\
 MERGED from [com.google.android.material:material:1.2.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\d776e52f087aabc381b0b4907fc988e8\material-1.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.synnapps:carouselview:0.1.4] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\4dc564e0081b90e01d426215ab3f86db\jetified-carouselview-0.1.4\AndroidManifest.xml:7:5-9:41
 MERGED from [com.synnapps:carouselview:0.1.4] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\4dc564e0081b90e01d426215ab3f86db\jetified-carouselview-0.1.4\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.chrisbanes:PhotoView:2.3.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\8df55a6785da9be5dfdb19df74337a47\jetified-PhotoView-2.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.chrisbanes:PhotoView:2.3.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\8df55a6785da9be5dfdb19df74337a47\jetified-PhotoView-2.3.0\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\bf96d2b5a86ecd602a621e7e96856420\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\bf96d2b5a86ecd602a621e7e96856420\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Aneel\.gradle\caches\transforms-2\files-2.1\be0f08ddbc7b2ceb9beb29e6b731c207\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44

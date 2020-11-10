@@ -9,7 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:paddingVertical="42dp"
-        android:background="@drawable/relative_layout_bg_curve"></RelativeLayout>
+        android:background="@drawable/relative_layout_bg_curve">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:background="@drawable/doc_ime"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"></ImageView>
+    </RelativeLayout>
 <LinearLayout
     android:layout_width="match_parent"
     android:orientation="horizontal"

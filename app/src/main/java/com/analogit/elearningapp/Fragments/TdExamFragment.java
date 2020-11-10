@@ -5,15 +5,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.analogit.elearningapp.R;
 
 public class TdExamFragment  extends Fragment {
     private ImageView ansSheet;
+    TextView tvMark;
 
     public TdExamFragment() {
         // Required empty public constructor
@@ -23,6 +26,17 @@ public class TdExamFragment  extends Fragment {
                               Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_td_start_question, container, false);
         ansSheet=v.findViewById(R.id.fr_sq_ans_sheet);
+        tvMark=v.findViewById(R.id.test_discussion_tv_mark);
+     tvMark.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+             FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
+             fr.replace(R.id.content,new TestDiscussionFinalreportFragment());
+             fr.addToBackStack(null);
+             fr.commit();
+         }
+     });
+
         ansSheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

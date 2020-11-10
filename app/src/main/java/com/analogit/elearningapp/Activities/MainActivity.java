@@ -85,15 +85,13 @@ public class MainActivity extends AppCompatActivity {
                         transaction2.commit();
                         break;
                     case R.id.bottom_td:
-                       // AllTandDFragment allTandDFragment=new AllTandDFragment();
                         BothTestNDiscussionFragment bothTestNDiscussionFragment=new BothTestNDiscussionFragment();
                         FragmentTransaction transaction3=getSupportFragmentManager().beginTransaction();
                         transaction3.replace(R.id.content,bothTestNDiscussionFragment);
                         transaction3.commit();
                         break;
                     case R.id.bottom_stock:
-                       GraphFragment graphFragment=new GraphFragment();
-
+                        GraphFragment graphFragment=new GraphFragment();
                         FragmentTransaction transaction4=getSupportFragmentManager().beginTransaction();
                         transaction4.replace(R.id.content,graphFragment);
 

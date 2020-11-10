@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv_mrl_image"
+                android:layout_marginVertical="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/home_image"></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/iv_mrl_image"
+                android:fontFamily="@font/roboto_medium"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                android:lineHeight="24dp"
+                android:id="@+id/tv_mrl_title"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="8dp"
+                android:text="This guide to the letters that come after a doctor's title will help you determine"
+                android:layout_height="wrap_content"></TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/tv_mrl_title"
+                android:fontFamily="@font/roboto_regular"
+                android:textAlignment="textStart"
+                android:layout_alignParentRight="true"
+                android:gravity="start"
+                android:id="@+id/tv_mrl_sub_name"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:text="@string/obstetrics_gynaecology"
+                android:textColor="@color/barcolor"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content"></TextView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="24dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="12dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_fav"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#737373"
+                android:background="@drawable/ic_favrite"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_below="@id/iv_fav"
+                android:textColor="#808080"
+                android:textSize="14dp"
+                android:id="@+id/tv_likes"
+                android:text="999 likes"></TextView>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="12dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_sheet"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#737373"
+                android:background="@drawable/ic_sheet"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="84dp"
+                android:layout_toRightOf="@id/tv_likes"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_sheet"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#808080"
+                android:textSize="14dp"
+                android:id="@+id/tv_case_sheet"
+                android:text="Case Sheet"></TextView>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="12dp"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_share_mr"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="#737373"
+                android:background="@drawable/ic_share"
+                ></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_below="@id/iv_share_mr"
+                android:textColor="#808080"
+                android:layout_alignParentRight="true"
+                android:textSize="14dp"
+                android:id="@+id/tv_share"
+                android:text="Share"></TextView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="#4d4d4d"
+                android:text="Similar Morning Rounds"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textAllCaps="false"
+                android:textSize="14sp"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textAlignment="center"
+                android:drawableRight="@drawable/ic_sub_menu"
+                android:drawableTint="@color/orange"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/orange"
+                android:text="All Subjects "></TextView>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/qbank_qlab_rec"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

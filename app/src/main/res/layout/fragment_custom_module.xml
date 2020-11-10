@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back"
-            android:id="@+id/iv_cm_back"
+            android:id="@+id/iv_custom_module_back"
             android:layout_marginLeft="10dp"
             android:layout_alignParentLeft="true"></ImageView>
         <TextView
@@ -25,16 +25,16 @@
             android:fontFamily="@font/roboto_regular"
             android:textSize="18sp"
             android:textAllCaps="true"
-            android:id="@+id/tv_cm_title"
-            android:layout_toLeftOf="@id/iv_cm_cal"
-            android:layout_toRightOf="@id/iv_cm_back"
+            android:id="@+id/tv_custom_module_title"
+            android:layout_toLeftOf="@id/iv_custom_module_cal"
+            android:layout_toRightOf="@id/iv_custom_module_back"
             android:layout_marginLeft="70dp"
             android:text="custom module"></TextView>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_calendar"
-            android:id="@+id/iv_cm_cal"
+            android:id="@+id/iv_custom_module_cal"
             android:layout_marginRight="15dp"
             android:layout_alignParentRight="true"></ImageView>
     </RelativeLayout>
@@ -159,7 +159,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="20dp"
         android:orientation="vertical">
         <TextView
@@ -169,17 +169,20 @@
             android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:textSize="16sp"></TextView>
-        <GridLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:rowCount="2"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:columnCount="3">
+
+            >
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Neet pg"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:layout_gravity="center"
@@ -190,51 +193,13 @@
                 android:gravity="center"></TextView>
 
             <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="aiims"
-                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inicet"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
                 android:textAlignment="center"
-                android:textAllCaps="true"
-                android:layout_gravity="center"
-                android:background="@drawable/tab_unselect_bg"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="16sp"
-                android:gravity="center"></TextView>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="pgi"
-                android:layout_marginLeft="20dp"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:layout_gravity="center"
-                android:background="@drawable/tab_unselect_bg"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="16sp"
-                android:gravity="center"></TextView>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="jipmer"
-                android:layout_marginTop="20dp"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:layout_gravity="center"
-                android:background="@drawable/tab_unselect_bg"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_regular"
-                android:textSize="16sp"
-                android:gravity="center"></TextView>
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:text="upsc"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:textAlignment="center"
+                android:layout_marginLeft="12dp"
                 android:textAllCaps="true"
                 android:layout_gravity="center"
                 android:background="@drawable/tab_unselect_bg"
@@ -243,7 +208,8 @@
                 android:textSize="16sp"
                 android:gravity="center"></TextView>
 
-        </GridLayout>
+
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -268,7 +234,7 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radio_cm"
+                    android:id="@+id/radio_custom_module"
                     android:gravity="center"
                     android:layout_marginTop="8dp"
                     android:layout_marginLeft="6dp"
@@ -283,9 +249,9 @@
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="16sp"
-                    android:id="@+id/tv_cm_qbank"
+                    android:id="@+id/tv_custom_module_qbank"
                     android:layout_marginLeft="12dp"
-                    android:layout_toRightOf="@id/radio_cm"
+                    android:layout_toRightOf="@id/radio_custom_module"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="center"></TextView>
                 <TextView
@@ -297,9 +263,9 @@
                     android:textSize="10sp"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="16dp"
-                    android:id="@+id/tv_cm_sub_title"
-                    android:layout_toRightOf="@id/radio_cm"
-                    android:layout_below="@id/tv_cm_qbank"
+                    android:id="@+id/tv_custom_module_sub_title"
+                    android:layout_toRightOf="@id/radio_custom_module"
+                    android:layout_below="@id/tv_custom_module_qbank"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="start"
                     tools:ignore="RtlCompat"></TextView>
@@ -316,7 +282,7 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/radio_cm_two"
+                    android:id="@+id/radio_custom_module_two"
                     android:gravity="center"
                     android:layout_marginTop="8dp"
                     android:layout_marginLeft="6dp"
@@ -330,9 +296,9 @@
                     android:textColor="@color/black"
                     android:textAlignment="center"
                     android:textSize="16sp"
-                    android:id="@+id/tv_cm_test_mode"
+                    android:id="@+id/tv_custom_module_test_mode"
                     android:layout_marginLeft="12dp"
-                    android:layout_toRightOf="@id/radio_cm_two"
+                    android:layout_toRightOf="@id/radio_custom_module_two"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="center"></TextView>
                 <TextView
@@ -344,9 +310,9 @@
                     android:textSize="10sp"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="16dp"
-                    android:id="@+id/tv_cm_sub_title_test"
-                    android:layout_toRightOf="@id/radio_cm_two"
-                    android:layout_below="@id/tv_cm_test_mode"
+                    android:id="@+id/tv_custom_module_sub_title_test"
+                    android:layout_toRightOf="@id/radio_custom_module_two"
+                    android:layout_below="@id/tv_custom_module_test_mode"
                     android:fontFamily="@font/roboto_regular"
                     android:gravity="start"
                     tools:ignore="RtlCompat"></TextView>

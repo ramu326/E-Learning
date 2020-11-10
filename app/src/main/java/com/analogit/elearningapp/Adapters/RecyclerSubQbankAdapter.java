@@ -25,7 +25,7 @@ public class RecyclerSubQbankAdapter extends ListAdapter<SubQbankModel,RecyclerS
     @NonNull
     @Override
     public MyViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.new_sub_topics_quest_row,parent,false));
+        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.new_sub_topics_quest_child_row,parent,false));
     }
 
     @Override

@@ -36,6 +36,7 @@ public class DiffTestTypesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         v= inflater.inflate(R.layout.fragment_diff_test_types, container, false);
          rView_one=v.findViewById(R.id.diff_test_rec);
         rView_three=v.findViewById(R.id.diff_test_type_rec);
