@@ -34,47 +34,49 @@ public class RecyclerAllSubjectsAdapter  extends ListAdapter<AllSubjectsModel,Re
     @Override
     public void onBindViewHolder(@NonNull MyViewholder holder, int position) {
         switch (position){
-            case 0:holder.SubName.setText("Anatomy");
+            case 0:holder.SubName.setText("All");
+                break;
+            case 1:holder.SubName.setText("Anatomy");
             break;
-            case 1:holder.SubName.setText("Physiology");
+            case 2:holder.SubName.setText("Physiology");
                 break;
-            case 2:holder.SubName.setText("Biochemistry");
+            case 3:holder.SubName.setText("Biochemistry");
                 break;
-            case 3:holder.SubName.setText("Pathology");
+            case 4:holder.SubName.setText("Pathology");
                 break;
-            case 4:holder.SubName.setText("Pharmacology");
+            case 5:holder.SubName.setText("Pharmacology");
                 break;
-            case 5:holder.SubName.setText("Microbiology");
+            case 6:holder.SubName.setText("Microbiology");
                 break;
-            case 6:holder.SubName.setText("Forensic Medicine");
+            case 7:holder.SubName.setText("Forensic Medicine");
                 break;
-            case 7:holder.SubName.setText("Community Medicine");
+            case 8:holder.SubName.setText("Community Medicine");
                 break;
-            case 8:holder.SubName.setText("ENT");
+            case 9:holder.SubName.setText("ENT");
                 break;
-            case 9:holder.SubName.setText("Opthalmology");
+            case 10:holder.SubName.setText("Opthalmology");
                 break;
-            case 10:holder.SubName.setText("Gynaecology & obstetrics");
+            case 11:holder.SubName.setText("Gynaecology & obstetrics");
                 break;
-            case 11:holder.SubName.setText("Paediatrics");
+            case 12:holder.SubName.setText("Paediatrics");
                 break;
-            case 12:holder.SubName.setText("Surgery");
+            case 13:holder.SubName.setText("Surgery");
                 break;
-            case 13:holder.SubName.setText("Medicine");
+            case 14:holder.SubName.setText("Medicine");
                 break;
-            case 14:holder.SubName.setText("Radiology");
+            case 15:holder.SubName.setText("Radiology");
                 break;
-            case 15:holder.SubName.setText("Anaesthesia");
+            case 16:holder.SubName.setText("Anaesthesia");
                 break;
-            case 16:holder.SubName.setText("Orthopaedics");
+            case 17:holder.SubName.setText("Orthopaedics");
                 break;
-            case 17:holder.SubName.setText("Psychiatry");
+            case 18:holder.SubName.setText("Psychiatry");
                 break;
-            case 18:holder.SubName.setText("Dermatology");
+            case 19:holder.SubName.setText("Dermatology");
                 break;
-            case 19:holder.SubName.setText("Emergency Medicine");
+            case 20:holder.SubName.setText("Emergency Medicine");
                 break;
-            case 20:holder.SubName.setText("Integrated lectures");
+            case 21:holder.SubName.setText("Integrated lectures");
                 break;
             default:
                 break;
@@ -94,13 +96,13 @@ public class RecyclerAllSubjectsAdapter  extends ListAdapter<AllSubjectsModel,Re
         TextView SubName;
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
-            linearLayout=itemView.findViewById(R.id.asr_ll_one);
+          //  linearLayout=itemView.findViewById(R.id.asr_ll_one);
             SubName=itemView.findViewById(R.id.tv_asr_subjects);
         }
     }
 
     @Override
     public int getItemCount() {
-        return 21;
+        return 22;
     }
 }

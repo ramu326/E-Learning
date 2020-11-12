@@ -26,12 +26,12 @@ public class TdExamFragment  extends Fragment {
                               Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.fragment_td_start_question, container, false);
         ansSheet=v.findViewById(R.id.fr_sq_ans_sheet);
-        tvMark=v.findViewById(R.id.test_discussion_tv_mark);
+        tvMark=v.findViewById(R.id.tv_mark_fr_td_start_mark);
      tvMark.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
              FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
-             fr.replace(R.id.content,new TestDiscussionFinalreportFragment());
+             fr.replace(R.id.content,new TestDiscussionFinalreportAllTabsFragment());
              fr.addToBackStack(null);
              fr.commit();
          }
@@ -40,8 +40,11 @@ public class TdExamFragment  extends Fragment {
         ansSheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BottomSheetFragment bottomSheetFragment=new BottomSheetFragment();
-                bottomSheetFragment.show(getActivity().getSupportFragmentManager(),"bottomsheet");
+
+               TestDiscussionBottomSheetFragment testDiscussionBottomSheetFragment=new TestDiscussionBottomSheetFragment();
+               testDiscussionBottomSheetFragment.show(getActivity().getSupportFragmentManager(),"hello");
+
+
             }
         });
         return v;

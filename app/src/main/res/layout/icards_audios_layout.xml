@@ -16,6 +16,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/ial_rec"
+            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 
@@ -26,9 +27,11 @@
             android:layout_marginTop="16dp">
 
             <TextView
-                android:layout_width="150dp"
-                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp"
                 android:background="@drawable/btn_bg"
                 android:backgroundTint="@color/barcolor"
                 android:gravity="center"
@@ -37,16 +40,16 @@
                 android:textColor="@color/white"
                 android:textSize="14sp"></TextView>
 
-            <Switch
+            <androidx.appcompat.widget.SwitchCompat
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:checked="true"
                 android:textColor="@color/barcolor"
                 android:textOff="Off"
-                android:textOn="Autoplay"
+                android:textOn="on"
                 android:thumbTint="@color/barcolor"
-                android:trackTint="@color/barcolor"></Switch>
+                android:trackTint="@color/barcolor"></androidx.appcompat.widget.SwitchCompat>
 
         </RelativeLayout>
 
@@ -54,7 +57,7 @@
             android:id="@+id/ial_audios"
             android:layout_marginTop="12dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
     <LinearLayout
@@ -62,7 +65,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:layout_marginBottom="16dp"
         android:paddingVertical="24dp"
         android:background="#f1efef"
         android:orientation="vertical"

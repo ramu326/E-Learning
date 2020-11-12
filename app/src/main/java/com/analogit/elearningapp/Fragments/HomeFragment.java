@@ -93,7 +93,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
-                fr.replace(R.id.content,new WallPosterZoomFragment());
+                fr.replace(R.id.content,new WallPosterGridfFragment());
                 fr.addToBackStack(null);
                 fr.commit();
             }

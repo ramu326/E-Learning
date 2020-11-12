@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.analogit.elearningapp.Fragments.GeneralIndructionFragmment;
 import com.analogit.elearningapp.Fragments.TdStartFragment;
 import com.analogit.elearningapp.Model.SubjectsModel;
 import com.analogit.elearningapp.Model.TnDOneModel;
@@ -56,7 +57,7 @@ public class RecyclerTnDOneAdapter extends ListAdapter<TnDOneModel,RecyclerTnDOn
                 @Override
                 public void onClick(View view) {
                     AppCompatActivity appCompatActivity=(AppCompatActivity) view.getContext();
-                    Fragment fragment=new TdStartFragment();
+                    Fragment fragment=new GeneralIndructionFragmment();
 
                     appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content,fragment).addToBackStack(null).commit();
                 }

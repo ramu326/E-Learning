@@ -33,16 +33,7 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
       recyclerView.setLayoutManager(new GridLayoutManager(getContext(),6,RecyclerView.VERTICAL,false));
       recyclerBottomSheetAdapter=new RecyclerBottomSheetAdapter(this);
       recyclerView.setAdapter(recyclerBottomSheetAdapter);
-//      submit.setOnClickListener(new View.OnClickListener() {
-//          @Override
-//          public void onClick(View view) {
-//              BottomSheetFragment.this.dismiss();
-//              FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
-//              fr.replace(R.id.content,new QnAFragment());
-//              fr.addToBackStack(null);
-//              fr.commit();
-//          }
-//      });
+
     return v;
     }
 }

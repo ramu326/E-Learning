@@ -6,11 +6,14 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.analogit.elearningapp.Fragments.DiscussionVideoExplantaionFragment;
 import com.analogit.elearningapp.Model.DiscussionModel;
 import com.analogit.elearningapp.R;
 
@@ -44,8 +47,18 @@ public class RecyclerDiscussionAdapter extends ListAdapter<DiscussionModel,Recyc
 
     class MyViewholder extends RecyclerView.ViewHolder{
 
+       CardView cardView;
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
+            cardView =itemView.findViewById(R.id.new_discussion_video_card_view);
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AppCompatActivity appCompatActivity=(AppCompatActivity)view.getContext();
+                    DiscussionVideoExplantaionFragment discussionVideoExplantaionFragment=new DiscussionVideoExplantaionFragment();
+                    appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content, discussionVideoExplantaionFragment).addToBackStack(null).commit();
+                }
+            });
         }
     }
 

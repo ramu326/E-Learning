@@ -135,6 +135,7 @@
         android:layout_width="match_parent"
         android:layout_gravity="start|center"
         android:gravity="start|center"
+        android:visibility="gone"
         android:id="@+id/ll_rlr_marks_layout"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"

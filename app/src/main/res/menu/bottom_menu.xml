@@ -28,7 +28,7 @@
     <item
         android:id="@+id/bottom_stock"
         android:enabled="true"
-        android:icon="@drawable/doc_ime"
+        android:icon="@drawable/docime"
         android:title=""
         app:showAsAction="ifRoom" />
 </menu>

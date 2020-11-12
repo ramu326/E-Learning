@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +35,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewholder
     public void onBindViewHolder(@NonNull MyViewholder holder, int position) {
         holder.image.setImageDrawable(imageModel.get(position).imageView);
 
+
     }
 
     @Override
@@ -44,9 +46,24 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.MyViewholder
     class MyViewholder extends RecyclerView.ViewHolder{
 
         ImageView image;
+        LinearLayout linearLayout;
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
             image=itemView.findViewById(R.id.image_zoom_view);
+            linearLayout=itemView.findViewById(R.id.ll_icards_image_row);
+            linearLayout.setVisibility(View.GONE);
+            image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    if(linearLayout.getVisibility()==View.GONE){
+                        linearLayout.setVisibility(View.VISIBLE);
+                    }
+                    else {
+                        linearLayout.setVisibility(View.GONE);
+                    }
+                }
+            });
         }
 
     }

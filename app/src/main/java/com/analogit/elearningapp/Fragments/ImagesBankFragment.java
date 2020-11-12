@@ -44,15 +44,26 @@ private RecyclerView recyclerViewImage,recyclerViewSubject,recyclerViewGried;
         recyclerViewSubject=view.findViewById(R.id.imagebank_sub_rec);
         aSwitch=view.findViewById(R.id.switch_compact_gried);
         recyclerViewGried=view.findViewById(R.id.image_bank_rec_gried_view);
+        recyclerViewGried.setVisibility(View.GONE);
 
         aSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                recyclerViewGried.setVisibility(View.VISIBLE);
-                recyclerViewGried.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
-                recyclerImageGridViewAdapter=new RecyclerImageGridViewAdapter(ImagesBankFragment.this);
-                recyclerViewGried.setAdapter(recyclerImageGridViewAdapter);
-                recyclerViewImage.setVisibility(View.GONE);
+                if(recyclerViewGried.getVisibility()==View.GONE){
+                    recyclerViewGried.setVisibility(View.VISIBLE);
+                    recyclerViewGried.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
+                    recyclerImageGridViewAdapter=new RecyclerImageGridViewAdapter(ImagesBankFragment.this);
+                    recyclerViewGried.setAdapter(recyclerImageGridViewAdapter);
+                    recyclerViewImage.setVisibility(View.GONE);
+                }
+                else{
+                    recyclerViewGried.setVisibility(View.GONE);
+                    recyclerViewGried.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
+                    recyclerImageGridViewAdapter=new RecyclerImageGridViewAdapter(ImagesBankFragment.this);
+                    recyclerViewGried.setAdapter(recyclerImageGridViewAdapter);
+                    recyclerViewImage.setVisibility(View.VISIBLE);
+                }
+
             }
         });
 

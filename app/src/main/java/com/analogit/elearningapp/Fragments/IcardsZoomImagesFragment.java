@@ -9,6 +9,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.analogit.elearningapp.Adapters.ImageAdapter;
 import com.analogit.elearningapp.Adapters.VideosAdapter;
@@ -25,6 +26,7 @@ public class IcardsZoomImagesFragment extends Fragment {
     ViewPager2 viewPager;
     View view;
     public ImageAdapter imageAdapter;
+  //  LinearLayout linearLayout;
     List<ImageModel> imageModels = new ArrayList<>();
 
     public IcardsZoomImagesFragment() {
@@ -38,6 +40,8 @@ public class IcardsZoomImagesFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_icards_zoom_images, container, false);
         viewPager = view.findViewById(R.id.image_slider_viewpager);
+    //    linearLayout=view.findViewById(R.id.ll_icards_image_zoom);
+       // linearLayout.setVisibility(View.GONE);
 
 
         ImageModel first = new ImageModel();

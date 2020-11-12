@@ -6,11 +6,15 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.analogit.elearningapp.Fragments.GeneralIndructionFragmment;
+import com.analogit.elearningapp.Fragments.TdStartFragment;
 import com.analogit.elearningapp.Model.TnDOneModel;
 import com.analogit.elearningapp.Model.TndThreeModel;
 import com.analogit.elearningapp.R;
@@ -42,8 +46,18 @@ public class RecyclerTnDThreeAdapter extends ListAdapter<TndThreeModel,RecyclerT
 
     class  MyViewholder extends RecyclerView.ViewHolder{
 
+        CardView cardView;
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
+            cardView=itemView.findViewById(R.id.test_discussion_second_row_card_view);
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    AppCompatActivity appCompatActivity=(AppCompatActivity)view.getContext();
+                    Fragment fragment=new GeneralIndructionFragmment();
+                    appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content,fragment).addToBackStack(null).commit();
+                }
+            });
         }
     }
 

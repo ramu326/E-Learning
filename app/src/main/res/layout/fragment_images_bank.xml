@@ -12,44 +12,81 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="image bank"
             android:textAllCaps="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:fontFamily="@font/roboto_medium"
             android:fitsSystemWindows="true"
             android:textSize="20dp"
+            android:id="@+id/tv_fr_image_bank"
             android:textAlignment="center"
             android:gravity="center"
             android:textColor="@color/black"
             android:paddingVertical="12dp"></TextView>
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch_compact_gried"
+            android:textOff="OFF"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="12dp"
+            android:textOn="On"
+            android:layout_toLeftOf="@id/tv_fr_image_bank_book_mark"
+            android:layout_toRightOf="@id/tv_fr_image_bank"
+            app:showText="true"
+           ></androidx.appcompat.widget.SwitchCompat>
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_marginRight="16dp"
+            android:id="@+id/tv_fr_image_bank_book_mark"
             android:layout_centerInParent="true"
             android:src="@drawable/bookmark"></ImageView>
     </RelativeLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="@color/lightblack"></View>
 
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_marginTop="12dp"
     android:layout_height="wrap_content"
     android:id="@+id/imagebank_sub_rec"></androidx.recyclerview.widget.RecyclerView>
-
-
-    <androidx.appcompat.widget.SwitchCompat
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ll_back_bg"
+        android:backgroundTint="#bfe2e5"
+        android:gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content">
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/switch_compact_gried"
-            android:layout_gravity="right"
-            android:textOff="OFF"
-            android:paddingHorizontal="6dp"
-            android:paddingVertical="6dp"
-            android:textOn="..."
-            app:showText="true"
-            android:layout_alignParentRight="true"></androidx.appcompat.widget.SwitchCompat>
+            android:backgroundTint="#006666"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_baseline_play_arrow"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Image Based Discussion"
+            android:paddingVertical="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor=" #006666"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"></TextView>
+    </LinearLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
