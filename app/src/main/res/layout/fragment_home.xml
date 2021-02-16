@@ -6,56 +6,77 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:scrollbars="vertical"
-    tools:context=".Fragments.HomeFragment"
-    tools:ignore="NamespaceTypo">
+    tools:context=".Fragments.HomeFragment">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:paddingVertical="6dp"
+    android:background="@color/barcolor"
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/iv_fh_menu_style"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_baseline_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"></ImageView>
+
+    <TextView
+        android:id="@+id/tv_the_doctor"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingVertical="12dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:background="@color/barcolor"
-        android:orientation="vertical">
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="The Doctor"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/iv_fh_menu_style"
+        app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"></TextView>
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="10dp"
-            android:background="@color/barcolor"
-            android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/baloo"
+        android:text="Anil Kumar"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fh_menu_style"
+        app:layout_constraintStart_toStartOf="@id/tv_the_doctor"
+        app:layout_constraintTop_toBottomOf="@id/tv_the_doctor"></TextView>
 
-            <ImageView
-                android:id="@+id/iv_fh_menu_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/menu_style"></ImageView>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/search"
+        android:id="@+id/iv_fh_searh"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fh_menu_style"
+        app:layout_constraintEnd_toStartOf="@id/iv_fh_group"
+        app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"
+        app:tint="@color/white"></ImageView>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="fitXY"
+        android:id="@+id/iv_fh_group"
+        android:src="@drawable/group_white"
+        app:layout_constraintBottom_toBottomOf="@id/iv_fh_menu_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"></ImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
-                android:id="@+id/iv_fh_searh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
-                android:layout_toLeftOf="@id/iv_fh_group"
-                android:foregroundGravity="center"
-                android:src="@drawable/search"></ImageView>
-
-            <ImageView
-                android:id="@+id/iv_fh_group"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentRight="true"
-                android:layout_toLeftOf="@id/iv_fh_menu_style"
-                android:src="@drawable/group_white"></ImageView>
-
-
-        </RelativeLayout>
-    </LinearLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -65,30 +86,51 @@
             android:id="@+id/ll_main_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ededed"
+            android:background="@color/white"
             android:orientation="vertical">
 
-<View
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="3dp"
-    android:background="#46b9b9	"></View>
-            <com.synnapps.carouselview.CarouselView
-                android:id="@+id/fh_carousel"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                app:fillColor="@color/white"
-                app:pageColor="@color/lightblack"
-                app:radius="4dp"
-                app:slideInterval="2000"
-                app:snap="true"
-                app:strokeWidth="0.1dp">
-
-            </com.synnapps.carouselview.CarouselView>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="#46b9b9	"></View>
-
+    android:background="@color/barcolor"
+    android:layout_height="230dp">
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/CircularDeterminateProgressBar"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:indeterminate="false"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:progress="40"/>
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+        app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+        app:layout_constraintStart_toStartOf="@+id/progress_bar"
+        app:layout_constraintTop_toTopOf="@+id/progress_bar"
+        android:text="0.48%"
+        android:id="@+id/tv_progress_percent"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Videos"
+        app:layout_constraintTop_toBottomOf="@id/tv_progress_percent"
+        app:layout_constraintStart_toStartOf="@id/tv_progress_percent"
+        app:layout_constraintEnd_toEndOf="@id/tv_progress_percent"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_height="wrap_content"></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -156,67 +198,116 @@
                                     android:fontFamily="@font/roboto_medium"
                                     android:gravity="start"
                                     android:textColor="#4d4d4d"
-                                    android:text="Which of the Following is an A typical Vitamin? artery doppler finding which will most significantly the intra uterine?"
+                                    android:id="@+id/tv_question"
+                                    android:text=""
                                     android:textAlignment="textStart"
                                     android:textSize="16sp">
 
                                 </TextView>
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="left|center"
-                                    android:layout_marginTop="16dp"
-                                    android:paddingVertical="8dp"
-                                    android:layout_marginHorizontal="16dp"
-                                    android:fontFamily="@font/roboto_regular"
-                                    android:background="@drawable/ll_bg_tv_bt"
-                                    android:gravity="left|center"
-                                    android:paddingHorizontal="10dp"
-                                    android:text="A. Enter your option"
-                                    android:textColor="#8c8c8c"
-                                    android:textStyle="bold"></TextView>
-                    <TextView
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left|center"
-                        android:layout_marginTop="16dp"
-                        android:paddingVertical="8dp"
-                        android:layout_marginHorizontal="16dp"
-                        android:fontFamily="@font/roboto_regular"
+                        android:id="@+id/constaraint_option_a"
                         android:background="@drawable/ll_bg_tv_bt"
-                        android:gravity="left|center"
-                        android:paddingHorizontal="10dp"
-                        android:text="A. Enter your option"
-                        android:textColor="#8c8c8c"
-                        android:textStyle="bold"></TextView>
-                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_opton_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_regular"
+                            android:paddingVertical="8dp"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textColor="#8c8c8c"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"></TextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left|center"
-                        android:layout_marginTop="16dp"
-                        android:paddingVertical="8dp"
-                        android:layout_marginHorizontal="16dp"
-                        android:fontFamily="@font/roboto_regular"
+                        android:id="@+id/constaraint_option_b"
                         android:background="@drawable/ll_bg_tv_bt"
-                        android:gravity="left|center"
-                        android:paddingHorizontal="10dp"
-                        android:text="A. Enter your option"
-                        android:textColor="#8c8c8c"
-                        android:textStyle="bold"></TextView>
-                    <TextView
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_opton_two"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:fontFamily="@font/roboto_regular"
+                            android:paddingVertical="8dp"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textColor="#8c8c8c"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"></TextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left|center"
-                        android:layout_marginTop="16dp"
-                        android:paddingVertical="8dp"
-                        android:layout_marginHorizontal="16dp"
-                        android:fontFamily="@font/roboto_regular"
+                        android:id="@+id/constaraint_option_c"
                         android:background="@drawable/ll_bg_tv_bt"
-                        android:gravity="left|center"
-                        android:paddingHorizontal="10dp"
-                        android:text="A. Enter your option"
-                        android:textColor="#8c8c8c"
-                        android:textStyle="bold"></TextView>
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_opton_three"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:fontFamily="@font/roboto_regular"
+                            android:paddingVertical="8dp"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textColor="#8c8c8c"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"></TextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/constaraint_option_d"
+                        android:background="@drawable/ll_bg_tv_bt"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_opton_four"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:fontFamily="@font/roboto_regular"
+                            android:paddingVertical="8dp"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:textColor="#8c8c8c"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"></TextView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_marginHorizontal="24dp"
@@ -241,6 +332,102 @@
                             android:text="Related Module"></TextView>
                     </RelativeLayout>
                 </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="4dp"
+                android:layout_gravity="center"
+                app:cardUseCompatPadding="true"
+                android:outlineAmbientShadowColor="@color/black"
+                android:background="@drawable/card_back"
+                android:backgroundTint="#eaf8f9">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_live_board"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Live Board"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_live_board">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="120dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:id="@+id/card_live_class"
+                            android:background="@drawable/card_back"
+                            android:backgroundTint="@color/white"
+                            app:cardCornerRadius="4dp"
+                            app:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Live Class"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"></TextView>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="120dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/card_back"
+                            android:backgroundTint="@color/white"
+                            app:cardCornerRadius="4dp"
+                            app:cardUseCompatPadding="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Live Test"
+                                android:textAllCaps="true"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"></TextView>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -293,58 +480,78 @@
                 android:layout_marginHorizontal="16dp"
                 android:background="@drawable/card_back"
                 android:backgroundTint="@color/white">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/challeng_image"
-                    android:layout_height="wrap_content"></ImageView>
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/challeng_image"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:alpha="0.7"
+                        android:id="@+id/tv_daily_qiuz_share"
+                        android:drawableLeft="@drawable/ic_boost_share"
+                        android:drawableTint="@color/black"
+                        android:paddingVertical="8dp"
+                        android:background="@drawable/book_mark"
+                        android:text="@string/share_boost_with_friends"></TextView>
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
             </androidx.cardview.widget.CardView>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
 
-                <TextView
-                    android:id="@+id/iv_fh_live"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:layout_marginTop="36dp"
-                    android:layout_marginLeft="16dp"
+<!--                <TextView-->
+<!--                    android:id="@+id/iv_fh_live"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_marginTop="36dp"-->
+<!--                    android:textColor=" #1a1a1a"-->
+<!--                    android:fontFamily="@font/roboto_medium"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:text="Live Board">-->
+<!--                </TextView>-->
+<!--                <View-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="4dp"-->
+<!--                    android:id="@+id/view_liveboard"-->
+<!--                    android:background="#5c5c5c"-->
+<!--                    android:layout_marginVertical="4dp"-->
+<!--                    android:layout_below="@id/iv_fh_live"-->
+<!--                    android:layout_centerHorizontal="true"></View>-->
 
-                    android:textColor=" #1a1a1a"
-                    android:fontFamily="@font/roboto_medium"
-                    android:layout_centerHorizontal="true"
-                    android:text="Live Board">
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="40dp"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:fontFamily="@font/roboto_regular"-->
+<!--                    android:text="Schedule"-->
+<!--                    android:layout_marginRight="16dp"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:id="@+id/tv_fh_live_all"-->
+<!--                    android:textColor="@color/orange"-->
+<!--                    ></TextView>-->
 
-                </TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginTop="36dp"
-                    android:layout_alignParentRight="true"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Schedule"
-                    android:layout_marginRight="16dp"
-                    android:textSize="14sp"
-                    android:id="@+id/tv_fh_live_all"
-                    android:textColor="@color/orange"
-                    ></TextView>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rec_fh_live_rec"
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_fh_live_all"></androidx.recyclerview.widget.RecyclerView>
-            </RelativeLayout>
-
-
-
-
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/rec_fh_live_rec"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/view_liveboard"></androidx.recyclerview.widget.RecyclerView>-->
+<!--            </RelativeLayout>-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -418,7 +625,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="110dp"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/imagbank"></ImageView>
+                    android:background="@drawable/vip"></ImageView>
             </androidx.cardview.widget.CardView>
             <TextView
                 android:layout_width="wrap_content"

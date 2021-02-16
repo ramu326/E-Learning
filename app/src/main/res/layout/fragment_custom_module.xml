@@ -5,39 +5,51 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:background="@color/barcolor"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_height="70dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_back"
-            android:id="@+id/iv_custom_module_back"
-            android:layout_marginLeft="10dp"
-            android:layout_alignParentLeft="true"></ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:fontFamily="@font/roboto_regular"
-            android:textSize="18sp"
-            android:textAllCaps="true"
-            android:id="@+id/tv_custom_module_title"
-            android:layout_toLeftOf="@id/iv_custom_module_cal"
-            android:layout_toRightOf="@id/iv_custom_module_back"
-            android:layout_marginLeft="70dp"
-            android:text="custom module"></TextView>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_calendar"
-            android:id="@+id/iv_custom_module_cal"
-            android:layout_marginRight="15dp"
-            android:layout_alignParentRight="true"></ImageView>
-    </RelativeLayout>
+        android:paddingVertical="12dp"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/barcolor">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_back"
+                android:backgroundTint="@color/black"
+                android:id="@+id/iv_custom_module_back"
+                android:layout_alignParentLeft="true"></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="18sp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:textAllCaps="true"
+                android:id="@+id/tv_custom_module_title"
+                android:text="custom module"></TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_calendar"
+                android:backgroundTint="@color/black"
+                android:id="@+id/iv_custom_module_cal"
+                android:layout_alignParentRight="true"></ImageView>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -104,7 +116,6 @@
                 android:layout_width="wrap_content"
                 android:layout_weight="0.9"
                 android:layout_marginRight="3dp"
-
                 android:layout_height="wrap_content"
                 android:gravity="center">
             </Spinner>

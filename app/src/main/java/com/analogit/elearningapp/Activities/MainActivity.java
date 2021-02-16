@@ -19,7 +19,8 @@ import android.view.View;
 import com.analogit.elearningapp.Fragments.AllTandDFragment;
 import com.analogit.elearningapp.Fragments.AllVideoFragment;
 import com.analogit.elearningapp.Fragments.BothTestNDiscussionFragment;
-import com.analogit.elearningapp.Fragments.GraphFragment;
+import com.analogit.elearningapp.Fragments.DRLearnFragment;
+import com.analogit.elearningapp.Fragments.DummyQbankFragment;
 import com.analogit.elearningapp.Fragments.HomeFragment;
 import com.analogit.elearningapp.Fragments.IcardsZoomImagesFragment;
 import com.analogit.elearningapp.Fragments.QBankFragment;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         HomeFragment homeFragment = new HomeFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.content,homeFragment);
-       // transaction.addToBackStack(null);
+        // transaction.addToBackStack(null);
         transaction.commit();
 
         bottomNavigationView.setItemIconTintList(null);
@@ -67,11 +68,11 @@ public class MainActivity extends AppCompatActivity {
                         transaction.commit();
 
 
-                      break;
+                        break;
                     case R.id.bottom_qbank:
-                        QBankFragment qBankFragment=new QBankFragment();
+                       // QBankFragment qBankFragment=new QBankFragment();
                         FragmentTransaction transaction1=getSupportFragmentManager().beginTransaction();
-                        transaction1.replace(R.id.content,qBankFragment);
+                        transaction1.replace(R.id.content,new DummyQbankFragment());
 
                         transaction1.commit();
 
@@ -91,9 +92,9 @@ public class MainActivity extends AppCompatActivity {
                         transaction3.commit();
                         break;
                     case R.id.bottom_stock:
-                        GraphFragment graphFragment=new GraphFragment();
+                     //   GraphFragment graphFragment=new GraphFragment();
                         FragmentTransaction transaction4=getSupportFragmentManager().beginTransaction();
-                        transaction4.replace(R.id.content,graphFragment);
+                        transaction4.replace(R.id.content,new DRLearnFragment());
 
                         transaction4.commit();
                         break;

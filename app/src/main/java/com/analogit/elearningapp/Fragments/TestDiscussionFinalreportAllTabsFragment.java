@@ -52,19 +52,19 @@ RecyclerView recyclerView;
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position){
                     case  0:
-                        tab.setText("Total\n"+"("+36+")");
+                        tab.setText("Total"+"("+36+")");
                         break;
                     case 1:
-                        tab.setText("Correct\n"+"("+30+")");
+                        tab.setText("Correct"+"("+30+")");
                         break;
                     case 2:
-                        tab.setText("InCorrect\n"+"("+32+")");
+                        tab.setText("InCorrect"+"("+32+")");
                         break;
                     case 3:
-                        tab.setText("Skipped\n"+"("+33+")");
+                        tab.setText("Skipped"+"("+33+")");
                         break;
                     case 4:
-                        tab.setText("NotViewed\n"+"("+31+")");
+                        tab.setText("NotViewed"+"("+31+")");
                         break;
                 }
             }

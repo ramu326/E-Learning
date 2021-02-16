@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:paddingVertical="8dp"
+    android:id="@+id/const_live_class"
+    android:layout_marginHorizontal="12dp"
+    android:background="@drawable/live_class_shape"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_sub_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/microscope"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/tv_sub_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Anatomy"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iv_sub_image"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_sub_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_sub_name"
+        app:layout_constraintStart_toStartOf="@id/tv_sub_name"
+        android:text="5 Coming Soon"
+        android:textColor="#e97534"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/tv_sub_work_status"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv_sub_work_status"
+        app:layout_constraintTop_toBottomOf="@id/tv_sub_work_status"
+        app:layout_constraintStart_toStartOf="@id/tv_sub_work_status"
+        android:text="52 Ongoing"
+        android:textColor="#979797"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/tv_sub_work_schedule"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_height="wrap_content"></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

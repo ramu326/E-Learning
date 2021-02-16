@@ -3,8 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ededed"
     tools:context=".Fragments.SubjectQbankFragment">
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:minHeight="?attr/actionBarSize"
+       android:layout_width="match_parent"
+       android:paddingVertical="12dp"
+       android:layout_height="wrap_content"
+       app:titleTextColor="@android:color/white"
+       android:background="@color/barcolor">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="Anatomy"
+          android:textAlignment="center"
+          android:textSize="20sp"
+          android:fontFamily="@font/roboto_medium"
+          android:textColor="@color/black"
+          android:paddingVertical="8dp"></TextView>
+   </androidx.appcompat.widget.Toolbar>
+
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dp"
+       android:background="@color/lightblack"></View>
+
+
 
    <androidx.recyclerview.widget.RecyclerView
        android:layout_width="match_parent"

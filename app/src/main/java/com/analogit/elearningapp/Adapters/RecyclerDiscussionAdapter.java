@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.analogit.elearningapp.Fragments.DiscussionVideoExplantaionFragment;
+import com.analogit.elearningapp.Fragments.TestDiscussionSessionStartFragment;
 import com.analogit.elearningapp.Model.DiscussionModel;
 import com.analogit.elearningapp.R;
 
@@ -55,8 +56,8 @@ public class RecyclerDiscussionAdapter extends ListAdapter<DiscussionModel,Recyc
                 @Override
                 public void onClick(View view) {
                     AppCompatActivity appCompatActivity=(AppCompatActivity)view.getContext();
-                    DiscussionVideoExplantaionFragment discussionVideoExplantaionFragment=new DiscussionVideoExplantaionFragment();
-                    appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content, discussionVideoExplantaionFragment).addToBackStack(null).commit();
+                   // DiscussionVideoExplantaionFragment discussionVideoExplantaionFragment=new DiscussionVideoExplantaionFragment();
+                    appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content, new TestDiscussionSessionStartFragment()).addToBackStack(null).commit();
                 }
             });
         }

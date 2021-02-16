@@ -4,6 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:scrollbars="vertical"
+    android:background="@color/barcolor"
+    android:paddingBottom="32dp"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
@@ -12,18 +14,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/test_tablayout"
-        app:tabTextColor="@color/black"
+        app:tabTextColor="#b8f5fa"
+        android:background="@color/barcolor"
         app:tabMode="auto"
-        android:layout_marginTop="30dp"
+        app:tabPaddingStart="20dp"
+        app:tabPaddingEnd="20dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="4dp"
+        app:tabIndicator="@drawable/indicator_tab_line"
         android:scrollbars="horizontal"
-        app:tabSelectedTextColor="@color/barcolor"
-        app:tabIndicatorColor="@color/barcolor">
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="@color/white">
 
     </com.google.android.material.tabs.TabLayout>
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/test_view_pager"
+
         tools:layout_editor_absoluteX="8dp">
     </androidx.viewpager2.widget.ViewPager2>
 

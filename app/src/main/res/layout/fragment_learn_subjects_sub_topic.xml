@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ededed"
+    tools:context=".Fragments.LearnSubjectsSubTopicFragment">
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:minHeight="?attr/actionBarSize"
+       android:layout_width="match_parent"
+       android:paddingVertical="12dp"
+       android:elevation="0dp"
+       android:layout_height="wrap_content"
+       app:layout_scrollFlags="scroll|enterAlways|snap"
+       app:popupTheme="@style/AppTheme.PopupOverlay"
+       android:background="#f2f2f2">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Anatomy"
+          android:fontFamily="@font/roboto_medium"
+          android:gravity="center"
+          android:textColor="@color/black"
+          android:textAllCaps="true"
+          android:textSize="16sp"
+          android:paddingVertical="8dp"></TextView>
+   </androidx.appcompat.widget.Toolbar>
+   <View
+       android:layout_width="match_parent"
+       android:layout_height="0.5dp"
+       android:background="@color/lightblack"></View>
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:id="@+id/fr_learn_sub_topic_rec"
+       android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

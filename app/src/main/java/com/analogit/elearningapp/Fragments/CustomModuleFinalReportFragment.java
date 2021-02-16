@@ -42,19 +42,19 @@ ViewPager2 viewPager;
            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                switch (position){
                    case 0:
-                       tab.setText("Total\n"+"("+36+")");
+                       tab.setText("Total"+"("+36+")");
                        break;
                    case 1:
-                       tab.setText("Total\n"+"("+39+")");
+                       tab.setText("Correct"+"("+39+")");
                        break;
                    case 2:
-                       tab.setText("Total\n"+"("+30+")");
+                       tab.setText("InCorrect"+"("+30+")");
                        break;
                    case 3:
-                       tab.setText("Total\n"+"("+37+")");
+                       tab.setText("Skipped"+"("+37+")");
                        break;
                    case 4:
-                       tab.setText("Total\n"+"("+6+")");
+                       tab.setText("NotViewed"+"("+6+")");
                        break;
 
                }

@@ -3,21 +3,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#ededed"
     tools:context=".Fragments.DiscussionVideoExplantaionFragment">
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:minHeight="?attr/actionBarSize"
+      android:layout_width="match_parent"
+      android:paddingVertical="12dp"
+      android:layout_height="wrap_content"
+      app:titleTextColor="@android:color/white"
+      android:background="@color/barcolor">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Discussion"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:paddingVertical="8dp"
+        ></TextView>
+  </androidx.appcompat.widget.Toolbar>
+
+  <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:foreground="?android:attr/selectableItemBackground"
+      android:layout_gravity="center"
+      android:outlineAmbientShadowColor="@color/black"
+      android:background="@drawable/card_back"
+      android:backgroundTint="@color/white">
 
   <androidx.recyclerview.widget.RecyclerView
       android:layout_width="match_parent"
-      android:layout_marginTop="12dp"
       android:layout_height="wrap_content"
+      android:background="#f2f2f2"
       android:id="@+id/fr_discussion_video_explantion_rec_sub"></androidx.recyclerview.widget.RecyclerView>
-
+  </androidx.cardview.widget.CardView>
     <VideoView
         android:layout_width="match_parent"
-        android:layout_margin="16dp"
         android:id="@+id/fr_discussion_video_explantion_video_view"
-        android:layout_height="200dp"></VideoView>
+        android:layout_height="250dp"></VideoView>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginVertical="12dp"
+      android:weightSum="5"
+      android:gravity="start"
+      android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_centerHorizontal="true"
+          android:id="@+id/image_fr_learn_play"
+          android:backgroundTint="@color/lightblack"
+          android:background="@drawable/notes"></ImageView>
+      <TextView
+          android:layout_width="wrap_content"
+          android:textColor="@color/black"
+          android:fontFamily="@font/roboto_regular"
+          android:textSize="12sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/image_fr_learn_play"
+          android:text="Notes"
+          android:layout_marginTop="4dp"
+          android:layout_height="wrap_content"></TextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_centerHorizontal="true"
+          android:id="@+id/image_fr_learn_play_one"
+          android:backgroundTint="@color/lightblack"
+          android:background="@drawable/images"></ImageView>
+      <TextView
+          android:layout_width="wrap_content"
+          android:textColor="@color/black"
+          android:fontFamily="@font/roboto_regular"
+          android:textSize="12sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/image_fr_learn_play_one"
+          android:text="Images"
+          android:layout_marginTop="4dp"
+          android:layout_height="wrap_content"></TextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:id="@+id/image_fr_learn_play_two"
+          android:layout_centerHorizontal="true"
+          android:backgroundTint="@color/lightblack"
+          android:background="@drawable/share_white"></ImageView>
+      <TextView
+          android:layout_width="wrap_content"
+          android:textColor="@color/black"
+          android:fontFamily="@font/roboto_regular"
+          android:textSize="12sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/image_fr_learn_play_two"
+          android:text="Share"
+          android:layout_marginTop="4dp"
+          android:layout_height="wrap_content"></TextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_centerHorizontal="true"
+          android:id="@+id/image_fr_learn_play_three"
+          android:backgroundTint="@color/lightblack"
+          android:background="@drawable/ic_bookmark"></ImageView>
+      <TextView
+          android:layout_width="wrap_content"
+          android:textColor="@color/black"
+          android:fontFamily="@font/roboto_regular"
+          android:textSize="12sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/image_fr_learn_play_three"
+          android:text="bookmark"
+          android:layout_marginTop="4dp"
+          android:layout_height="wrap_content"></TextView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+      <ImageView
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:id="@+id/image_fr_learn_play_four"
+          android:layout_centerHorizontal="true"
+          android:backgroundTint="@color/lightblack"
+          android:background="@drawable/ic_download"></ImageView>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:textColor="@color/black"
+          android:fontFamily="@font/roboto_regular"
+          android:textSize="12sp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/image_fr_learn_play_four"
+          android:text="Download"
+          android:layout_marginTop="4dp"
+          android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+  </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

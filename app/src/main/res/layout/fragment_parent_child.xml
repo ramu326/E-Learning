@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ededed"
+    tools:context=".Fragments.QbankParentChildFragment">
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:minHeight="?attr/actionBarSize"
+      android:layout_width="match_parent"
+      android:paddingVertical="12dp"
+      android:layout_height="wrap_content"
+      android:background="@color/barcolor">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Anatomy"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:paddingVertical="8dp"></TextView>
+  </androidx.appcompat.widget.Toolbar>
+
+
+
+  <ExpandableListView
+      android:layout_width="match_parent"
+      android:groupIndicator="@null"
+      android:layout_marginHorizontal="16dp"
+      android:background="@color/white"
+      android:layout_height="match_parent"
+      android:id="@+id/expandable_listview"></ExpandableListView>
+
+</LinearLayout>

@@ -1,9 +1,11 @@
 package com.analogit.elearningapp.Adapters;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -45,10 +47,23 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.MyViewhold
 
         VideoView videoView;
         TextView textView;
+        ImageView iv_share;
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
             videoView=itemView.findViewById(R.id.slv_videos);
             textView=itemView.findViewById(R.id.tv_slv_title);
+            iv_share=itemView.findViewById(R.id.slots_share);
+            iv_share.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent sendIntent=new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT,"nothing");
+                    sendIntent.setType("text/plain");
+                    Intent shereintent=Intent.createChooser(sendIntent,null);
+                    v.getContext().startActivity(shereintent);
+                }
+            });
             textView.setSelected(true);
 
         }

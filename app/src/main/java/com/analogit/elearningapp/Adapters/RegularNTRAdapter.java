@@ -2,14 +2,12 @@ package com.analogit.elearningapp.Adapters;
 
 import android.content.Context;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.analogit.elearningapp.Fragments.RegularCourceFragment;
-import com.analogit.elearningapp.Fragments.TrRapidFragment;
+import com.analogit.elearningapp.Fragments.MorningRoundPracticalsTabsDecFragment;
 
 public class RegularNTRAdapter extends FragmentPagerAdapter {
     private Context myContext;
@@ -29,7 +27,7 @@ public class RegularNTRAdapter extends FragmentPagerAdapter {
                 RegularCourceFragment regularCourceFragment=new RegularCourceFragment();
                 return  regularCourceFragment;
             case 1:
-                TrRapidFragment trRapidFragment=new TrRapidFragment();
+                MorningRoundPracticalsTabsDecFragment trRapidFragment=new MorningRoundPracticalsTabsDecFragment(1);
                 return trRapidFragment;
             default:
                 return null;

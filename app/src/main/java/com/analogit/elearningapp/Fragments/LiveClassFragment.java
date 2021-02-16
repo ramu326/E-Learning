@@ -9,8 +9,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.analogit.elearningapp.Activities.MainActivity;
-import com.analogit.elearningapp.Adapters.RecyclerLiveClassAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerLiveClassLatestAdapter;
 import com.analogit.elearningapp.R;
 
@@ -48,5 +46,4 @@ public class LiveClassFragment extends Fragment {
 
         return v;
     }
-
 }

@@ -1,23 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/half_shape_with_two_corners"
+    android:orientation="vertical"
     tools:context=".Fragments.DiffTestTypesFragment">
 
+    <TextView
+        android:id="@+id/test_completed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="My Attempted Tests "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/test_completed_num"
+        app:layout_constraintStart_toEndOf="@id/test_completed"
+        app:layout_constraintTop_toTopOf="@id/test_completed"
+        android:text="10/58"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
+        android:layout_height="wrap_content"></TextView>
+
+    <TextView
+        android:id="@+id/view_half"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/draw_view_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/test_completed"></TextView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/diff_test_rec"
-        android:layout_marginTop="24dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_half"></androidx.recyclerview.widget.RecyclerView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/diff_test_type_rec"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
-        android:id="@+id/diff_test_type_rec">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diff_test_rec"></androidx.recyclerview.widget.RecyclerView>
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

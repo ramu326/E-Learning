@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/asr_ll_one"
+    android:paddingVertical="8dp"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:textAlignment="center"
+        android:hint="Anatomy"
+        android:paddingVertical="6dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/all_subject_bg_shape"
+        android:backgroundTint="#b5e8ef"
+        android:id="@+id/tv_poster_subjects"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="center">
+
+    </TextView>
+
+
+
+
+</LinearLayout>

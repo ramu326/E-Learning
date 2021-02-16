@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Fragments.GroupDiscusionExplanationTabsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/circle_user_image"
+            android:layout_gravity="center"
+            android:src="@drawable/nurse_pic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. MaheshGoud Maha"
+            android:textSize="16sp"
+            android:layout_toRightOf="@id/circle_user_image"
+            android:id="@+id/fr_tv_doctor_name"
+            android:inputType="textMultiLine"
+            android:layout_gravity="top"
+            android:layout_marginLeft="16dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            tools:ignore="RtlCompat"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opthalmology.   "
+            android:textSize="12sp"
+            android:gravity="center"
+            android:drawableRight="@drawable/ic_mentor"
+            android:drawableTint="#5c5c5c"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/fr_tv_doctor_name"
+            android:layout_toRightOf="@id/circle_user_image"
+            android:id="@+id/fr_tv_subject_name"
+            android:layout_gravity="top"
+            android:textAllCaps="true"
+            android:layout_marginLeft="16dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="#5c5c5c"
+            tools:ignore="RtlCompat"></TextView>
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_gravity="top|center"
+            android:gravity="start"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textColorHint="#e0e0e0"
+            android:text="Which of the following is an A Typical Vitamin?">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:paddingVertical="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:text="A).Vitamin A">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:paddingVertical="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:text="B). Vitamin A">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:paddingVertical="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:text="C). Vitamin A">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:paddingVertical="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:text="D). Vitamin A">
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

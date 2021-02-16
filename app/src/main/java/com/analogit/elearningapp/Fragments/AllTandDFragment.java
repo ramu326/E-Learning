@@ -4,8 +4,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
@@ -14,10 +12,7 @@ import android.view.ViewGroup;
 
 import com.analogit.elearningapp.Adapters.DiffDiscussionTypesViewpager;
 import com.analogit.elearningapp.Adapters.DiffTestTypesViewPager;
-import com.analogit.elearningapp.Adapters.RecyclerDiscussionAdapter;
-import com.analogit.elearningapp.Adapters.RecyclerTnDOneAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerTnDThreeAdapter;
-import com.analogit.elearningapp.Adapters.RecyclerTnDTwoAdapter;
 import com.analogit.elearningapp.R;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -60,6 +55,7 @@ public class AllTandDFragment extends Fragment {
                     @Override
                     public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                         switch (position){
+
                             case 0:
                                 tab.setText("All Test");
                                 break;
@@ -92,7 +88,6 @@ public class AllTandDFragment extends Fragment {
                 break;
                            case 1:
                             v= inflater.inflate(R.layout.discussion_with_tabs_layout, container, false);
-
                             dis_tablayout=v.findViewById(R.id.discusion_with_tabs);
                             dis_viewpager=v.findViewById(R.id.discussion_with_viewpager);
                                DiffDiscussionTypesViewpager diffDiscussionTypesViewpager=new DiffDiscussionTypesViewpager(this);
@@ -104,29 +99,32 @@ public class AllTandDFragment extends Fragment {
 
                                     switch (position){
                                         case 0:
-                                            tab.setText("All Test");
+                                            tab.setText("All");
                                             break;
                                         case 1:
-                                            tab.setText("Live Test");
+                                            tab.setText("Anatomy");
                                             break;
                                         case 2:
-                                            tab.setText("Grand Test");
+                                            tab.setText("Physiology");
                                             break;
                                         case 3:
-                                            tab.setText("Allied Test");
-
+                                            tab.setText("Biochemistry");
                                             break;
                                         case 4:
-                                            tab.setText("Recall Test");
+                                            tab.setText("Pathology");
+
                                             break;
                                         case 5:
-                                            tab.setText("Prev Test");
+                                            tab.setText("Pharmacology");
                                             break;
                                         case 6:
-                                            tab.setText("SWT Test");
+                                            tab.setText("Microbiology");
                                             break;
                                         case 7:
-                                            tab.setText("Daily Test");
+                                            tab.setText("Forensic Medicine");
+                                            break;
+                                        case 8:
+                                            tab.setText("Community Medicine");
                                             break;
                                     }
                                 }

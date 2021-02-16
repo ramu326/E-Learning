@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ededed"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:background="@color/barcolor">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Errors Practice"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:paddingVertical="8dp"
+                android:fontFamily="@font/roboto_regular"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_height="wrap_content"></TextView>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/barcolor"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@color/barcolor"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/view_sol_bg_bt"
+                    android:backgroundTint="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Correct :"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="16sp"
+                        android:id="@+id/tv_dcal_score_text"
+                        android:layout_height="wrap_content"></TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15/30"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="16sp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_toRightOf="@id/tv_dcal_score_text"
+                        android:id="@+id/tv_dcal_score"></TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="12dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/reset_bg_bt"
+                    android:backgroundTint="@color/white"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Time Spent :"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="16sp"
+                        android:id="@+id/tv_dcal_time_text"
+                        android:layout_height="wrap_content"></TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30 Mints"
+                        android:textAllCaps="false"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="16sp"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/red"
+                        android:fontFamily="@font/roboto_bold"
+                        android:layout_toRightOf="@id/tv_dcal_time_text"
+                        android:id="@+id/tv_dcal_time"></TextView>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="16dp"
+                android:gravity="start|center"
+
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Accuracy:"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/tv_rlr_accuracy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="40%"
+                    android:layout_toRightOf="@id/tv_rlr_accuracy"
+                    android:textAllCaps="true"
+                    android:id="@+id/tv_rlr_acc_per"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Avg.Time:"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/tv_rlr_acc_per"
+                    android:textAllCaps="false"
+                    android:id="@+id/tv_rlr_avg_time"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="50s/Q"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/tv_rlr_avg_time"
+                    android:textAllCaps="false"
+                    android:id="@+id/tv_dcal_avg_time_sec"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Strength:"
+                    android:layout_toRightOf="@id/tv_dcal_avg_time_sec"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv_dcal_s_strnght"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Weak"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/tv_dcal_s_strnght"
+                    android:id="@+id/tv_rlr_strenth"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"></TextView>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fr_error_practice_tablayout"
+            app:tabMode="auto"
+            app:tabIndicatorHeight="2dp"
+            android:fitsSystemWindows="true"
+            app:tabPaddingStart="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            app:tabIndicatorColor="@color/white"
+            android:background="@color/barcolor"
+            app:tabIndicator="@color/white"
+            app:tabTextColor="@color/white"
+            app:tabSelectedTextColor="@color/white"></com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fr_error_practice_viewpager"></androidx.viewpager2.widget.ViewPager2>
+
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

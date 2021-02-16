@@ -6,71 +6,94 @@
     android:background="#ededed"
     xmlns:card_view="http://schemas.android.com/tools"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:id="@+id/dcal_rl_one"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="16dp"
-            android:backgroundTint="@color/black"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/iv_dcal_bulb"
-            android:background="@drawable/ic_back_black"></ImageView>
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:adjustViewBounds="true"
-            android:id="@+id/iv_dcal_bulb"
-            android:background="@drawable/bulb_img">
-        </ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/tv_dcal_dc"
-            android:text="Daily \n BoostUP Quiz"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_height="wrap_content"></TextView>
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="26dp"
-            android:adjustViewBounds="true"
-            android:layout_alignParentRight="true"
-            android:id="@+id/iv_dcal_cal"
-            android:layout_marginRight="24dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:backgroundTint="@color/black"
-            android:background="@drawable/ic_calendar">
-        </ImageView>
-    </RelativeLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:background="@color/barcolor">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/dcal_rl_one"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="16dp"
+                    android:backgroundTint="@color/black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/iv_dcal_bulb"
+                    android:background="@drawable/ic_back_black"></ImageView>
 
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/iv_dcal_bulb"
+                    android:background="@drawable/bulb_img">
+                </ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_dcal_dc"
+                    android:text="Daily \n BoostUP Quiz"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="24sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"></TextView>
+<!--                <ImageView-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="26dp"-->
+<!--                    android:adjustViewBounds="true"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:id="@+id/iv_dcal_cal"-->
+<!--                    android:layout_marginRight="24dp"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:backgroundTint="@color/black"-->
+<!--                    android:background="@drawable/ic_calendar">-->
+<!--                </ImageView>-->
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.5dp"-->
+<!--            android:background="@color/lightblack"></View>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/barcolor"
+            android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="24dp"
+        android:background="@color/barcolor"
         android:layout_height="wrap_content">
+
+
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="16dp"
-            android:backgroundTint="@color/white"
+            android:paddingVertical="12dp"
             android:background="@drawable/view_sol_bg_bt"
+            android:backgroundTint="@color/white"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:text="My Rank :"
-                android:textColor="@color/barcolor"
+                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 android:textSize="16sp"
                 android:id="@+id/tv_dcal_score_text"
@@ -78,17 +101,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="30456"
-                android:textAllCaps="true"
+                android:text=""
                 android:textAlignment="center"
                 android:gravity="center"
-                android:layout_marginLeft="12dp"
+                android:layout_marginLeft="4dp"
                 android:textSize="16sp"
                 android:layout_centerInParent="true"
-                android:textColor="@color/barcolor"
+                android:textColor="@color/red"
                 android:fontFamily="@font/roboto_bold"
                 android:layout_toRightOf="@id/tv_dcal_score_text"
-                android:id="@+id/tv_dcal_score"></TextView>
+                android:id="@+id/tv_final_score"></TextView>
         </LinearLayout>
 
 
@@ -97,667 +119,218 @@
             android:layout_height="wrap_content"
             android:text="ViewLeaderBoard"
             android:textAllCaps="false"
-            android:paddingHorizontal="12dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
             android:background="@drawable/reset_bg_bt"
             android:backgroundTint="@color/white"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_marginLeft="12dp"
             android:textSize="16sp"
-            android:textColor="@color/green"
+            android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:layout_alignParentRight="true"
             android:id="@+id/tv_dcal_leader_board"></TextView>
 
 
     </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/relativeLayout2"
-            android:layout_width="match_parent"
-            android:layout_marginTop="12dp"
-            android:layout_marginHorizontal="12dp"
-            android:gravity="start|center"
-            android:layout_below="@id/ll__rl_one"
-            android:layout_height="wrap_content"
-            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Accuracy:"
-                android:layout_alignParentLeft="true"
-
-                android:id="@+id/tv_rlr_accuracy"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textSize="14sp"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:text="40%"
-                android:layout_toRightOf="@id/tv_rlr_accuracy"
-                android:textAllCaps="true"
-                android:id="@+id/tv_rlr_acc_per"
-                android:layout_marginLeft="3dp"
-                android:textColor="@color/barcolor"
-                android:textSize="16sp"></TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Avg.Time:"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/tv_rlr_acc_per"
-                android:textAllCaps="false"
-                android:id="@+id/tv_rlr_avg_time"
-                android:textColor="@color/black"
-                android:textSize="14sp"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:text="50s/Q"
-                android:layout_marginLeft="3dp"
-                android:layout_toRightOf="@id/tv_rlr_avg_time"
-                android:textAllCaps="false"
-                android:id="@+id/tv_dcal_avg_time_sec"
-                android:textColor="@color/barcolor"
-                android:textSize="16sp"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Strength:"
-                android:layout_toRightOf="@id/tv_dcal_avg_time_sec"
-                android:textAllCaps="false"
-                android:layout_marginLeft="10dp"
-                android:id="@+id/tv_dcal_s_strnght"
-                android:textColor="@color/black"
-                android:textSize="14sp"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Weak"
-                android:layout_marginLeft="3dp"
-                android:layout_toRightOf="@id/tv_dcal_s_strnght"
-                android:id="@+id/tv_rlr_strenth"
-                android:textAllCaps="false"
-                android:textColor="@color/red"
-                android:textSize="16sp"></TextView>
-
-        </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_gravity="start|center"
-        android:gravity="start|center"
-        android:id="@+id/ll_rlr_marks_layout"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_below="@id/relativeLayout2"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10"
-                android:textSize="16sp"
-                android:textAlignment="center"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:fontFamily="@font/roboto_bold">
-
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:fontFamily="@font/roboto_regular">
-
-            </TextView>
-
-        </LinearLayout>
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:background="@color/lightblack"></View>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5"
-                android:textSize="16sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/green"
-                android:fontFamily="@font/roboto_regular">
-
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Correct"
-                android:textColor="@color/green"
-                android:textSize="12sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:fontFamily="@font/roboto_regular">
-            </TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="6"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/red"
-                android:fontFamily="@font/roboto_regular">
-
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="InCorrect"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/red"
-                android:textSize="12sp"
-                android:fontFamily="@font/roboto_regular">
-            </TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7"
-                android:textSize="16sp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textColor="@color/orange"
-                android:fontFamily="@font/roboto_regular">
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Skipped"
-                android:textColor="@color/orange"
-                android:textSize="12sp"
-                android:fontFamily="@font/roboto_regular">
-            </TextView>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:textSize="16sp"
-                android:textColor="@color/lightblack"
-                android:fontFamily="@font/roboto_regular">
-
-            </TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Not Viewed"
-                android:textColor="@color/lightblack"
-                android:textSize="12sp"
-                android:fontFamily="@font/roboto_regular">
-
-            </TextView>
-
-        </LinearLayout>
-
-    </LinearLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:layout_height="wrap_content">
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            card_view:cardElevation="10dp"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/dcal_rec"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                 />
+                android:layout_marginTop="16dp">
 
-
-        </androidx.cardview.widget.CardView>
-
-    </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="8dp"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Which of the following is an A Typical vitamin? "
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:layout_alignParentLeft="true"
-                android:fontFamily="@font/roboto_regular"
-                android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:id="@+id/tv_dcal_question"
-                android:textAllCaps="false"
-                android:textAlignment="textStart"
-                android:layout_height="wrap_content"
-                android:gravity="start"></TextView>
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/bookmark"
-                android:adjustViewBounds="true"
-                android:layout_toRightOf="@id/tv_dcal_question"
-                android:layout_centerInParent="true"
-                android:layout_height="40dp"></ImageView>
-           
-        </RelativeLayout>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/card_back"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:outlineAmbientShadowColor="@color/black"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            >
-
-            <LinearLayout
-                android:id="@+id/dcal_relativeLayout1"
-                android:layout_width="match_parent"
-                android:paddingVertical="8dp"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="12dp"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:layout_gravity="start|center"
-                >
                 <TextView
-                    android:id="@+id/tv_dcal_op_a"
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
+                    android:id="@+id/tv_dca_accuracy"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/cirle_shape"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="a"
-                    android:paddingBottom="4dp"
-                    android:paddingHorizontal="8dp"
-                    android:textSize="14dp"
-                    android:backgroundTint="#EAE5E4"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"></TextView>
-
+                    android:text="Accuracy:"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
 
                 <TextView
+                    android:id="@+id/tv_dca_accuracy_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_toRightOf="@id/tv_dcal_op_a"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text=" Vitamin B1"
-                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="40%"
                     android:textAllCaps="false"
-                    android:textSize="14sp"></TextView>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_dca_accuracy"
+                    app:layout_constraintTop_toTopOf="@id/tv_dca_accuracy"></TextView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/card_back"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:outlineAmbientShadowColor="@color/black"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            >
-
-            <LinearLayout
-                android:id="@+id/dcal_relativeLayout2"
-                android:layout_width="match_parent"
-                android:paddingVertical="8dp"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="12dp"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:layout_gravity="start|center"
-                >
                 <TextView
-                    android:id="@+id/tv_dcal_op_b"
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
+                    android:id="@+id/tv_dca_avg_time"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/cirle_shape"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="a"
-                    android:paddingBottom="4dp"
-                    android:paddingHorizontal="8dp"
-                    android:textSize="14dp"
-                    android:backgroundTint="#EAE5E4"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"></TextView>
-
+                    android:text="Avg.Time:"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_dca_accuracy_percent"
+                    app:layout_constraintTop_toTopOf="@id/tv_dca_accuracy_percent"></TextView>
 
                 <TextView
+                    android:id="@+id/tv_dca_avg_time_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_toRightOf="@id/tv_dcal_op_b"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text=" Vitamin B1"
-                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="40%"
                     android:textAllCaps="false"
-                    android:textSize="14sp"></TextView>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_dca_avg_time"
+                    app:layout_constraintTop_toTopOf="@id/tv_dca_avg_time"></TextView>
 
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/card_back"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:outlineAmbientShadowColor="@color/black"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            >
-
-            <LinearLayout
-                android:id="@+id/dcal_relativeLayout3"
-                android:layout_width="match_parent"
-                android:paddingVertical="8dp"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="12dp"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:layout_gravity="start|center"
-                >
                 <TextView
-                    android:id="@+id/tv_dcal_op_c"
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
+                    android:id="@+id/tv_dca_strenth"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/cirle_shape"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="a"
-                    android:paddingBottom="4dp"
-                    android:paddingHorizontal="8dp"
-                    android:textSize="14dp"
-                    android:backgroundTint="#EAE5E4"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"></TextView>
-
+                    android:text="Strength:"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_dca_avg_time_percent"
+                    app:layout_constraintTop_toTopOf="@id/tv_dca_avg_time_percent"></TextView>
 
                 <TextView
+                    android:id="@+id/tv_dca_tv_dca_strenth_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
-                    android:layout_toRightOf="@id/tv_dcal_op_c"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text=" Vitamin B1"
-                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="40%"
+                    android:inputType="textCapSentences"
                     android:textAllCaps="false"
-                    android:textSize="14sp"></TextView>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/tv_dca_strenth"
+                    app:layout_constraintTop_toTopOf="@id/tv_dca_strenth"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/relativeLayout2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_marginHorizontal="16dp"-->
+<!--            android:gravity="start|center"-->
+<!--            android:layout_below="@id/ll__rl_one"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            >-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/roboto_regular"-->
+<!--                android:text="Accuracy:"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:id="@+id/tv_dca_accuracy"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="14sp"></TextView>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/roboto_bold"-->
+<!--                android:text="40%"-->
+<!--                android:layout_toRightOf="@id/tv_dca_accuracy"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:id="@+id/tv_dca_acc_per"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="16sp"></TextView>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/roboto_regular"-->
+<!--                android:text="Avg.Time:"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:layout_toRightOf="@id/tv_dca_acc_per"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:id="@+id/tv_dca_avg_time"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="14sp"></TextView>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/roboto_bold"-->
+<!--                android:text="50s/Q"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:layout_toRightOf="@id/tv_dca_avg_time"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:id="@+id/tv_dca_avg_time_sec"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="16sp"></TextView>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/roboto_regular"-->
+<!--                android:text="Strength:"-->
+<!--                android:layout_toRightOf="@id/tv_dca_avg_time_sec"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:id="@+id/tv_dca_s_strnght"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="14sp"></TextView>-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/roboto_bold"-->
+<!--                android:text=""-->
+<!--                android:layout_marginLeft="3dp"-->
+<!--                android:layout_toRightOf="@id/tv_dca_s_strnght"-->
+<!--                android:id="@+id/tv_rlr_strenth"-->
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="@color/red"-->
+<!--                android:textSize="16sp"></TextView>-->
+
+<!--        </RelativeLayout>-->
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/card_back"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:outlineAmbientShadowColor="@color/black"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            >
-
-            <LinearLayout
-                android:id="@+id/dcal_relativeLayout4"
-                android:layout_width="match_parent"
-                android:paddingVertical="8dp"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="12dp"
-                android:layout_height="wrap_content"
-                android:gravity="start|center"
-                android:layout_gravity="start|center"
-                >
-                <TextView
-                    android:id="@+id/tv_dcal_op_d"
-                    android:layout_width="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/cirle_shape"
-                    android:fontFamily="@font/roboto_regular"
-                    android:gravity="center"
-                    android:text="a"
-                    android:paddingBottom="4dp"
-                    android:paddingHorizontal="8dp"
-                    android:textSize="14dp"
-                    android:backgroundTint="#EAE5E4"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"></TextView>
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text=" Vitamin B1"
-                    android:textColor="@color/black"
-                    android:textAllCaps="false"
-                    android:textSize="14sp"></TextView>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <RelativeLayout
+            android:id="@+id/daily_challenge_tablayout"
+            app:tabMode="auto"
+            app:tabIndicatorHeight="2dp"
+            android:fitsSystemWindows="true"
+            app:tabPaddingStart="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            app:tabIndicatorColor="@color/white"
+            android:background="@color/barcolor"
+            app:tabIndicator="@color/white"
+            app:tabTextColor="@color/white"
+            app:tabSelectedTextColor="@color/white"></com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:layout_marginHorizontal="12dp"
-            android:id="@+id/rl_layout"
-            android:layout_marginVertical="12dp"
-            android:gravity="top">
-
-            <TextView
-                android:id="@+id/tvText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:fontFamily="@font/roboto_regular"
-                android:text="Explanation"
-                android:textAlignment="center"
-                android:textColor="@color/green"
-                android:textSize="12sp"
-                android:paddingBottom="12dp"
-                android:gravity="center_horizontal" />
-
-            <View
-                android:id="@+id/view_one"
-                android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="6dp"
-                android:layout_marginTop="7dp"
-                android:layout_toLeftOf="@id/tvText"
-                android:layout_toRightOf="@id/view_ver_one"
-                android:background="#ffb3b3" />
-
-            <View
-                android:id="@+id/view_ver_one"
-                android:layout_width="1.5dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/view_one"
-                android:layout_marginLeft="6dp"
-                android:layout_above="@+id/view_horizantal"
-                android:background="#ffb3b3" />
-
-            <View
-                android:id="@+id/view_two"
-                android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="7dp"
-                android:layout_marginRight="6dp"
-                android:layout_toRightOf="@id/tvText"
-                android:background="#ffb3b3" />
-
-            <View
-                android:layout_width="1.5dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/view_two"
-                android:layout_above="@+id/view_horizantal"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="7dp"
-                android:id="@+id/view_ver_two"
-                android:background="#ffb3b3"
-                android:layout_marginRight="6dp">
-            </View>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1.5dp"
-                android:background="#ffb3b3"
-                android:id="@+id/view_horizantal"
-                android:layout_below="@+id/relativeLayout4"
-                android:layout_marginHorizontal="6dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentLeft="true"></View>
+            android:id="@+id/dail_challenge_viewpager"></androidx.viewpager2.widget.ViewPager2>
 
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:id="@+id/ll_dca_marks_layout"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
 
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout4"
-                android:layout_width="match_parent"
-                android:gravity="start"
-                android:layout_marginHorizontal="16dp"
-                android:layout_below="@id/ll_dca_marks_layout"
-                android:layout_height="wrap_content"
-                >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:text="Google News is a news aggregator service developed by Google. It presents a continuous flow of articles organized from thousands of publishers and magazines"
-                    android:id="@+id/tv_srl_view_solution"
-                    android:textAllCaps="false"
-                    android:textAlignment="textStart"
-                    android:gravity="start"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"></TextView>
-            </RelativeLayout>
-        </RelativeLayout>
 
         </LinearLayout>
 

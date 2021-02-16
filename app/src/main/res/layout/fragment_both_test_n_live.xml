@@ -2,35 +2,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".Fragments.BothTestNLiveFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.MorningRoundTabsFragment">
 
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
+        android:paddingVertical="12dp"
         android:layout_height="wrap_content"
-        android:paddingBottom="42dp"
-        android:background="@drawable/relative_layout_bg_curve"></RelativeLayout>
+        app:titleTextColor="@android:color/white"
+        android:background="@color/barcolor">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Live Board"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fr_live_tab_layout"
-        app:tabTextColor="@color/black"
-        android:layout_marginHorizontal="5dp"
+        app:tabIndicatorHeight="4dp"
+        android:fitsSystemWindows="true"
+        app:tabPaddingStart="24dp"
+        app:tabIndicator="@drawable/indicator_tab_line"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="#cccccc"
+        android:background="@color/barcolor"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:backgroundTint="@color/barcolor"
         android:scrollbars="none"
+        app:tabMaxWidth="0dp"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/green"
-        app:tabIndicatorColor="@color/green"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
         >
 
     </com.google.android.material.tabs.TabLayout>
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/fr_live_view_pager"
-        tools:layout_editor_absoluteX="8dp">
-
-    </androidx.viewpager2.widget.ViewPager2>
-
+        android:layout_height="wrap_content"></androidx.viewpager2.widget.ViewPager2>
 </LinearLayout>

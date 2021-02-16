@@ -52,7 +52,8 @@
             android:fontFamily="@font/roboto_medium"
             android:gravity="start"
             android:textColor="#4d4d4d"
-            android:text="Which of the Following is an A typical Vitamin? artery doppler finding which will most significantly the intra uterine?"
+            android:text=""
+            android:id="@+id/tv_main_question"
             android:textAlignment="textStart"
             android:textSize="16sp">
 
@@ -68,7 +69,8 @@
             android:background="@drawable/ll_bg_tv_bt"
             android:gravity="left|center"
             android:paddingHorizontal="10dp"
-            android:text="A. Enter your option"
+            android:text=""
+            android:id="@+id/tv_expl_option_one"
             android:textColor="#8c8c8c"
             android:textStyle="bold"></TextView>
         <TextView
@@ -82,7 +84,9 @@
             android:background="@drawable/ll_bg_tv_bt"
             android:gravity="left|center"
             android:paddingHorizontal="10dp"
-            android:text="A. Enter your option"
+            android:text=""
+            android:id="@+id/tv_expl_option_two"
+
             android:textColor="#8c8c8c"
             android:textStyle="bold"></TextView>
         <TextView
@@ -96,7 +100,9 @@
             android:background="@drawable/ll_bg_tv_bt"
             android:gravity="left|center"
             android:paddingHorizontal="10dp"
-            android:text="A. Enter your option"
+            android:text=""
+            android:id="@+id/tv_expl_option_three"
+
             android:textColor="#8c8c8c"
             android:textStyle="bold"></TextView>
         <TextView
@@ -110,7 +116,8 @@
             android:background="@drawable/ll_bg_tv_bt"
             android:gravity="left|center"
             android:paddingHorizontal="10dp"
-            android:text="A. Enter your option"
+            android:text=""
+            android:id="@+id/tv_expl_option_four"
             android:textColor="#8c8c8c"
             android:textStyle="bold"></TextView>
 
@@ -218,8 +225,7 @@
             android:gravity="start"
             android:layout_marginHorizontal="16dp"
             android:layout_below="@id/ll_dca_marks_layout"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -227,8 +233,8 @@
                 android:fontFamily="@font/roboto_regular"
                 android:lineHeight="16dp"
                 android:paddingBottom="16dp"
-                android:text="Google News is a news aggregator service developed by Google. It presents a continuous flow of articles organized from thousands of publishers and magazines"
-                android:id="@+id/tv_srl_view_solution"
+                android:text=""
+                android:id="@+id/tv_expl_solution"
                 android:textAllCaps="false"
                 android:textAlignment="textStart"
                 android:gravity="start"

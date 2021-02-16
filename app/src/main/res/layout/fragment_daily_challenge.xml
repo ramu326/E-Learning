@@ -8,44 +8,54 @@
     android:orientation="vertical"
     android:background="#ededed"
     tools:context=".Fragments.DailyChallengeFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        app:layout_scrollFlags="scroll|enterAlways|snap"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:background="@color/barcolor">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/iv_fdc_bulb"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/bulb_img">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tv_fdc_dc"
+                android:text="Daily \n BoostUP Quiz"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"></TextView>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:adjustViewBounds="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/iv_fdc_cal"
+                android:layout_marginRight="24dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/ic_calendar">
+            </ImageView>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content">
-       <ImageView
-           android:layout_width="80dp"
-           android:layout_height="80dp"
-           android:adjustViewBounds="true"
-           android:id="@+id/iv_fdc_bulb"
-           android:layout_centerInParent="true"
-           android:layout_alignParentLeft="true"
-          android:src="@drawable/bulb_img">
-       </ImageView>
-     <TextView
-         android:layout_width="wrap_content"
-         android:id="@+id/tv_fdc_dc"
-         android:text="Daily \n BoostUP Quiz"
-         android:textColor="@color/black"
-         android:gravity="center"
-         android:textSize="24sp"
-         android:fontFamily="@font/roboto_medium"
-         android:layout_centerInParent="true"
-         android:layout_height="wrap_content"></TextView>
-       <ImageView
-           android:layout_width="24dp"
-           android:layout_height="26dp"
-           android:adjustViewBounds="true"
-           android:layout_alignParentRight="true"
-           android:id="@+id/iv_fdc_cal"
-           android:layout_marginRight="24dp"
-           android:layout_centerHorizontal="true"
-           android:layout_centerVertical="true"
-           android:layout_centerInParent="true"
-           android:backgroundTint="@color/black"
-           android:background="@drawable/ic_calendar">
-       </ImageView>
-   </RelativeLayout>
 
 <RelativeLayout
     android:layout_width="match_parent"
@@ -78,7 +88,7 @@
         android:textSize="12sp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:text="10"></TextView>
+        android:text=""></TextView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_gravity="start"
@@ -108,7 +118,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_gravity="start"
-        android:id="@+id/tv_submit"
+        android:id="@+id/fdc_submit"
         android:layout_marginRight="16dp"
         android:layout_alignParentRight="true"
         android:fontFamily="@font/roboto_bold"
@@ -120,17 +130,16 @@
         android:text="Submit"></TextView>
 
 </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="2dp"
-        android:layout_height="wrap_content">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        app:cardElevation="16dp"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_gravity="center"
-        card_view:cardUseCompatPadding="true"
-        android:layout_height="wrap_content">
+        app:cardUseCompatPadding="true"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/card_back"
+        android:backgroundTint="#f2f2f2">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
@@ -142,268 +151,251 @@
 
     </androidx.cardview.widget.CardView>
 
-    </RelativeLayout>
 
-      <RelativeLayout
+
+      <androidx.constraintlayout.widget.ConstraintLayout
           android:layout_width="match_parent"
-          android:layout_marginHorizontal="4dp"
           android:layout_marginTop="8dp"
           android:layout_height="wrap_content">
 
           <TextView
-              android:layout_width="wrap_content"
-              android:text="Which of the following is an A Typical vitamin? "
+              android:id="@+id/tv_fdc_question"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_alignParentLeft="true"
+              android:layout_marginStart="16dp"
+              android:layout_marginLeft="16dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginRight="8dp"
+              android:fontFamily="@font/roboto_medium"
+              android:text=" "
+              android:textAllCaps="false"
               android:textColor="@color/black"
               android:textSize="16sp"
-              android:layout_alignParentLeft="true"
-              android:fontFamily="@font/roboto_medium"
-              android:layout_centerInParent="true"
-              android:layout_centerHorizontal="true"
-              android:layout_centerVertical="true"
-              android:id="@+id/tv_fdc_question"
-              android:textAllCaps="false"
-              android:textAlignment="textStart"
-              android:layout_height="wrap_content"
-              android:gravity="start"></TextView>
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/iv_bookmark"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"></TextView>
+
           <ImageView
-              android:layout_width="20dp"
-              android:layout_alignParentRight="true"
-              android:src="@drawable/bookmark"
+              android:id="@+id/iv_bookmark"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginRight="8dp"
               android:adjustViewBounds="true"
-              android:layout_toRightOf="@id/tv_fdc_question"
-              android:layout_centerInParent="true"
-              android:layout_height="40dp"></ImageView>
-      </RelativeLayout>
+              android:src="@drawable/bookmark"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"></ImageView>
+      </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/card_back"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:outlineAmbientShadowColor="@color/black"
-            app:cardCornerRadius="8dp">
+            android:id="@+id/card_rl_one"
+            app:contentPaddingTop="6dp"
+            app:contentPaddingBottom="6dp"
+            app:cardCornerRadius="8dp"
+            android:outlineAmbientShadowColor="@color/black">
 
-            <RelativeLayout
-                android:id="@+id/fdc_relativeLayout1"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:paddingVertical="6dp"
-                android:layout_marginHorizontal="12dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="start|center"
+
+
                >
+
                 <TextView
                     android:id="@+id/tv_fdc_op_a"
-                    android:layout_width="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
-                    android:paddingVertical="4dp"
-                    android:paddingHorizontal="10dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
                     android:background="@drawable/cirle_shape"
                     android:fontFamily="@font/roboto_regular"
-                    android:gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
                     android:text="a"
-                    android:textSize="16dp"
-                    android:backgroundTint="#EAE5E4"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"></TextView>
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
                 <TextView
+                    android:id="@+id/tv_option_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                   android:textAlignment="center"
-                    android:gravity="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:layout_toRightOf="@id/tv_fdc_op_a"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:text=" Vitamin B1"
+                    android:text=""
                     android:textColor="@color/black"
-                    android:textAllCaps="false"
-                    android:textSize="14sp"></TextView>
-            </RelativeLayout>
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_fdc_op_a"
+                    app:layout_constraintTop_toTopOf="@+id/tv_fdc_op_a"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/card_back"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:outlineAmbientShadowColor="@color/black"
+        android:id="@+id/card_rl_two"
+        app:contentPaddingTop="6dp"
+        app:contentPaddingBottom="6dp"
         app:cardCornerRadius="8dp"
+        android:outlineAmbientShadowColor="@color/black">
 
-        >
-
-        <RelativeLayout
-            android:id="@+id/fdc_relativeLayout2"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:paddingVertical="6dp"
-            android:layout_marginHorizontal="12dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="start|center"
+
+
             >
+
             <TextView
                 android:id="@+id/tv_fdc_op_b"
-                android:layout_width="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:paddingVertical="4dp"
-                android:paddingHorizontal="10dp"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:background="@drawable/cirle_shape"
                 android:fontFamily="@font/roboto_regular"
-                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
                 android:text="b"
-                android:textSize="16dp"
-                android:backgroundTint="#EAE5E4"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"></TextView>
+                android:gravity="center"
+                android:paddingBottom="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
             <TextView
+                android:id="@+id/tv_option_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@id/tv_fdc_op_b"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text=" Vitamin B1"
+                android:text=""
                 android:textColor="@color/black"
-                android:textAllCaps="false"
-                android:textSize="14sp"></TextView>
-        </RelativeLayout>
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_fdc_op_b"
+                app:layout_constraintTop_toTopOf="@+id/tv_fdc_op_b"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginHorizontal="16dp"
-
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/card_back"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:outlineAmbientShadowColor="@color/black"
+        android:id="@+id/card_rl_three"
+        app:contentPaddingTop="6dp"
+        app:contentPaddingBottom="6dp"
         app:cardCornerRadius="8dp"
+        android:outlineAmbientShadowColor="@color/black">
 
-        >
-
-        <RelativeLayout
-            android:id="@+id/fdc_relativeLayout3"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:paddingVertical="6dp"
-            android:layout_marginHorizontal="12dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="start|center"
+
+
             >
+
             <TextView
                 android:id="@+id/tv_fdc_op_c"
-                android:layout_width="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:paddingVertical="4dp"
-                android:paddingHorizontal="10dp"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:background="@drawable/cirle_shape"
                 android:fontFamily="@font/roboto_regular"
-                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
                 android:text="c"
-                android:textSize="16dp"
-                android:backgroundTint="#EAE5E4"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"></TextView>
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
             <TextView
+                android:id="@+id/tv_option_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@id/tv_fdc_op_c"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text=" Vitamin B1"
+                android:text=""
                 android:textColor="@color/black"
-                android:textAllCaps="false"
-                android:textSize="14sp"></TextView>
-        </RelativeLayout>
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_fdc_op_c"
+                app:layout_constraintTop_toTopOf="@+id/tv_fdc_op_c"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginHorizontal="16dp"
-
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/card_back"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:outlineAmbientShadowColor="@color/black"
+        android:id="@+id/card_rl_four"
+        app:contentPaddingTop="6dp"
+        app:contentPaddingBottom="6dp"
         app:cardCornerRadius="8dp"
+        android:outlineAmbientShadowColor="@color/black">
 
-        >
-
-        <RelativeLayout
-            android:id="@+id/fdc_relativeLayout4"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:paddingVertical="6dp"
-            android:layout_marginHorizontal="12dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="start|center"
+
+
             >
+
             <TextView
                 android:id="@+id/tv_fdc_op_d"
-                android:layout_width="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:paddingVertical="4dp"
-                android:paddingHorizontal="10dp"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:background="@drawable/cirle_shape"
                 android:fontFamily="@font/roboto_regular"
-                android:gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
                 android:text="d"
-                android:textSize="16dp"
-                android:backgroundTint="#EAE5E4"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"></TextView>
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
             <TextView
+                android:id="@+id/tv_option_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@id/tv_fdc_op_d"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:fontFamily="@font/roboto_regular"
-                android:text=" Vitamin B1"
+                android:text=""
                 android:textColor="@color/black"
-                android:textAllCaps="false"
-                android:textSize="14sp"></TextView>
-        </RelativeLayout>
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_fdc_op_d"
+                app:layout_constraintTop_toTopOf="@+id/tv_fdc_op_d"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -426,27 +418,27 @@
                 android:background="@drawable/ic_arrow_back"></ImageView>
 
             <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/btn_bg"
-            android:id="@+id/fdc_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_bg"
+                android:id="@+id/fdc_clear"
                 android:layout_toRightOf="@id/iv_fd_back"
-                android:layout_marginLeft="42dp"
-            android:textAllCaps="true"
+                android:layout_marginLeft="42dp"   
+                android:textAllCaps="true" 
                 android:layout_centerInParent="true"
-            android:textSize="16sp"
-            android:paddingVertical="8dp"
-            android:layout_centerHorizontal="true"
-            android:paddingHorizontal="20dp"
-            android:layout_centerVertical="true"
-            android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingVertical="8dp"
+                android:layout_centerHorizontal="true"
+                android:paddingHorizontal="20dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
                 android:backgroundTint="@color/barcolor"
-            android:text="Clear"></TextView>
+                android:text="Clear"></TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/btn_bg"
-                android:id="@+id/fdc_submit"
+                android:id="@+id/fdc_next"
                 android:fontFamily="@font/roboto_regular"
                 android:layout_centerInParent="true"
                 android:paddingVertical="12dp"

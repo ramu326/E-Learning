@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Fragments.DailyChallngeTabsLayoutInfoFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                card_view:cardElevation="10dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dcal_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                     />
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Which of the following is an A Typical vitamin? "
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tv_dcal_question"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"></TextView>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/bookmark"
+                    android:adjustViewBounds="true"
+                    android:layout_toRightOf="@id/tv_dcal_question"
+                    android:layout_centerInParent="true"
+                    android:layout_height="40dp"></ImageView>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/card_back"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="0dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/dcal_relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:paddingVertical="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:layout_gravity="start|center"
+                    >
+                    <TextView
+                        android:id="@+id/tv_dcal_op_a"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cirle_shape"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="a"
+                        android:paddingBottom="4dp"
+                        android:paddingHorizontal="8dp"
+                        android:textSize="14dp"
+                        android:backgroundTint="#EAE5E4"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"></TextView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/tv_dcal_op_a"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text=" Vitamin B1"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/card_back"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="0dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/dcal_relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:paddingVertical="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:layout_gravity="start|center"
+                    >
+                    <TextView
+                        android:id="@+id/tv_dcal_op_b"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cirle_shape"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="a"
+                        android:paddingBottom="4dp"
+                        android:paddingHorizontal="8dp"
+                        android:textSize="14dp"
+                        android:backgroundTint="#EAE5E4"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"></TextView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/tv_dcal_op_b"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text=" Vitamin B1"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/card_back"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="0dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/dcal_relativeLayout3"
+                    android:layout_width="match_parent"
+                    android:paddingVertical="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:layout_gravity="start|center"
+                    >
+                    <TextView
+                        android:id="@+id/tv_dcal_op_c"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cirle_shape"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="a"
+                        android:paddingBottom="4dp"
+                        android:paddingHorizontal="8dp"
+                        android:textSize="14dp"
+                        android:backgroundTint="#EAE5E4"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"></TextView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/tv_dcal_op_c"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text=" Vitamin B1"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/card_back"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="0dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/dcal_relativeLayout4"
+                    android:layout_width="match_parent"
+                    android:paddingVertical="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center"
+                    android:layout_gravity="start|center"
+                    >
+                    <TextView
+                        android:id="@+id/tv_dcal_op_d"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cirle_shape"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:text="a"
+                        android:paddingBottom="4dp"
+                        android:paddingHorizontal="8dp"
+                        android:textSize="14dp"
+                        android:backgroundTint="#EAE5E4"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"></TextView>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text=" Vitamin B1"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="12dp"
+                android:id="@+id/rl_layout"
+                android:layout_marginVertical="12dp"
+                android:gravity="top">
+
+                <TextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Explanation"
+                    android:textAlignment="center"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:paddingBottom="12dp"
+                    android:gravity="center_horizontal" />
+
+                <View
+                    android:id="@+id/view_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_toLeftOf="@id/tvText"
+                    android:layout_toRightOf="@id/view_ver_one"
+                    android:background="#ffb3b3" />
+
+                <View
+                    android:id="@+id/view_ver_one"
+                    android:layout_width="1.5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_one"
+                    android:layout_marginLeft="6dp"
+                    android:layout_above="@+id/view_horizantal"
+                    android:background="#ffb3b3" />
+
+                <View
+                    android:id="@+id/view_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_toRightOf="@id/tvText"
+                    android:background="#ffb3b3" />
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/view_two"
+                    android:layout_above="@+id/view_horizantal"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/view_ver_two"
+                    android:background="#ffb3b3"
+                    android:layout_marginRight="6dp">
+                </View>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="#ffb3b3"
+                    android:id="@+id/view_horizantal"
+                    android:layout_below="@+id/relativeLayout4"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentLeft="true"></View>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/ll_dca_marks_layout"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout4"
+                    android:layout_width="match_parent"
+                    android:gravity="start"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_below="@id/ll_dca_marks_layout"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Google News is a news aggregator service developed by Google. It presents a continuous flow of articles organized from thousands of publishers and magazines"
+                        android:id="@+id/tv_srl_view_solution"
+                        android:textAllCaps="false"
+                        android:textAlignment="textStart"
+                        android:gravity="start"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"></TextView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+</LinearLayout>

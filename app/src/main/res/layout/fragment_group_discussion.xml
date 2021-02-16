@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ededed"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.GroupDiscussionFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:paddingVertical="8dp"
+        android:layout_height="wrap_content"
+        android:background="@color/barcolor">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Group Discussion"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="8dp"
+      android:paddingBottom="16dp"
+      android:background="@color/barcolor"
+      android:orientation="vertical">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="8dp"
+          android:background="@drawable/tab_select_bg"
+          android:backgroundTint="@color/white"
+          android:orientation="horizontal">
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:layout_width="30dp"
+              android:layout_marginVertical="8dp"
+              android:layout_marginLeft="16dp"
+              android:id="@+id/gr_discussion_person"
+              android:layout_height="30dp"
+              android:layout_centerVertical="true"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_round_person" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Ask a question . . ."
+              android:textSize="16sp"
+              android:layout_toRightOf="@id/gr_discussion_person"
+              android:layout_centerHorizontal="true"
+              android:textAlignment="viewStart"
+              android:id="@+id/fr_et_group_discussion"
+              android:layout_marginLeft="16dp"
+              android:layout_centerInParent="true"
+              android:backgroundTint="#d9d9d9"
+              android:layout_gravity="start|center"
+              android:textColorHint="#4d4d4d"
+              ></TextView>
+          <View
+              android:layout_width="0.9dp"
+              android:layout_height="30dp"
+              android:layout_centerInParent="true"
+              android:layout_marginRight="8dp"
+              android:layout_toLeftOf="@id/gr_camera"
+              android:background="@color/lightblack"></View>
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_centerInParent="true"
+              android:layout_marginVertical="8dp"
+              android:id="@+id/gr_camera"
+              android:layout_marginRight="16dp"
+              android:backgroundTint="#9d9d9d"
+              android:background="@drawable/ic_photo_camera"></ImageView>
+      </RelativeLayout>
+
+  </LinearLayout>
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="16dp"
+    android:fontFamily="@font/roboto_medium"
+    android:textSize="16sp"
+    android:paddingHorizontal="12dp"
+    android:textColor="#4d4d4d"
+    android:layout_height="wrap_content"
+    android:text="Join in Group discussion :"></TextView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/group_discussion_rec">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/group_tab_layout"
+        app:tabIndicatorHeight="4dp"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="16dp"
+        app:tabPaddingStart="24dp"
+        app:tabIndicator="@drawable/indicator_tab_line"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="#cccccc"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/barcolor"
+        app:tabIndicatorColor="@color/barcolor"
+        >
+
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/group_view_pager"
+        tools:layout_editor_absoluteX="8dp">
+
+    </androidx.viewpager2.widget.ViewPager2>
+</LinearLayout>

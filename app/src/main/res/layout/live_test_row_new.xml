@@ -1,96 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="start"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp"
-    android:id="@+id/live_test_card_view"
-    android:layout_marginHorizontal="8dp"
-    android:foreground="?android:attr/selectableItemBackground"
-    app:cardUseCompatPadding="true"
-    android:outlineAmbientShadowColor="@color/black"
-    android:background="@drawable/card_back"
-    android:backgroundTint="@color/white"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:id="@+id/const_live_class"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="8dp"
-        android:id="@+id/linear_layout"
-        android:layout_marginTop="8dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/three_images"
+        android:layout_width="72dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="4dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:paddingVertical="20dp"
-            android:background="@drawable/preimage"></ImageView>
+            android:layout_width="72dp"
+            android:layout_height="48dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/three_doc_img"></ImageView>
+    </androidx.cardview.widget.CardView>
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_marginHorizontal="24dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="4dp"
-            android:id="@+id/relative"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" 200"
-                android:layout_alignParentLeft="true"
-                android:drawableLeft="@drawable/ic_like"
-                android:textSize="14sp"
-                android:id="@+id/new_tv_sub_likes"
-                android:letterSpacing="0.02"
-                android:textColor="#8c8c8c"
-                android:textAlignment="center"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center_horizontal">
-            </TextView>
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:background="@color/lightblack"
-                ></View>
-            <TextView
-                android:id="@+id/new_tv_sub_notify_me"
-                android:layout_width="wrap_content"
-                android:visibility="gone"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
-                android:drawableLeft="@drawable/ic_notification"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center_horizontal"
-                android:letterSpacing="0.02"
-                android:text=" Notify Me"
-                android:textAlignment="center"
-                android:textColor="#8c8c8c"
-                android:textSize="14sp"></TextView>
-            <TextView
-                android:id="@+id/new_tv_sub_play"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:layout_centerHorizontal="true"
-                android:drawableLeft="@drawable/ic_sheet"
-                android:drawableTint="#8c8c8c"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center_horizontal"
-                android:letterSpacing="0.02"
-                android:text=" Take Test"
-                android:textAlignment="center"
-                android:textColor="#8c8c8c"
-                android:textSize="14sp"></TextView>
+    <TextView
+        android:id="@+id/tv_dec"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Ventricles blood supply of Brain."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/three_images"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
 
-        </RelativeLayout>
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/note"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_notifications"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/time_zone"
+        app:tint="@color/lightblack"></ImageView>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:text="Schedule:"-->
+<!--        android:textSize="12sp"-->
+<!--        android:textColor="#808080"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:id="@+id/tv_schedule"-->
+<!--        android:fontFamily="@font/roboto_regular"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_dec"-->
+<!--        app:layout_constraintStart_toStartOf="@id/tv_dec"-->
+<!--        android:layout_height="wrap_content"></TextView>-->
 
-</androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/time_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="6dp"
+        android:text="Live on 4:00 pm 27/03/2021"
+        android:textColor="#808080"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_dec"
+        app:layout_constraintTop_toBottomOf="@id/tv_dec"></TextView>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="20dp"
+        android:background="#e6e6e6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/time_zone"
+        app:layout_constraintTop_toBottomOf="@+id/time_zone"></View>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,99 +2,217 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#ededed"
+    android:background="#ffffff"
     tools:context=".Fragments.ImagesBankFragment">
-    <RelativeLayout
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@drawable/class_room_gradient"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/image_bank_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/black"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="V i p"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/yantramanav_medium"
+            android:textAllCaps="true"
+            android:id="@+id/tv_image_bank"
+            app:layout_constraintEnd_toStartOf="@+id/ib_book_mark"
+            app:layout_constraintStart_toEndOf="@id/image_bank_back"
+            app:layout_constraintTop_toTopOf="@id/image_bank_back"
+            app:layout_constraintBottom_toBottomOf="@id/image_bank_back"
+            android:layout_height="wrap_content"></TextView>
+<TextView
+    android:layout_width="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/tv_image_bank"
+    app:layout_constraintStart_toStartOf="@id/tv_image_bank"
+    app:layout_constraintEnd_toEndOf="@id/tv_image_bank"
+    android:text="Visually imaging preparation"
+    android:textAllCaps="false"
+    android:id="@+id/tv_vip"
+    android:textColor="@color/white"
+    android:textSize="12sp"
+    android:fontFamily="@font/yantramanav"
+    android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:id="@+id/tv_videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/plain_start"
+            android:fontFamily="@font/yantramanav"
+            android:text=" Images 36"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/tv_vip"
+            app:layout_constraintTop_toBottomOf="@id/tv_vip"></TextView>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="image bank"
-            android:textAllCaps="true"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/roboto_medium"
-            android:fitsSystemWindows="true"
-            android:textSize="20dp"
-            android:id="@+id/tv_fr_image_bank"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:paddingVertical="12dp"></TextView>
-        <androidx.appcompat.widget.SwitchCompat
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/switch_compact_gried"
-            android:textOff="OFF"
-            android:paddingHorizontal="12dp"
-            android:paddingVertical="12dp"
-            android:textOn="On"
-            android:layout_toLeftOf="@id/tv_fr_image_bank_book_mark"
-            android:layout_toRightOf="@id/tv_fr_image_bank"
-            app:showText="true"
-           ></androidx.appcompat.widget.SwitchCompat>
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:drawableLeft="@drawable/plain_start"
+            android:fontFamily="@font/yantramanav"
+            android:text=" Videos 21"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_videos"
+            app:layout_constraintEnd_toEndOf="@id/tv_vip"
+            app:layout_constraintStart_toEndOf="@+id/tv_videos"
+            app:layout_constraintTop_toTopOf="@id/tv_videos"></TextView>
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
+            android:id="@+id/ib_book_mark"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:id="@+id/tv_fr_image_bank_book_mark"
-            android:layout_centerInParent="true"
-            android:src="@drawable/bookmark"></ImageView>
-    </RelativeLayout>
-<View
-    android:layout_width="match_parent"
-    android:layout_height="0.5dp"
-    android:background="@color/lightblack"></View>
+            android:src="@drawable/bookmark"
+            app:layout_constraintBottom_toBottomOf="@id/tv_image_bank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_image_bank"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:paddingVertical="12dp"-->
+<!--        android:elevation="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_scrollFlags="scroll|enterAlways|snap"-->
+<!--        app:popupTheme="@style/AppTheme.PopupOverlay"-->
+<!--        android:background="@drawable/class_room_gradient">-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/ic_arrow_back"-->
+<!--                android:backgroundTint="@color/black"></ImageView>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="image bank"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:fontFamily="@font/yantramanav_medium"-->
+<!--                android:textSize="20sp"-->
+<!--                android:paddingHorizontal="16dp"-->
+<!--                android:layout_marginRight="42dp"-->
+<!--                android:id="@+id/tv_fr_image_bank"-->
+<!--                android:textColor="@color/black"-->
+<!--                ></TextView>-->
+<!--            <androidx.appcompat.widget.SwitchCompat-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/switch_compact_gried"-->
+<!--                android:textOff="OFF"-->
+<!--                android:layout_toLeftOf="@id/tv_fr_image_bank_book_mark"-->
+<!--                android:textOn="On"-->
+<!--                android:layout_marginHorizontal="8dp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                app:showText="true"-->
+<!--                ></androidx.appcompat.widget.SwitchCompat>-->
+<!--            <ImageView-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:id="@+id/tv_fr_image_bank_book_mark"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:src="@drawable/bookmark"></ImageView>-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.appcompat.widget.Toolbar>-->
 
-<androidx.recyclerview.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_marginTop="12dp"
-    android:layout_height="wrap_content"
-    android:id="@+id/imagebank_sub_rec"></androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_gravity="center"
+        android:outlineAmbientShadowColor="@color/black"
+        android:background="@drawable/card_back"
+        android:backgroundTint="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/class_room_gradient"
+            android:paddingVertical="8dp"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content"
+                android:id="@+id/imagebank_sub_rec"></androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/ll_back_bg"
-        android:backgroundTint="#bfe2e5"
         android:gravity="center"
+        android:id="@+id/ll"
+        android:layout_marginTop="8dp"
         android:layout_marginHorizontal="20dp"
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#006666"
             android:layout_gravity="center"
-            android:background="@drawable/ic_baseline_play_arrow"></ImageView>
+            android:src="@drawable/ic_video_view"
+            app:tint="#006666"></ImageView>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Image Based Discussion"
+            android:text="Anatomy vip part 1"
             android:paddingVertical="8dp"
             android:fontFamily="@font/roboto_medium"
             android:textColor=" #006666"
             android:textSize="16sp"
+            android:layout_marginLeft="4dp"
             android:textAlignment="center"
             android:gravity="center_horizontal"></TextView>
     </LinearLayout>
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:id="@+id/image_bank_rec_gried_view"></androidx.recyclerview.widget.RecyclerView>
+
 
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
     android:id="@+id/image_bank_rec"></androidx.recyclerview.widget.RecyclerView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        android:id="@+id/image_bank_all_images"></androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

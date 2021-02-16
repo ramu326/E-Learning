@@ -8,7 +8,7 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:scrollbars="vertical"
         android:id="@+id/image_slider_viewpager"
         android:layout_height="match_parent"></androidx.viewpager2.widget.ViewPager2>

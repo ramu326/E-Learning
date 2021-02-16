@@ -50,108 +50,108 @@ public class RecyclerRegularNTrAdapter extends ListAdapter<RegularCourceModel,Re
       holder.Pimage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.newprevious));
       holder.Swtimage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.newswt));
 
-      switch (position){
-          case 0:
-              holder.Subject.setText("Anatomy");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.anatomy));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.antmycolor)));
-              break;
-          case 1:
-              holder.Subject.setText("Physiology");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.physiology));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.phylogycolor)));
-              break;
-          case 2:
-              holder.Subject.setText("Biochemistry");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.biochemistry));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.biochecolor)));
-              break;
-          case 3:
-              holder.Subject.setText("Pathology");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.pathology));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.pathcolor)));
-              break;
-//            case 4:
-//                holder.Subject.setText("Anatomy");
-//                holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.anatomy));
-//                holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.antmycolor)));
-//                break;
-          case 4:
-              holder.Subject.setText("Pharmacology");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.pharmacology));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.pharmcolor)));
-              break;
-          case 5:
-              holder.Subject.setText("Microbiologgy");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.microbiology));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.microcolor)));
-              break;
-          case 6:
-              holder.Subject.setText("Forensic Medicine");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.foresic));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.forcolor)));
-              break;
-          case 7:
-              holder.Subject.setText("Community Medicine");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.communitymedicin));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.comcolor)));
-              break;
-          case 8:
-              holder.Subject.setText("ENT");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.ent));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.entcolor)));
-              break;
-          case 9:
-              holder.Subject.setText("Opthalmology");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.opthalmology));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.opthocolor)));
-              break;
-          case 10:
-              holder.Subject.setText("Gynaecology & Obstetrics");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.obestric));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.obcolor)));
-              break;
-          case 11:
-              holder.Subject.setText("Paediatrics");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.pediatrics));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.pedcolor)));
-              break;
-          case 12:
-              holder.Subject.setText("Surgery");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.generalsurgery));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.gencolor)));
-              break;
-          case 13:
-              holder.Subject.setText("Medicine");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.generalmedicine));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.genmcolor)));
-              break;
-          case 14:
-              holder.Subject.setText("Radiology");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.radiology));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.radiocolor)));
-              break;
-          case 15:
-              holder.Subject.setText("Anaesthesia");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.anesthesia));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.anescolor)));
-              break;
-          case 16:
-              holder.Subject.setText("Orthopaedics");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.orthopedics));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.orthocolor)));
-              break;
-          case 17:
-              holder.Subject.setText("Psychiatry");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.physiology));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.phylogycolor)));
-              break;
-          case 18:
-              holder.Subject.setText("Dermatology");
-              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.dermatology));
-              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.dermocolor)));
-              break;
-      }
+//      switch (position){
+//          case 0:
+//              holder.Subject.setText("Anatomy");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.anatomy));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.antmycolor)));
+//              break;
+//          case 1:
+//              holder.Subject.setText("Physiology");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.physiology));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.phylogycolor)));
+//              break;
+//          case 2:
+//              holder.Subject.setText("Biochemistry");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.biochemistry));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.biochecolor)));
+//              break;
+//          case 3:
+//              holder.Subject.setText("Pathology");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.pathology));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.pathcolor)));
+//              break;
+////            case 4:
+////                holder.Subject.setText("Anatomy");
+////                holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.anatomy));
+////                holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.antmycolor)));
+////                break;
+//          case 4:
+//              holder.Subject.setText("Pharmacology");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.pharmacology));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.pharmcolor)));
+//              break;
+//          case 5:
+//              holder.Subject.setText("Microbiologgy");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.microbiology));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.microcolor)));
+//              break;
+//          case 6:
+//              holder.Subject.setText("Forensic Medicine");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.foresic));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.forcolor)));
+//              break;
+//          case 7:
+//              holder.Subject.setText("Community Medicine");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.communitymedicin));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.comcolor)));
+//              break;
+//          case 8:
+//              holder.Subject.setText("ENT");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.ent));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.entcolor)));
+//              break;
+//          case 9:
+//              holder.Subject.setText("Opthalmology");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.opthalmology));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.opthocolor)));
+//              break;
+//          case 10:
+//              holder.Subject.setText("Gynaecology & Obstetrics");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.obestric));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.obcolor)));
+//              break;
+//          case 11:
+//              holder.Subject.setText("Paediatrics");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.pediatrics));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.pedcolor)));
+//              break;
+//          case 12:
+//              holder.Subject.setText("Surgery");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.generalsurgery));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.gencolor)));
+//              break;
+//          case 13:
+//              holder.Subject.setText("Medicine");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.generalmedicine));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.genmcolor)));
+//              break;
+//          case 14:
+//              holder.Subject.setText("Radiology");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.radiology));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.radiocolor)));
+//              break;
+//          case 15:
+//              holder.Subject.setText("Anaesthesia");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.anesthesia));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.anescolor)));
+//              break;
+//          case 16:
+//              holder.Subject.setText("Orthopaedics");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.orthopedics));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.orthocolor)));
+//              break;
+//          case 17:
+//              holder.Subject.setText("Psychiatry");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.physiology));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.phylogycolor)));
+//              break;
+//          case 18:
+//              holder.Subject.setText("Dermatology");
+//              holder.Simage.setImageDrawable(regularCourceFragment.getResources().getDrawable(R.drawable.dermatology));
+//              holder.progressBar.setProgressTintList(ColorStateList.valueOf(regularCourceFragment.getResources().getColor(R.color.dermocolor)));
+//              break;
+//      }
     }
     @Override
     public void submitList(@Nullable List<RegularCourceModel> list) {

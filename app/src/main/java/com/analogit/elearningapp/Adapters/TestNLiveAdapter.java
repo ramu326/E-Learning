@@ -1,17 +1,13 @@
 package com.analogit.elearningapp.Adapters;
 
 import android.content.Context;
-import android.widget.Switch;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.analogit.elearningapp.Fragments.LiveClassFragment;
 import com.analogit.elearningapp.Fragments.LiveTestFragment;
-import com.analogit.elearningapp.Fragments.TestNDiscussionFragment;
-import com.analogit.elearningapp.Fragments.VideosFragment;
 
 public class TestNLiveAdapter extends FragmentPagerAdapter {
 

@@ -1,81 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/tab_unselect_bg"
-    android:backgroundTint="#ededed"
-    android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:paddingVertical="42dp"
-        android:background="@drawable/relative_layout_bg_curve">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:background="@drawable/docime"
-            android:layout_centerInParent="true"
-            android:layout_height="wrap_content"></ImageView>
-    </RelativeLayout>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="horizontal"
-    android:background="@drawable/ll_back_bg"
-    android:backgroundTint="#bfe2e5"
-    android:layout_gravity="center"
-    android:layout_marginTop="20dp"
-    android:gravity="center"
-    android:layout_marginHorizontal="20dp"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#006666"
-        android:layout_gravity="center"
-        android:background="@drawable/ic_baseline_play_arrow"></ImageView>
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:background="@color/barcolor"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/class_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" Morning Rounds "
-        android:paddingVertical="8dp"
-        android:fontFamily="@font/roboto_medium"
-        android:textColor=" #006666"
-        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/yantramanav_medium"
+        android:text="Class room"
         android:textAlignment="center"
-        android:gravity="center_horizontal"></TextView>
-</LinearLayout>
-    <LinearLayout
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/dr_learn_qbank_tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/premium_live_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/class_name"
+        app:popupTheme="@style/Theme.Design.NoActionBar"
+        app:tabIndicator="@drawable/tab_select_bg"
+        app:tabIndicatorColor="#257274"
+        app:tabIndicatorGravity="stretch"
+        app:tabMode="auto"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        app:tabTextColor="#257274"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/dr_learn_qbank_view_pager"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/ll_back_bg"
-        android:backgroundTint="#bfe2e5"
-        android:gravity="center"
-        android:layout_marginHorizontal="20dp"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#006666"
-            android:layout_gravity="center"
-            android:background="@drawable/ic_baseline_play_arrow"></ImageView>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dr_learn_qbank_tab_layout">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" WallPoster Discussion"
-            android:paddingVertical="8dp"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor=" #006666"
-            android:textSize="16sp"
-            android:textAlignment="center"
-            android:gravity="center_horizontal"></TextView>
-    </LinearLayout>
+    </androidx.viewpager2.widget.ViewPager2>
 
-<androidx.recyclerview.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_marginTop="20dp"
-    android:layout_height="match_parent"
-    android:id="@+id/learn_rec"></androidx.recyclerview.widget.RecyclerView>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ededed"
+    tools:context=".Fragments.GroupDiscussionQuestionPostFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:paddingVertical="8dp"
+
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Post"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_arrow_back"
+            android:drawableTint="@color/black"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:paddingVertical="8dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/lightblack"></View>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:id="@+id/circle_user_image"
+            android:layout_gravity="center"
+            android:src="@drawable/nurse_pic" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. MaheshGoud Maha"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/circle_user_image"
+            android:id="@+id/fr_tv_doctor_name"
+            android:inputType="textMultiLine"
+            android:layout_gravity="top"
+            android:layout_marginLeft="16dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            tools:ignore="RtlCompat"></TextView>
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingVertical="4dp"
+            android:layout_toRightOf="@id/circle_user_image"
+            android:backgroundTint="@color/white"
+            android:layout_below="@id/fr_tv_doctor_name"
+            android:layout_marginLeft="16dp"
+            android:paddingHorizontal="8dp"
+            android:background="@drawable/tab_select_bg"
+            android:orientation="vertical">
+            <Spinner
+                android:id="@+id/sp_public"
+                android:layout_width="wrap_content"
+                android:spinnerMode="dropdown"
+                android:layout_gravity="right"
+                android:backgroundTint="@color/black"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="28dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/ic_camera"
+        android:background="@drawable/ic_camera_add"
+        android:layout_alignParentLeft="true"
+        android:backgroundTint="@color/blue"
+        ></ImageView>
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="32dp"
+        android:id="@+id/iv_gallery"
+        android:layout_toRightOf="@id/ic_camera"
+        android:background="@drawable/ic_add_galllery"
+        android:backgroundTint="@color/green"
+        ></ImageView>
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="32dp"
+        android:id="@+id/iv_video"
+        android:layout_toRightOf="@id/iv_gallery"
+        android:background="@drawable/ic_video"
+        android:backgroundTint="@color/red"
+        ></ImageView>
+</RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:textSize="24sp"
+                android:textAlignment="textStart"
+                android:inputType="text"
+                android:layout_gravity="top|center"
+                android:gravity="start"
+                android:backgroundTint="@null"
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textColorHint="#e0e0e0"
+                android:hint="Enter Your question?">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:paddingVertical="12dp"
+
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textColorHint="#e0e0e0"
+                android:hint="A).Enter your option here">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:paddingVertical="12dp"
+                android:maxLines="1"
+
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textColorHint="#e0e0e0"
+                android:hint="B).Enter your option here">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:paddingVertical="12dp"
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textColorHint="#e0e0e0"
+                android:hint="C).Enter your option here">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="text"
+                android:paddingTop="12dp"
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                android:textColorHint="#e0e0e0"
+                android:hint="D).Enter your option here">
+
+            </EditText>
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/tab_select_bg"
+        android:orientation="vertical">
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:spinnerMode="dropdown"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/black"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Post "
+        android:id="@+id/tv_post"
+        android:layout_gravity="center_horizontal"
+        android:paddingVertical="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/btn_bg_white"
+        android:paddingHorizontal="42dp"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="42dp"
+        android:backgroundTint="@color/barcolor"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"></TextView>
+</LinearLayout>

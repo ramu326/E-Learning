@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Fragments.VIPFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ll_vip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingVertical="12dp"
+        android:background="@drawable/class_room_gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="V I P"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Visually Imaging Preparation"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Videos 36"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_vip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_vip"></androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

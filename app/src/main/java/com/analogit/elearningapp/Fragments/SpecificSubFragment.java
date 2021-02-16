@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -15,7 +14,6 @@ import android.widget.TextView;
 
 import com.analogit.elearningapp.Activities.MainActivity;
 import com.analogit.elearningapp.Adapters.RecyclerAllQuestionsRow;
-import com.analogit.elearningapp.Adapters.RecyclerSubJTopicAdapter;
 import com.analogit.elearningapp.R;
 
 public class SpecificSubFragment extends Fragment {
@@ -39,16 +37,16 @@ private TextView next;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.subject_with_topic_name_questions_layout, container, false);
-       recyclerView=view.findViewById(R.id.rec_all_ques);
-       ivMenu=view.findViewById(R.id.iv_attempted_question);
-       next=view.findViewById(R.id.topic_tv_next);
+
+       ivMenu=view.findViewById(R.id.fr_sub_with_topic_attempted_questions);
+       next=view.findViewById(R.id.topic_tv_next_sub_with_fr);
 
         ((MainActivity)getActivity()).bottomNavigationView.setVisibility(View.GONE);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
-        recyclerAllQuestionsRow=new RecyclerAllQuestionsRow(this);
-
-        recyclerView.setAdapter(recyclerAllQuestionsRow);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
+//        recyclerAllQuestionsRow=new RecyclerAllQuestionsRow(this);
+//
+//        recyclerView.setAdapter(recyclerAllQuestionsRow);
 
         ivMenu.setOnClickListener(new View.OnClickListener() {
             @Override

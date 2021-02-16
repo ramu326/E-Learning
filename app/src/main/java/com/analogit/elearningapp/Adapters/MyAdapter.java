@@ -2,13 +2,12 @@ package com.analogit.elearningapp.Adapters;
 
 import android.content.Context;
 //TestNLiveAdapter
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.analogit.elearningapp.Fragments.TestNDiscussionFragment;
-import com.analogit.elearningapp.Fragments.VideosFragment;
+import com.analogit.elearningapp.Fragments.WallPosterVideosFragment;
 
 public class MyAdapter extends FragmentPagerAdapter {
 
@@ -29,7 +28,7 @@ public class MyAdapter extends FragmentPagerAdapter {
                 TestNDiscussionFragment testNDiscussionFragment = new TestNDiscussionFragment();
                 return testNDiscussionFragment;
             case 1:
-               VideosFragment videosFragment = new VideosFragment();
+               WallPosterVideosFragment videosFragment = new WallPosterVideosFragment();
                 return videosFragment;
             case 2:
 

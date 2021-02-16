@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_back"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:id="@+id/wall_poster_grid_card_view"
+    android:layout_margin="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:id="@+id/iv_poster_sub"
+        android:src="@drawable/wallposter_skeliton">
+    </ImageView>
+
+
+
+
+
+
+</androidx.cardview.widget.CardView>

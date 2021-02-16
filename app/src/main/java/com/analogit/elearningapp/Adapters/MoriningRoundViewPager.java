@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.analogit.elearningapp.Fragments.MoringRoundFragment;
+import com.analogit.elearningapp.Fragments.MornigRoundSubjectWithDecFragment;
+import com.analogit.elearningapp.Fragments.MorningRoundPracticlesFragment;
 
 public class MoriningRoundViewPager extends FragmentStateAdapter {
     public MoriningRoundViewPager(@NonNull Fragment fragmentActivity) {
@@ -15,7 +17,14 @@ public class MoriningRoundViewPager extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return new MoringRoundFragment(position);
+
+        switch (position){
+            case 0:
+                return new MornigRoundSubjectWithDecFragment();
+            case 1:
+                return new MorningRoundPracticlesFragment();
+        }
+return null;
     }
 
     @Override

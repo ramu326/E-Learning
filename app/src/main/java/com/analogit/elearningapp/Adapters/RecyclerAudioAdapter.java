@@ -6,11 +6,14 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.analogit.elearningapp.Fragments.IcardsFragment;
 import com.analogit.elearningapp.Model.AudioModel;
 import com.analogit.elearningapp.R;
 
@@ -43,8 +46,17 @@ public class RecyclerAudioAdapter extends ListAdapter<AudioModel,RecyclerAudioAd
 
     class MyViewholder extends RecyclerView.ViewHolder{
 
+        ConstraintLayout constraintLayout;
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
+            constraintLayout=itemView.findViewById(R.id.cons_icards_audio);
+            constraintLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AppCompatActivity activity=(AppCompatActivity)v.getContext();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.content,new IcardsFragment()).addToBackStack(null).commit();
+                }
+            });
         }
     }
 

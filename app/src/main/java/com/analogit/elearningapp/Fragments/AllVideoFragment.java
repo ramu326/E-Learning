@@ -60,25 +60,25 @@ public class AllVideoFragment extends Fragment {
        videosModels.add(first);
 
 
-       VideosModel second=new VideosModel();
-       second.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.two;;
-       videosModels.add(second);
-
-       VideosModel third=new VideosModel();
-       third.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.three;
-       videosModels.add(third);
-
-       VideosModel fourth=new VideosModel();
-       fourth.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.four;
-       videosModels.add(fourth);
-
-        VideosModel fifth=new VideosModel();
-        fifth.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.five;
-        videosModels.add(fifth);
-
-        VideosModel sixth=new VideosModel();
-        sixth.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.six;
-        videosModels.add(sixth);
+//       VideosModel second=new VideosModel();
+//       second.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.two;;
+//       videosModels.add(second);
+//
+//       VideosModel third=new VideosModel();
+//       third.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.three;
+//       videosModels.add(third);
+//
+//       VideosModel fourth=new VideosModel();
+//       fourth.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.four;
+//       videosModels.add(fourth);
+//
+//        VideosModel fifth=new VideosModel();
+//        fifth.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.five;
+//        videosModels.add(fifth);
+//
+//        VideosModel sixth=new VideosModel();
+//        sixth.videoUrl="android.resource://" + getActivity().getPackageName() + "/" + R.raw.six;
+//        videosModels.add(sixth);
 
        viewPager2.setAdapter(new VideosAdapter(videosModels));
        return v;

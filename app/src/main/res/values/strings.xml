@@ -76,7 +76,7 @@
     <string name="are_you_want_to_pause_or_quit_the_quit">Are you want to pause or \n Quit the Quit?</string>
     <!--    <string name="t_d"> <![CDATA[  T&d]]></string>-->
     <string name="all_subjects">All Subjects</string>
-    <string name="which_of_the_following_is_an_a_typical_vitamin">Which of the following is an A Typical Vitamin?</string>
+    <string name="which_of_the_following_is_an_a_typical_vitamin">1.Which of the following is an A Typical Vitamin?</string>
     <string name="view_all"><font color='#008000'>View</font> <font color='#006400'></font> All</string>
     <string name="resume">Resume</string>
     <string name="meet_the_master_minds">Meet the <font color='#000000'>Master Minds</font></string>
@@ -84,6 +84,7 @@
     <string name="leader_board_list">Leader Board List</string>
     <string name="Rs">\u20B9</string>
     <string name="obstetrics_gynaecology"><![CDATA[obstetrics & gynaecology]]></string>
+    <string name="share_boost_with_friends"><![CDATA[ Share & Boost with friends]]></string>
 
     <!--    <string name="string_resource">This [img src=dra/] is an icon.</string>-->
 

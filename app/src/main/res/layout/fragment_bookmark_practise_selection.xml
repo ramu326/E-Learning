@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Fragments.BookmarkPractiseSelectionFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:paddingVertical="12dp"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/barcolor">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" Bookmarks Practice "
+                android:textAlignment="center"
+                android:id="@+id/tv_pr_error"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"></TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/tv_pr_error"
+                android:layout_marginTop="4dp"
+                android:text="(wrong+Skipped Mcq's)"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:background="@color/barcolor"
+                android:visibility="gone"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/black"
+                ></TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/ic_calendar"></ImageView>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_height="wrap_content"
+            android:text="Create Name"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Title..."
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="@color/lightblack"
+            android:layout_height="wrap_content"></EditText>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAlignment="textStart"
+            android:layout_height="wrap_content"
+            android:text="No. Of MCQ's"
+            android:textStyle="normal"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"></TextView>
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="0"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:backgroundTint="@color/lightblack"
+            android:layout_height="wrap_content"></EditText>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/tab_unselect_bg"
+            android:orientation="horizontal">
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp"
+                android:gravity="center">
+            </Spinner>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_down"></ImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:id="@+id/tv_fr_book_go_practise"
+        android:textAllCaps="true"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="24dp"
+        android:text="Go practice"
+        android:background="@drawable/ll_back_bg"
+        android:backgroundTint="@color/barcolor"></TextView>
+</LinearLayout>

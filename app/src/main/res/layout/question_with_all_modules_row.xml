@@ -99,7 +99,7 @@
                 android:layout_marginLeft="28dp"
                 android:id="@+id/iv_qwamr_stack"
 
-                android:src="@drawable/stock">
+                android:src="@drawable/anatomy">
             </ImageView>
             <TextView
                 android:layout_width="wrap_content"

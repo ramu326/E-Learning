@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.analogit.elearningapp.Adapters.RecyclerAllSubjectsAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerDiscussionVideoExplantaionAdapter;
+import com.analogit.elearningapp.Adapters.RecyclerImageBankSubjectAdapter;
 import com.analogit.elearningapp.R;
 
 
@@ -19,8 +20,10 @@ public class DiscussionVideoExplantaionFragment extends Fragment {
 
    View view;
 RecyclerView rViewSub,rViewSubExplain;
-    public DiscussionVideoExplantaionFragment() {
+int a;
+    public DiscussionVideoExplantaionFragment(int a) {
         // Required empty public constructor
+        this.a=a;
     }
 
 
@@ -28,18 +31,32 @@ RecyclerView rViewSub,rViewSubExplain;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view= inflater.inflate(R.layout.fragment_discussion_video_explantaion, container, false);
+     if(a==0){
+         view= inflater.inflate(R.layout.fragment_discussion_video_explantaion, container, false);
 
-        RecyclerAllSubjectsAdapter recyclerAllSubjectsAdapter=new RecyclerAllSubjectsAdapter(this);
-        RecyclerDiscussionVideoExplantaionAdapter recyclerDiscussionVideoExplantaionAdapter=new RecyclerDiscussionVideoExplantaionAdapter(this);
+         RecyclerImageBankSubjectAdapter recyclerImageBankSubjectAdapter=new RecyclerImageBankSubjectAdapter(this);
+         RecyclerDiscussionVideoExplantaionAdapter recyclerDiscussionVideoExplantaionAdapter=new RecyclerDiscussionVideoExplantaionAdapter(this);
 
-        rViewSub=view.findViewById(R.id.fr_discussion_video_explantion_rec_sub);
-        rViewSub.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
-        rViewSub.setAdapter(recyclerAllSubjectsAdapter);
-        rViewSubExplain=view.findViewById(R.id.fr_discussion_video_explantion_rec_sub_explantaion);
+         rViewSub=view.findViewById(R.id.fr_discussion_video_explantion_rec_sub);
+         rViewSub.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
+         rViewSub.setAdapter(recyclerImageBankSubjectAdapter);
+         rViewSubExplain=view.findViewById(R.id.fr_discussion_video_explantion_rec_sub_explantaion);
+         rViewSubExplain.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
+         rViewSubExplain.setAdapter(recyclerDiscussionVideoExplantaionAdapter);
+     }
+     else if(a==1){
+         view= inflater.inflate(R.layout.fragment_discussion_video_explantaion, container, false);
+         rViewSub=view.findViewById(R.id.fr_discussion_video_explantion_rec_sub);
+                rViewSub.setVisibility(View.GONE);
+           RecyclerDiscussionVideoExplantaionAdapter recyclerDiscussionVideoExplantaionAdapter=new RecyclerDiscussionVideoExplantaionAdapter(this);
+          rViewSubExplain=view.findViewById(R.id.fr_discussion_video_explantion_rec_sub_explantaion);
+          rViewSubExplain.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
+          rViewSubExplain.setAdapter(recyclerDiscussionVideoExplantaionAdapter);
+     }
+     else {
 
-        rViewSubExplain.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
-        rViewSubExplain.setAdapter(recyclerDiscussionVideoExplantaionAdapter);
+     }
+
         return view;
     }
 }

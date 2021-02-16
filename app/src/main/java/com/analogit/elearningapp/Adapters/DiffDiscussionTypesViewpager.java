@@ -20,6 +20,6 @@ public class DiffDiscussionTypesViewpager extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 8;
+        return 9;
     }
 }

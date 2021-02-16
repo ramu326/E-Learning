@@ -1,52 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#ededed"
+    android:background="@color/barcolor"
     tools:context=".Fragments.BothTestNLiveFragment">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="42dp"
-            android:background="@drawable/relative_layout_bg_curve">
-    <ImageView
-        android:layout_width="160dp"
-        android:paddingHorizontal="12dp"
-        android:id="@+id/iv_td"
-        android:adjustViewBounds="true"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_height="150dp"
-        android:src="@drawable/td"></ImageView>
-    </RelativeLayout>
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/class_name_test"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="Test Hall"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+    <com.google.android.material.tabs.TabLayout
+
         android:id="@+id/both_tab_layout"
-        android:layout_marginTop="-60dp"
-        app:tabIndicatorHeight="0dp"
-        android:layout_marginHorizontal="12dp"
-        app:tabTextColor="#cccccc"
-        android:background="@drawable/btn_bg"
-        android:backgroundTint="@color/barcolor"
-        android:scrollbars="none"
-        app:tabMode="fixed"
-        app:tabGravity="fill"
-        app:tabSelectedTextColor="@color/white"
-        app:tabIndicatorColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/dr_home_bg_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/class_name_test"
+        app:popupTheme="@style/Theme.Design.NoActionBar"
+        app:tabIndicator="@drawable/tab_select_bg"
+        app:tabIndicatorColor="#0eb2be"
+        app:tabIndicatorGravity="stretch"
+        app:tabMode="auto"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="#07595f"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        app:tabTextColor="#0eb2be"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         >
 
     </com.google.android.material.tabs.TabLayout>
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:id="@+id/both_view_pager"
-        tools:layout_editor_absoluteX="8dp">
+        app:layout_constraintTop_toBottomOf="@id/both_tab_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </androidx.viewpager2.widget.ViewPager2>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

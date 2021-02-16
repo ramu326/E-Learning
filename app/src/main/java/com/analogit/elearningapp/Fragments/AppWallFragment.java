@@ -12,8 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.analogit.elearningapp.Adapters.RecyclerAppwallAdapter;
-import com.analogit.elearningapp.Adapters.RecyclerLiveClassAdapter;
+import com.analogit.elearningapp.Adapters.RecyclerVIPAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerMedicalAdapter;
 import com.analogit.elearningapp.R;
 
@@ -25,7 +24,7 @@ public class AppWallFragment extends Fragment {
    private ImageView medicalImage;
    private CardView cardView,cardProof;
    private RecyclerMedicalAdapter recyclerMedicalAdapter;
-   private RecyclerAppwallAdapter recyclerAppwallAdapter;
+   private RecyclerVIPAdapter recyclerAppwallAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,7 +41,7 @@ public class AppWallFragment extends Fragment {
        cardView.setVisibility(View.GONE);
         cardProof.setVisibility(View.GONE);
        rAppvideos.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
-       recyclerAppwallAdapter=new RecyclerAppwallAdapter(this);
+       recyclerAppwallAdapter=new RecyclerVIPAdapter(this);
        rAppvideos.setAdapter(recyclerAppwallAdapter);
 
 

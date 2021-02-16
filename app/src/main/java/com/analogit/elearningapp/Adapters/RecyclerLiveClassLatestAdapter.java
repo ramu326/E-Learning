@@ -27,7 +27,7 @@ public class RecyclerLiveClassLatestAdapter extends ListAdapter<LiveClassModel,R
     @NonNull
     @Override
     public MyViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.new_live_class_row_layout,parent,false));
+        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.home_live_class_row,parent,false));
     }
 
     @Override

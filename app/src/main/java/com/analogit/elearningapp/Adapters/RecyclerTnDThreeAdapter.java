@@ -3,6 +3,7 @@ package com.analogit.elearningapp.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,8 +14,10 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.analogit.elearningapp.Fragments.DiscussionVideoExplantaionFragment;
 import com.analogit.elearningapp.Fragments.GeneralIndructionFragmment;
 import com.analogit.elearningapp.Fragments.TdStartFragment;
+import com.analogit.elearningapp.Fragments.TestDiscussionFinalreportAllTabsFragment;
 import com.analogit.elearningapp.Model.TnDOneModel;
 import com.analogit.elearningapp.Model.TndThreeModel;
 import com.analogit.elearningapp.R;
@@ -24,6 +27,7 @@ import java.util.List;
 
 public class RecyclerTnDThreeAdapter extends ListAdapter<TndThreeModel,RecyclerTnDThreeAdapter.MyViewholder> {
     Fragment fragment;
+    int a=0;
     public RecyclerTnDThreeAdapter(Fragment fragment) {
         super(TndThreeModel.tndThreeModelItemCallback);
         this.fragment=fragment;
@@ -47,9 +51,27 @@ public class RecyclerTnDThreeAdapter extends ListAdapter<TndThreeModel,RecyclerT
     class  MyViewholder extends RecyclerView.ViewHolder{
 
         CardView cardView;
+        TextView tvDiscussion,tvReview;
+
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
             cardView=itemView.findViewById(R.id.test_discussion_second_row_card_view);
+            tvDiscussion=itemView.findViewById(R.id.new_book_mark_test_discussion_discussion);
+            tvReview=itemView.findViewById(R.id.new_book_mark_test_discussion_review);
+            tvReview.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AppCompatActivity appCompatActivity=(AppCompatActivity)v.getContext();
+                    appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content,new TestDiscussionFinalreportAllTabsFragment()).addToBackStack(null).commit();
+                }
+            });
+            tvDiscussion.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AppCompatActivity appCompatActivity=(AppCompatActivity)v.getContext();
+                    appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content,new DiscussionVideoExplantaionFragment(a)).addToBackStack(null).commit();
+                }
+            });
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

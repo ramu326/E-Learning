@@ -3,7 +3,6 @@ package com.analogit.elearningapp.Fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.analogit.elearningapp.Activities.MainActivity;
-import com.analogit.elearningapp.Adapters.RecyclerTopicAdapter;
+import com.analogit.elearningapp.Adapters.RecyclerAudioListenAdapter;
 import com.analogit.elearningapp.R;
 
 
@@ -21,13 +20,13 @@ public class IcardsFragment extends Fragment {
 
         private  View v;
         private RecyclerView recyclerView;
-        private RecyclerTopicAdapter recyclerTopicAdapter;
+        private RecyclerAudioListenAdapter recyclerAudioListenAdapter;
         private ImageView more;
     public IcardsFragment() {
         // Required empty public constructor
     }
 
-
+//RecyclerAudioAdapter
 
 
     @Override
@@ -36,23 +35,15 @@ public class IcardsFragment extends Fragment {
         // Inflate the layout for this fragment
         v= inflater.inflate(R.layout.icards_text_layout, container, false);
         recyclerView=v.findViewById(R.id.itl_rec);
-        more=v.findViewById(R.id.iv_itl_more);
+
 
         ((MainActivity)(getActivity())).bottomNavigationView.setVisibility(View.GONE);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
-        recyclerTopicAdapter=new RecyclerTopicAdapter(this);
-        recyclerView.setAdapter(recyclerTopicAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
+        recyclerAudioListenAdapter=new RecyclerAudioListenAdapter(this);
+        recyclerView.setAdapter(recyclerAudioListenAdapter);
 
-        more.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
-                fr.replace(R.id.content,new IcardAudioFragment());
-                fr.addToBackStack(null);
-                fr.commit();
-            }
-        });
+
         return v;
     }
 }

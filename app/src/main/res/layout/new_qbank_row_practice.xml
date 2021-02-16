@@ -1,82 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="start"
-    android:layout_marginVertical="20dp"
-    android:layout_marginHorizontal="16dp"
-    android:paddingVertical="24dp"
-    android:foreground="?android:attr/selectableItemBackground"
-    app:cardCornerRadius="4dp"
-    app:cardUseCompatPadding="true"
-    android:outlineAmbientShadowColor="@color/black"
-    android:background="@drawable/card_back"
-    android:backgroundTint="@color/white"
-    android:layout_marginLeft="12dp"
+    android:id="@+id/constaraint_qbank"
+    android:layout_marginTop="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="8dp"
-        android:id="@+id/linear_layout"
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_sub_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/anatomy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/tv_sub_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:adjustViewBounds="true"
-            android:id="@+id/iv_sub_image"
-            android:background="@drawable/new_qbank_prac"></ImageView>
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Anatomy"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iv_sub_image"
+        app:layout_constraintTop_toTopOf="@id/iv_sub_image"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_sub_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_sub_name"
+        app:layout_constraintStart_toStartOf="@id/tv_sub_name"
+        android:text="5 out of 57 completed"
+        android:textColor="#979797"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/tv_sub_work_status"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_height="wrap_content"></TextView>
 
+    <ProgressBar
+        android:id="@+id/pBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="80dp"
+        android:layout_height="3dp"
+        android:minWidth="200dp"
+        android:max="100"
+        android:layout_marginTop="6dp"
+        android:background="#e6e6e6"
+        app:layout_constraintStart_toStartOf="@id/tv_sub_work_status"
+        app:layout_constraintTop_toBottomOf="@id/tv_sub_work_status"
+        android:indeterminate="false"
+        android:progress="2" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="BookmarkPracitce"
-                android:layout_centerVertical="true"
-                android:textSize="14sp"
-                android:layout_marginLeft="32dp"
-                android:id="@+id/new_book_mark"
-                android:letterSpacing="0.02"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center_horizontal">
-            </TextView>
-            <View
-                android:layout_width="0.5dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="32dp"
-                android:layout_toRightOf="@+id/new_book_mark"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerInParent="true"
-                android:id="@+id/view_one_ver"
-                android:background="@color/lightblack"
-                ></View>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#e6e6e6"
+        android:paddingTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_sub_work_status"
+        app:layout_constraintTop_toBottomOf="@id/pBar"></View>
 
-            <TextView
-                android:id="@+id/qbank_error"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="32dp"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/view_one_ver"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center_horizontal"
-                android:letterSpacing="0.02"
-                android:text=" ErrorsPrcatice"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="14sp"></TextView>
-
-        </RelativeLayout>
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

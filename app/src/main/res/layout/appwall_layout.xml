@@ -37,7 +37,7 @@
                 android:layout_marginVertical="14dp"
                 android:layout_marginLeft="48dp"
                 android:layout_toRightOf="@id/iv_al_back"
-                android:src="@drawable/app_wall"></ImageView>
+                android:src="@drawable/anatomy"></ImageView>
 
             <TextView
                 android:layout_width="match_parent"

@@ -9,12 +9,15 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.analogit.elearningapp.Fragments.IcardsTabsDecFragment;
 import com.analogit.elearningapp.Fragments.NewIcardExtenFragment;
 import com.analogit.elearningapp.Model.NewIcardsModel;
 import com.analogit.elearningapp.R;
@@ -48,33 +51,25 @@ public class RecyclerNewIcardsAdapter extends ListAdapter<NewIcardsModel, Recycl
 
     class MyViewholder extends RecyclerView.ViewHolder {
 
-        LinearLayout linearLayout;
-        RecyclerView recyclerView;
-        TextView textView;
 
+        ConstraintLayout constraintLayout;
 
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
-            linearLayout = itemView.findViewById(R.id.ll_subject_topic);
-
-
-            linearLayout.setOnClickListener(new View.OnClickListener() {
+            constraintLayout=itemView.findViewById(R.id.cons_icards_view);
+            constraintLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-
-                    Log.d("topics","Anotomysub");
-                    RecyclerAllTopicsAdapter recyclerAllTopicsAdapter=new RecyclerAllTopicsAdapter(fragment);
-
-                    ((NewIcardExtenFragment) (fragment)).fYear_rViewTopic
-                            .setLayoutManager(new LinearLayoutManager(fragment.getContext(), RecyclerView.HORIZONTAL, false));
-                    ((NewIcardExtenFragment) (fragment)).fYear_rViewTopic.setAdapter(recyclerAllTopicsAdapter);
+                public void onClick(View v) {
+                    AppCompatActivity activity=(AppCompatActivity)v.getContext();
+                    activity.getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.content, new IcardsTabsDecFragment()).commit();
                 }
             });
+
         }
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return 20;
     }
 }

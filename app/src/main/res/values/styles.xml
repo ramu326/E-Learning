@@ -1,11 +1,15 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/barcolor</item>
         <item name="colorPrimaryDark">@color/barcolor</item>
         <item name="colorAccent">@color/barcolor</item>
         <item name="colorControlNormal">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
 
     </style>
     <style name="NavigationView"  parent="Base.Theme.AppCompat">
@@ -74,5 +78,40 @@
     </style>
     <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
         <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="elevation">30dp</item>
+    </style>
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="fontFamily">@font/yantramanav_medium</item>
+    </style>
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="Animation.Design.BottomSheetDialog."  parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomShestStyle</item>
+    </style>
+    <style name="BottomShestStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="BaseBottomSheetDialogThem" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="RoundedImageview" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="color">@color/white</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="android:paddingTop">20dp</item>
+    </style>
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circle</item>
     </style>
 </resources>

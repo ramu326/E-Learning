@@ -26,29 +26,37 @@
       android:background="@drawable/ic_back"
       android:backgroundTint="@color/black"
    ></ImageView>
-  <RelativeLayout
+  <ProgressBar
+      android:layout_width="wrap_content"
+      android:layout_gravity="center"
+      android:id="@+id/progress"
+      android:layout_height="wrap_content"></ProgressBar>
+  <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_marginHorizontal="12dp"
-      android:layout_marginBottom="16dp"
-      android:layout_gravity="bottom|center">
+      android:layout_marginBottom="24dp"
+      android:layout_gravity="bottom">
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="12dp"
-        android:layout_marginLeft="32dp"
-        android:layout_alignParentLeft="true"
-        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:id="@+id/fav"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:background="@drawable/ic_favrite"></ImageView>
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="12dp"
-        android:layout_gravity="right"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="24dp"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/share"
+        app:layout_constraintStart_toEndOf="@id/fav"
+        app:layout_constraintEnd_toStartOf="@id/wall_poster_zoom_video"
+        app:layout_constraintTop_toTopOf="@id/fav"
+        app:layout_constraintBottom_toBottomOf="@id/fav"
         android:backgroundTint="@color/black"
         android:background="@drawable/ic_share"></ImageView>
     <TextView
@@ -56,15 +64,16 @@
         android:layout_height="wrap_content"
         android:paddingHorizontal="24dp"
         android:text="Videos "
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fav"
+        app:layout_constraintBottom_toBottomOf="@id/fav"
+        android:id="@+id/wall_poster_zoom_video"
         android:textColor="@color/black"
-        android:textAlignment="center"
-        android:background="@drawable/view_sol_bg_bt"
-        android:layout_gravity="right"
+        android:background="@drawable/btn_bg"
+        android:paddingVertical="8dp"
         android:drawableRight="@drawable/ic_forward"
-        android:drawableTint="@color/black"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        tools:ignore="RtlCompat"></TextView>
-  </RelativeLayout>
+        android:drawableTint="@color/black"></TextView>
+  </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

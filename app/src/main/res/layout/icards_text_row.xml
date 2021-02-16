@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    |<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
+    android:paddingVertical="8dp"
+    android:layout_height="wrap_content">
 
-    android:layout_height="match_parent">
+  <ImageView
+      android:id="@+id/music_symbol"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_marginStart="24dp"
+      android:layout_marginLeft="24dp"
+      android:src="@drawable/ic_music"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:tint="#8d8d8d"></ImageView>
 
+  <ImageView
+      android:layout_width="20dp"
+      android:layout_height="20dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginRight="16dp"
+      android:src="@drawable/bookmark"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+  <TextView
+      android:id="@+id/gao"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginLeft="16dp"
+      android:fontFamily="@font/roboto_regular"
+      android:text="General Anatomy"
+      android:textAllCaps="false"
+      android:textColor="@color/white"
+      android:textSize="14sp"
+      app:layout_constraintStart_toEndOf="@id/music_symbol"
+      app:layout_constraintTop_toTopOf="parent"></TextView>
     <TextView
-        android:id="@+id/tv_itr_all_topics"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/gao"
+        app:layout_constraintStart_toStartOf="@id/gao"
+        app:layout_constraintStart_toEndOf="@id/music_symbol"
+        android:text="30 mins .442"
+        android:textColor="#8d8d8d"
+        android:textSize="12sp"
+        android:textAllCaps="false"
         android:fontFamily="@font/roboto_regular"
-        android:lineSpacingExtra="5dp"
-        android:text="Chief Minister K Chandrashekhar Rao on Thursday announced ex gratia of Rs 5 lakh to the kin of persons who died in rain-related incidents in the State. He also instructed officials to provide relief to people affected by rains and floods on a war-footing, and asked them to distribute rice, pulses and other essential items besides three blankets to every household on behalf of the State government.
-
-Officials said 50 persons including 11 in GHMC area had lost their lives in rain-related incidents till Thursday. The crop loss across the State was estimated at Rs 2,000 crore. The Chief Minister also released Rs 5 crore to the Greater Hyderabad Municipal Corporation (GHMC) to speed up relief operations.
-
-The Chief Minister annnounced the decision at a high level review meeting at Pragathi Bhavan here to take stock of the ongoing relief works in the State. He issued specific directions to be implemented in the GHMC considering the impact the rains had on the city.
-
-He assured the people that new houses will be given to those whose houses had collapsed during the deluge and the government will undertake repairs to partially damaged houses free of cost. He made it clear that the new houses will be built on alternative sites since the houses that collapsed were constructed on drains (nalas) in the city. He directed the officers to pump out water from low-lying areas and cellars of apartment complexes and cautioned them not to restore power till the last drop of water was drained out as restoration of power supply in such areas could cause death"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
+        android:layout_height="wrap_content"></TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-</ScrollView>

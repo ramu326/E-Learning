@@ -1,240 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scrollbars="vertical"
-    android:fillViewport="true"
-    android:background="#ededed"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="@color/white">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/relative_layout_bg_curve"
         android:paddingVertical="42dp"
-        android:background="@drawable/relative_layout_bg_curve">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <ImageView
             android:layout_width="160dp"
-            android:paddingHorizontal="12dp"
-            android:id="@+id/iv_qbank"
-            android:adjustViewBounds="true"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
             android:layout_height="150dp"
-            android:src="@drawable/home_qbank"></ImageView>
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_below="@id/iv_qbank"-->
-<!--            android:layout_marginHorizontal="36dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            >-->
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentLeft="true"-->
-<!--                android:orientation="horizontal">-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_below="@id/iv_qbank"-->
-<!--                    android:text="Completed :"-->
-<!--                    android:id="@+id/tv_comleted"-->
-<!--                    android:textColor="#d9d9d9"-->
-<!--                    android:textSize="16sp"-->
-<!--                    android:layout_alignParentLeft="true"-->
-<!--                    android:fontFamily="@font/roboto_regular"-->
-<!--                    android:layout_height="wrap_content"></TextView>-->
+            android:adjustViewBounds="true"
+            android:src="@drawable/home_qbank"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--                    <TextView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_below="@id/tv_comleted"-->
-<!--                        android:text="200"-->
-<!--                        android:layout_marginLeft="4dp"-->
-<!--                        android:id="@+id/tv_comleted_modules"-->
-<!--                        android:textColor="	#d9d9d9"-->
-<!--                        android:textSize="16sp"-->
-<!--                        android:layout_alignParentLeft="true"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:fontFamily="@font/roboto_regular"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:gravity="center_horizontal"></TextView>-->
-<!--                    <TextView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_centerHorizontal="true"-->
-<!--                        android:text="/300"-->
-<!--                        android:id="@+id/tv_comleted_modules_total"-->
-<!--                        android:textColor="#d9d9d9"-->
-<!--                        android:textSize="16sp"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:fontFamily="@font/roboto_regular"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:gravity="center_horizontal"></TextView>-->
-
-
-<!--            </LinearLayout>-->
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentRight="true"-->
-<!--                android:orientation="horizontal">-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_below="@id/iv_qbank"-->
-<!--                    android:text="Bookmarks :"-->
-<!--                    android:id="@+id/tv_bookmark"-->
-<!--                    android:textColor="#d9d9d9"-->
-<!--                    android:textSize="16sp"-->
-<!--                    android:layout_alignParentLeft="true"-->
-<!--                    android:fontFamily="@font/roboto_regular"-->
-<!--                    android:layout_height="wrap_content"></TextView>-->
-
-<!--                    <TextView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_below="@id/tv_comleted"-->
-<!--                        android:text="20"-->
-<!--                        android:layout_marginLeft="4dp"-->
-<!--                        android:id="@+id/tv_bookmark_modules"-->
-<!--                        android:textColor="#d9d9d9"-->
-<!--                        android:textSize="16sp"-->
-<!--                        android:layout_alignParentLeft="true"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:fontFamily="@font/roboto_regular"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:gravity="center_horizontal"></TextView>-->
-
-
-
-<!--            </LinearLayout>-->
-<!--        </RelativeLayout>-->
-
-
-
-    </RelativeLayout>
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_qlab"
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="10dp"
-        app:cardCornerRadius="48dp"
-        app:cardElevation="8dp"
-        android:layout_marginTop="-70dp"
-        android:background="@drawable/ana_pb_bg"
-        android:backgroundTint="@color/white"
-        app:cardUseCompatPadding="true"
-        android:layout_height="wrap_content">
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/dr_home_bg_shape"
+        android:paddingVertical="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline4">
+
+        <ImageView
+            android:id="@+id/iv_add_pr_yr"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_note_add"
+            app:layout_constraintEnd_toStartOf="@+id/iv_qlab"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Pre.Yr"
+            android:textAllCaps="false"
+            android:textColor="#4d4d4d"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_add_pr_yr"
+            app:layout_constraintStart_toStartOf="@id/iv_add_pr_yr"
+            app:layout_constraintTop_toBottomOf="@id/iv_add_pr_yr"></TextView>
+
+        <ImageView
+            android:id="@+id/iv_qlab"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_wb_cloudy"
+            app:layout_constraintEnd_toStartOf="@+id/iv_custom"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_add_pr_yr"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Q lab"
+            android:textAllCaps="false"
+            android:textColor="#4d4d4d"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_qlab"
+            app:layout_constraintStart_toStartOf="@id/iv_qlab"
+            app:layout_constraintTop_toBottomOf="@id/iv_qlab"></TextView>
+
+        <ImageView
+            android:id="@+id/iv_custom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_post_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_qlab"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Custom"
+            android:textAllCaps="false"
+            android:textColor="#4d4d4d"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/iv_custom"
+            app:layout_constraintStart_toStartOf="@id/iv_custom"
+            app:layout_constraintTop_toBottomOf="@id/iv_custom"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="188dp" />
+
+    <TextView
+        android:id="@+id/tv_qbank_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:letterSpacing="0.60"
+        android:text="Q Bank-2020 Live"
+        android:textColor="@color/barcolor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint_qlab"></TextView>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/qbank_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/dr_home_bg_shape"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_qbank_live"
+        app:popupTheme="@style/Theme.Design.NoActionBar"
+        app:tabIndicator="@drawable/tab_select_bg"
+        app:tabIndicatorColor="@color/barcolor"
+        app:tabIndicatorGravity="stretch"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        app:tabTextColor="#006064"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="3"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:paddingVertical="12dp"
-            android:background="@drawable/ana_pb_bg"
-            android:backgroundTint="#ededed"
-            android:orientation="horizontal">
+            app:layout_constraintTop_toBottomOf="@id/qbank_tab_layout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/qbank_view_pager">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginLeft="12dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:backgroundTint="@color/black"
-                    android:background="@drawable/ic_note_add"></ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal"
-                    android:text="Pre Yr."
-                    android:paddingVertical="4dp"
-                    android:layout_alignParentLeft="true"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textSize="14sp"
-                    android:shadowColor="@color/black"
-                    android:layout_height="wrap_content"
-                    ></TextView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:backgroundTint="@color/black"
-                    android:background="@drawable/ic_wb_cloudy"></ImageView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal"
-                    android:text="Q lab"
-                    android:id="@+id/tv_qbank_qlab"
-                    android:paddingVertical="4dp"
-                    android:layout_alignParentLeft="true"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textSize="14sp"
-                    android:shadowColor="@color/black"
-                    android:layout_height="wrap_content"
-                    ></TextView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/ic_post_add"
-                    android:backgroundTint="@color/black"></ImageView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:textAlignment="center"
-                    android:gravity="center_horizontal"
-                    android:text="Custom"
-                    android:id="@+id/tv_qbank_custom_module"
-                    android:paddingVertical="4dp"
-                    android:layout_alignParentLeft="true"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textSize="14sp"
-                    android:shadowColor="@color/black"
-                    android:layout_height="wrap_content"
-                    ></TextView>
-            </LinearLayout>
+        </androidx.viewpager2.widget.ViewPager2>
 
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:layout_marginVertical="12dp"
-    android:layout_gravity="center"
-    android:textColor="@color/barcolor"
-    android:fontFamily="@font/roboto_medium"
-    android:textSize="16sp"
-    android:letterSpacing="0.60"
-    android:text="Q Bank-2020 Live"></TextView>
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="12dp"
-        android:layout_width="match_parent"
-        android:id="@+id/qwam_layout_rec"
-        android:layout_height="wrap_content">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

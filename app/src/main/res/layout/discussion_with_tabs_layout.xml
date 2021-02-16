@@ -2,18 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabSelectedTextColor="@color/barcolor"
-        app:tabIndicatorColor="@color/black"
+        app:tabTextColor="#b8f5fa"
+        android:background="@color/barcolor"
         app:tabMode="auto"
-        android:layout_marginTop="30dp"
+        app:tabIndicatorHeight="4dp"
+        app:tabPaddingStart="16dp"
+        app:tabPaddingEnd="16dp"
+        app:tabIndicator="@drawable/indicator_tab_line"
+        android:scrollbars="horizontal"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
         android:id="@+id/discusion_with_tabs"></com.google.android.material.tabs.TabLayout>
 <androidx.viewpager2.widget.ViewPager2
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="8dp"
     android:id="@+id/discussion_with_viewpager"></androidx.viewpager2.widget.ViewPager2>
 </LinearLayout>

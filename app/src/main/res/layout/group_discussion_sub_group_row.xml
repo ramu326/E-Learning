@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="12dp"
+    android:orientation="vertical">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="150dp"
+    android:paddingHorizontal="8dp"
+    android:layout_gravity="center"
+    android:adjustViewBounds="true"
+    android:src="@drawable/anatomy_sub"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Join Group "
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tab_select_bg"
+        android:textColor="@color/black"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="12dp"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_add"
+        android:drawableTint="@color/black"
+        android:textAlignment="center"></TextView>
+</LinearLayout>

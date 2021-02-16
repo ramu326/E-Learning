@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.QbankParentChildFragment">
+
+<androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/tl_toolbar"
+    android:background="@drawable/class_room_gradient"
+    android:layout_height="wrap_content">
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+          <ImageView
+              android:layout_width="wrap_content"
+              android:src="@drawable/ic_back_small"
+              app:layout_constraintTop_toTopOf="parent"
+              android:id="@+id/iv_back"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              android:layout_height="wrap_content"></ImageView>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="24dp"
+              android:layout_marginLeft="24dp"
+              android:fontFamily="@font/roboto_regular"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:text="Anatomy"
+              android:textColor="@color/white"
+              android:textSize="24sp"
+              app:layout_constraintStart_toEndOf="@id/iv_back"
+              app:layout_constraintTop_toTopOf="parent"></TextView>
+
+           <ImageView
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:layout_marginEnd="16dp"
+               android:layout_marginRight="16dp"
+               android:src="@drawable/ic_index_num"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"></ImageView>
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>
+   <com.google.android.material.tabs.TabLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/dr_tablatout"
+       app:tabIndicatorHeight="4dp"
+       app:tabIndicator="@drawable/indicator_tab_line"
+       app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+       app:tabTextColor="#b8f5fa"
+       android:background="@drawable/class_room_gradient"
+       app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+       app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+
+       app:tabMode="auto"
+       app:tabSelectedTextColor="@color/white"
+       app:tabIndicatorColor="@color/white"
+       >
+
+   </com.google.android.material.tabs.TabLayout>
+   <androidx.viewpager2.widget.ViewPager2
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/dr_view_pager"
+       tools:layout_editor_absoluteX="8dp">
+
+   </androidx.viewpager2.widget.ViewPager2>
+
+
+</LinearLayout>

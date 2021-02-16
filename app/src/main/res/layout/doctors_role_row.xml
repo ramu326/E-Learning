@@ -22,15 +22,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/picture"
+                android:id="@+id/tec_picture"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:contentDescription="@string/nav_header_desc"
                 android:paddingTop="8dp"
-                android:src="@drawable/doctor"
-                android:transitionName="picture"
-                tools:ignore="UnusedAttribute" />
+                android:src="@drawable/doctor" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,6 +35,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_gravity="center"
                 android:text="Dr.Ramya"
+                android:id="@+id/tv_tec_name"
                 android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/black"></TextView>
             <TextView
@@ -47,6 +45,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_gravity="center"
                 android:text="Anatomy"
+                android:id="@+id/tv_tec_sub_name"
                 android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/lightblack"></TextView>
         </LinearLayout>

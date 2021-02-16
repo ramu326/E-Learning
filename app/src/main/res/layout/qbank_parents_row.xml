@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ededed"
+    android:layout_marginVertical="12dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="general ebbryyology"
+        android:textAllCaps="true"
+        android:paddingVertical="12dp"
+        android:id="@+id/parentTextView"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:textColor="#737373"></TextView>
+
+
+</LinearLayout>

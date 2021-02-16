@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Adapters.DrLearnTabsFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintTop_toTopOf="parent"
+    android:background="@color/barcolor"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Q bank"
+        android:textAllCaps="true"
+        android:layout_gravity="center"
+        android:textSize="28sp"
+        android:fontFamily="@font/yantramanav_medium"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"></TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="24dp"
+        android:paddingBottom="8dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_mega_qnd"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image_one"
+                android:layout_width="65dp"
+                android:layout_height="55dp"
+                android:paddingHorizontal="8dp"
+                android:src="@drawable/ic_qnd"
+                app:tint="#5f259f"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yantramanav"
+                android:gravity="center"
+                android:text="Question discussions"
+                android:textAllCaps="false"
+                android:textColor="#2c8587"
+                android:textSize="14sp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_custom_mcq"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image_two"
+                android:layout_width="65dp"
+                android:layout_height="55dp"
+                android:paddingHorizontal="8dp"
+                android:src="@drawable/ic_cm"
+                app:tint="#ff7b22"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/yantramanav"
+                android:gravity="center"
+                android:text="Customized Mcqs"
+                android:textAllCaps="false"
+                android:textColor="#2c8587"
+                android:textSize="14sp"
+               ></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_past_mcqs"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image_three"
+                android:layout_width="65dp"
+                android:layout_height="55dp"
+                android:paddingHorizontal="8dp"
+                android:src="@drawable/ic_pre_mcq"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#e57373"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yantramanav"
+                android:gravity="center"
+                android:text="Past.yr.Mcqs"
+                android:textAllCaps="false"
+                android:textColor="#2c8587"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/image_three"
+                app:layout_constraintStart_toStartOf="@id/image_three"
+                app:layout_constraintTop_toBottomOf="@id/image_three"></TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/dummy_qbank_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/dr_second_tab_bg"
+        android:scrollbars="none"
+        app:popupTheme="@style/Theme.Design.NoActionBar"
+        app:tabIndicator="@drawable/dr_second_tab_selct"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorGravity="stretch"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="#cce5ff"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/dummy_qbank_view_pager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </androidx.viewpager2.widget.ViewPager2>
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
