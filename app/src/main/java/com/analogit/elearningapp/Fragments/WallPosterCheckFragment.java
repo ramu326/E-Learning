@@ -1,5 +1,6 @@
 package com.analogit.elearningapp.Fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -36,6 +37,11 @@ public class WallPosterCheckFragment extends Fragment {
     int name1=-1;
     ArrayList<AllPosterImagesModel> arrayListposterData = new ArrayList<>();
     ArrayList<PosterSubImagesModel> arrayListsubposterData = new ArrayList<>();
+    public  String content = "application/json", token;
+    private static final String PREF_NAME = "SharedPref";
+    public SharedPreferences pref;
+    public SharedPreferences.Editor editor;
+    int PRIVATE_MODE = 0, val = 1;
     public WallPosterCheckFragment() {
         // Required empty public constructor
     }
@@ -46,6 +52,8 @@ public class WallPosterCheckFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         v= inflater.inflate(R.layout.fragment_wall_poster_check, container, false);
+        pref =getActivity(). getSharedPreferences(PREF_NAME, PRIVATE_MODE);
+        editor = pref.edit();
         rviewsubposter = v.findViewById(R.id.rec_sub_poster);
 
         rviewAllposter = v.findViewById(R.id.rec_all_poster);
@@ -108,7 +116,7 @@ public class WallPosterCheckFragment extends Fragment {
 
         if(getArguments()!=null){
 
-            Call<List<PosterSubImagesModel>>call=REST_CLIENT.getsubPosters(getArguments().getInt("nameid"));
+            Call<List<PosterSubImagesModel>>call=REST_CLIENT.getsubPosters(pref.getString("token", "-1"),content,getArguments().getInt("nameid"));
             call.enqueue(new Callback<List<PosterSubImagesModel>>() {
                 List<PosterSubImagesModel> posterSubImagesList;
                 PosterSubImagesModel posterSubImagesData;

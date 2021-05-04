@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:scrollbars="vertical"
-    android:background="@color/barcolor"
-    android:paddingBottom="32dp"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:scrollbars="vertical">
 
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/test_tablayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/test_tablayout"
-        app:tabTextColor="#b8f5fa"
         android:background="@color/barcolor"
-        app:tabMode="auto"
-        app:tabPaddingStart="20dp"
-        app:tabPaddingEnd="20dp"
+        android:scrollbars="horizontal"
+        app:tabIndicator="@drawable/indicator_tab_line"
+        app:tabIndicatorColor="@color/white"
         app:tabIndicatorFullWidth="false"
         app:tabIndicatorHeight="4dp"
-        app:tabIndicator="@drawable/indicator_tab_line"
-        android:scrollbars="horizontal"
+        app:tabMode="auto"
+        app:tabPaddingEnd="20dp"
+        app:tabPaddingStart="20dp"
         app:tabSelectedTextColor="@color/white"
-        app:tabIndicatorColor="@color/white">
+
+        app:tabTextColor="#b8f5fa">
 
     </com.google.android.material.tabs.TabLayout>
+
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/test_view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/test_view_pager"
 
-        tools:layout_editor_absoluteX="8dp">
-    </androidx.viewpager2.widget.ViewPager2>
+
+        ></androidx.viewpager2.widget.ViewPager2>
 
 
 </LinearLayout>

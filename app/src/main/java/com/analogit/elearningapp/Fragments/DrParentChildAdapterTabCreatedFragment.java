@@ -38,31 +38,31 @@ public class DrParentChildAdapterTabCreatedFragment extends Fragment {
         // Inflate the layout for this fragment
        v= inflater.inflate(R.layout.fragment_dr_parent_child_adapter_tab_created, container, false);
 
-        expandableListView=v.findViewById(R.id.expandable_listview_dr);
-        DrParentChlidAdapter drParentChlidAdapter=new DrParentChlidAdapter(drParentlist,hashmap);
-
-        drParentlist.add("General Embbrylogy One");
-        drParentlist.add("General Embbrylogy Two");
-        drParentlist.add("General Embbrylogy Three");
-        drParentlist.add("General Embbrylogy Four");
-        for(int i=0;i<drParentlist.size();i++){
-            ArrayList drchildlist=new ArrayList();
-            drchildlist.add("General Anatomy One");
-            drchildlist.add("General Anatomy Two");
-            drchildlist.add("General Anatomy Three");
-            drchildlist.add("General Anatomy Four");
-            hashmap.put(drParentlist.get(i),drchildlist);
-
-        }
-        expandableListView.setAdapter(drParentChlidAdapter);
-        for (int i=0;i<drParentlist.size();i++)
-            expandableListView.expandGroup(i);
-        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-            @Override
-            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-                return true;
-            }
-        });
+//        expandableListView=v.findViewById(R.id.expandable_listview_dr);
+//        DrParentChlidAdapter drParentChlidAdapter=new DrParentChlidAdapter(drParentlist,hashmap);
+//
+//        drParentlist.add("General Embbrylogy One");
+//        drParentlist.add("General Embbrylogy Two");
+//        drParentlist.add("General Embbrylogy Three");
+//        drParentlist.add("General Embbrylogy Four");
+//        for(int i=0;i<drParentlist.size();i++){
+//            ArrayList drchildlist=new ArrayList();
+//            drchildlist.add("General Anatomy One");
+//            drchildlist.add("General Anatomy Two");
+//            drchildlist.add("General Anatomy Three");
+//            drchildlist.add("General Anatomy Four");
+//            hashmap.put(drParentlist.get(i),drchildlist);
+//
+//        }
+//        expandableListView.setAdapter(drParentChlidAdapter);
+//        for (int i=0;i<drParentlist.size();i++)
+//            expandableListView.expandGroup(i);
+//        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+//            @Override
+//            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+//                return true;
+//            }
+//        });
        return v;
     }
 }

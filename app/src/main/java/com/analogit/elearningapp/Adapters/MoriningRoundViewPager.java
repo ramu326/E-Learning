@@ -2,10 +2,10 @@ package com.analogit.elearningapp.Adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
+
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.analogit.elearningapp.Fragments.MoringRoundFragment;
+
 import com.analogit.elearningapp.Fragments.MornigRoundSubjectWithDecFragment;
 import com.analogit.elearningapp.Fragments.MorningRoundPracticlesFragment;
 

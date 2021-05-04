@@ -1,10 +1,7 @@
 package com.analogit.elearningapp.Fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.analogit.elearningapp.Activities.MainActivity;
 import com.analogit.elearningapp.ApiModel.PosterImageVideoModel;
@@ -37,8 +37,13 @@ public class WallPosterZoomFragment extends Fragment {
     Bundle bundle;
     String videourl;
     ProgressBar progressBar;
+    String content = "application/json", token;
+    private static final String PREF_NAME = "SharedPref";
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
+    int PRIVATE_MODE = 0;
 
-    public WallPosterZoomFragment() {
+   public WallPosterZoomFragment() {
         // Required empty public constructor
     }
 
@@ -52,12 +57,14 @@ public class WallPosterZoomFragment extends Fragment {
         pvZoomView = v.findViewById(R.id.wallposter_zoom_imaze);
         tvVideos = v.findViewById(R.id.wall_poster_zoom_video);
         progressBar=v.findViewById(R.id.progress);
+        pref =getActivity(). getSharedPreferences(PREF_NAME, PRIVATE_MODE);
+        editor = pref.edit();
         REST_CLIENT = RestClient.get();
         bundle = new Bundle();
         if (getArguments() != null) {
             Log.d("videosid", String.valueOf(getArguments().getInt("subidd")));
 
-            Call<PosterImageVideoModel> call = REST_CLIENT.getPosterVideo(getArguments().getInt("subidd"));
+            Call<PosterImageVideoModel> call = REST_CLIENT.getPosterVideo(pref.getString("token", "-1"),content,getArguments().getInt("subidd"));
             call.enqueue(new Callback<PosterImageVideoModel>() {
                 PosterImageVideoModel posterImageVideoData;
 
@@ -93,7 +100,7 @@ public class WallPosterZoomFragment extends Fragment {
                 if (getArguments() != null) {
 
                     Log.d("videosid", String.valueOf(getArguments().getInt("subidd")));
-                    Call<PosterImageVideoModel> call = REST_CLIENT.getPosterVideo(getArguments().getInt("subidd"));
+                    Call<PosterImageVideoModel> call = REST_CLIENT.getPosterVideo(pref.getString("token", "-1"),content,getArguments().getInt("subidd"));
                     call.enqueue(new Callback<PosterImageVideoModel>() {
                         PosterImageVideoModel posterImageVideoData;
 

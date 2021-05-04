@@ -153,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_height="wrap_content"
-                android:id="@+id/rec_all_poster_sub"></androidx.recyclerview.widget.RecyclerView>
+                android:id="@+id/rec_all_poster_subject_name"></androidx.recyclerview.widget.RecyclerView>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
@@ -161,10 +161,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:id="@+id/rec_sub_poster"></androidx.recyclerview.widget.RecyclerView>
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:id="@+id/rec_all_poster"></androidx.recyclerview.widget.RecyclerView>
+        android:id="@+id/rec_subject_posters"></androidx.recyclerview.widget.RecyclerView>
+  
 </LinearLayout>

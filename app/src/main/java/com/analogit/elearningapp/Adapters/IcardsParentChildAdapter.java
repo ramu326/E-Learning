@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.analogit.elearningapp.Fragments.DrLearnVideoPlayFragment;
+
 import com.analogit.elearningapp.Fragments.IcardsZoomImagesFragment;
 import com.analogit.elearningapp.R;
 

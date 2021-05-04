@@ -49,7 +49,7 @@
             android:layout_marginTop="10dp"
             android:lineHeight="24dp"
             android:paddingHorizontal="12dp"
-            android:fontFamily="@font/roboto_medium"
+            android:fontFamily="@font/poppins_medium"
             android:gravity="start"
             android:textColor="#4d4d4d"
             android:text=""
@@ -230,7 +230,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_regular"
+                android:fontFamily="@font/poppins_regular"
                 android:lineHeight="16dp"
                 android:paddingBottom="16dp"
                 android:text=""
@@ -240,6 +240,15 @@
                 android:gravity="start"
                 android:textColor="@color/black"
                 android:textSize="14sp"></TextView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:adjustViewBounds="true"
+                android:id="@+id/expla_image"
+                android:layout_below="@id/tv_expl_solution"
+                android:scaleType="fitXY"
+                android:layout_height="wrap_content"></ImageView>
         </RelativeLayout>
     </RelativeLayout>
     <TextView

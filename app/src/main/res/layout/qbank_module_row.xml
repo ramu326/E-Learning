@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/barcolor"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingVertical="8dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/relative_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp">
+
+            <TextView
+                android:id="@+id/iv_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="16dp"
+                android:text="1/25"
+                android:textSize="16sp"></TextView>
+
+
+            <ImageView
+                android:id="@+id/fr_sub_with_topic_attempted_questions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_notes"
+                android:backgroundTint="@color/black"
+                android:padding="16dp"></ImageView>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/view_fr_book_mark_pr"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/barcolor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"></View>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scorls"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/view_fr_book_mark_pr"
+        app:layout_constraintTop_toBottomOf="@+id/view_fr_book_mark_pr">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/fr_book_mark_practise_serial_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="1."
+
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fr_book_mark_practise_main_question"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintLeft_toRightOf="@id/fr_book_mark_practise_serial_number"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Which of the following is an A Typical Vitamin?"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/fr_book_mark_practise_bookmark"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toEndOf="@+id/fr_book_mark_practise_serial_number"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/fr_book_mark_practise_bookmark"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/bookmark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_option_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/card_back"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                app:cardCornerRadius="8dp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_tq_op_a_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="A."
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/tv_tq_op_a_fr"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Vitamin B1(Nacin)"
+                        android:textColor="@color/black"
+
+                        android:textAllCaps="false"
+                        android:textSize="16sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_tq_a_percent_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="12%"
+                        android:textColor="@color/black"
+
+                        android:textAllCaps="false"
+                        android:textSize="16sp"></TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/card_back"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                app:cardCornerRadius="8dp"
+
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_tq_op_b_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="B."
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+
+                        android:textSize="16sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/tv_tq_op_b_fr"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Vitamin B1(Nacin)"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+
+                        android:textSize="14sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_tq_b_percent_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="12%"
+                        android:textColor="@color/black"
+
+                        android:textAllCaps="false"
+                        android:textSize="16sp"></TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/card_back"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                app:cardCornerRadius="8dp"
+
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_tq_op_c_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="C."
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/tv_tq_op_c_fr"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Vitamin B1(Nacin)"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_tq_c_percent_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="12%"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"></TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/card_back"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                app:cardCornerRadius="8dp"
+
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
+                    android:paddingVertical="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_tq_op_d_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="D."
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/tv_tq_op_d_fr"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Vitamin B1(Nacin)"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_tq_d_percent_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="3dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="12%"
+                        android:textColor="@color/black"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"></TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/ll_explanation_with_percent_sub_with_fr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/relative_percent_answer_fr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/tvText_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="50% got this answer correct"
+                        android:textColor="@android:color/holo_green_dark" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toLeftOf="@id/tvText_fr"
+                        android:background="#FF0000" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_toRightOf="@id/tvText_fr"
+                        android:background="#FF0000" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/address1_fr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:maxLines="50"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    card_view:ignore="RtlCompat"></TextView>
+
+                <LinearLayout
+                    android:layout_width="160dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/image_bg_bt"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/brain"></ImageView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:text="Reference:"
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:textSize="16sp"
+                    card_view:ignore="RtlCompat"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center"
+                    android:maxLines="50"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis."
+                    android:textAlignment="textStart"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    card_view:ignore="RtlCompat"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Guess Answer"
+                        android:textColor="@color/lightblack"
+                        android:textSize="14sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Report"
+                        android:textColor="@color/lightblack"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/iv_tq_back_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/roboto_regular"
+                        android:src="@drawable/ic_arrow_back"
+                        android:text="Candidates:"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"></ImageView>
+
+                    <TextView
+                        android:id="@+id/topic_tv_next_sub_with_fr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/edit_bg"
+                        android:drawableRight="@drawable/ic_forward"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"
+                        android:paddingHorizontal="36dp"
+                        android:paddingVertical="12dp"
+                        android:text="Next "
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"></TextView>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="14dp"
+    android:paddingVertical="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cons_diffrential">
+<TextView
+    android:layout_width="0dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:textSize="20sp"
+    android:textColor="@color/black"
+    android:id="@+id/tv_different"
+    app:layout_constraintEnd_toStartOf="@+id/imageview"
+    android:fontFamily="@font/yantramanav"
+    android:text="Differentiating features between skeletal,smooth and cardiac musicles"
+    android:layout_height="wrap_content"></TextView>
+    <ImageView
+        android:layout_width="40dp"
+        android:id="@+id/imageview"
+        android:src="@drawable/bookmark"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toTopOf="@id/tv_different"
+        app:layout_constraintBottom_toBottomOf="@id/tv_different"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_different"
+        android:layout_height="40dp"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_different"
+        app:layout_constraintStart_toStartOf="@id/tv_different"
+        android:text="#Anatomy"
+        android:id="@+id/dia_sub_name"
+        android:layout_marginTop="4dp"
+        android:textColor="#b6b9ba"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

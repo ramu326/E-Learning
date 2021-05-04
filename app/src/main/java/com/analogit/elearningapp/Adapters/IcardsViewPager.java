@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.analogit.elearningapp.Fragments.IcardsAudioFragment;
+import com.analogit.elearningapp.Fragments.IcardsBookMarksFragment;
+import com.analogit.elearningapp.Fragments.IcardsPastExamTopicsFragment;
 import com.analogit.elearningapp.Fragments.NewIcardExtenFragment;
 
 public class IcardsViewPager extends FragmentStateAdapter {
@@ -23,9 +25,9 @@ public class IcardsViewPager extends FragmentStateAdapter {
             case 1:
                 return new IcardsAudioFragment();
             case 2:
-                return new IcardsAudioFragment();
+                return new IcardsPastExamTopicsFragment();
             case 3:
-                return new IcardsAudioFragment();
+                return new IcardsBookMarksFragment();
 
             default: break;
         }

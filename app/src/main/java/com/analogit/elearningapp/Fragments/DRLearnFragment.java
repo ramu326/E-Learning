@@ -59,10 +59,10 @@ public class DRLearnFragment extends Fragment {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position) {
                     case 0:
-                        tab.setText("Premium");
+                        tab.setText("PRIME");
                         break;
-                    case 1:
-                        tab.setText("Live");
+                    case 1://"("+36+")"
+                        tab.setText("Live"+"'");
                         break;
                 }
             }

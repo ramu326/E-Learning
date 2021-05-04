@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     android:background="@color/barcolor"
-    tools:context=".Fragments.BothTestNLiveFragment">
-    <TextView
-        android:id="@+id/class_name_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp"
-        android:text="Test Hall"
-        android:textAlignment="center"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></TextView>
-    <com.google.android.material.tabs.TabLayout
+    android:orientation="vertical">
 
+  ? <!--    <TextView-->
+    <!--        android:id="@+id/class_name_test"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:text="Test Hall"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textAllCaps="true"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="24sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"></TextView>-->
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/both_tab_layout"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/dr_home_bg_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/class_name_test"
+        app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/Theme.Design.NoActionBar"
         app:tabIndicator="@drawable/tab_select_bg"
         app:tabIndicatorColor="#0eb2be"
@@ -40,18 +41,19 @@
         app:tabSelectedTextColor="#07595f"
         app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
         app:tabTextColor="#0eb2be"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        >
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
     </com.google.android.material.tabs.TabLayout>
+
     <androidx.viewpager2.widget.ViewPager2
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:id="@+id/both_view_pager"
-        app:layout_constraintTop_toBottomOf="@id/both_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/both_tab_layout">
 
     </androidx.viewpager2.widget.ViewPager2>
 

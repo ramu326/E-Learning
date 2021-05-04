@@ -9,16 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.DiffUtil;
+
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.analogit.elearningapp.Fragments.GeneralIndructionFragmment;
-import com.analogit.elearningapp.Fragments.TdStartFragment;
-import com.analogit.elearningapp.Model.SubjectsModel;
+
 import com.analogit.elearningapp.Model.TnDOneModel;
 import com.analogit.elearningapp.R;
+import com.analogit.elearningapp.databinding.StartResumeTestDisRowOneBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +39,21 @@ public class RecyclerTnDOneAdapter extends ListAdapter<TnDOneModel,RecyclerTnDOn
     @Override
     public void onBindViewHolder(@NonNull MyViewholder holder, int position) {
 
+        TnDOneModel tnDOneModel=getCurrentList().get(position);
+
+        holder.binding.tvMcq.setText(tnDOneModel.getNumberOfQuestions());
+
+        holder.binding.subject.setText(tnDOneModel.getSubject());
+
+        holder.binding.dateOfExam.setText(tnDOneModel.getStartDate());
+
+        holder.binding.title.setText(tnDOneModel.getTitle());
+
+
+
     }
+
+
     @Override
     public void submitList(@Nullable List<TnDOneModel> list) {
         super.submitList(list == null ? null : new ArrayList<TnDOneModel>(list));
@@ -49,11 +62,14 @@ public class RecyclerTnDOneAdapter extends ListAdapter<TnDOneModel,RecyclerTnDOn
     class MyViewholder extends RecyclerView.ViewHolder{
 
         LinearLayout linearLayout;
+        StartResumeTestDisRowOneBinding binding;
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
 
-            linearLayout=itemView.findViewById(R.id.ll_srtdone);
-            linearLayout.setOnClickListener(new View.OnClickListener() {
+            binding=StartResumeTestDisRowOneBinding.bind(itemView);
+
+
+            binding.getRoot().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     AppCompatActivity appCompatActivity=(AppCompatActivity) view.getContext();
@@ -66,6 +82,6 @@ public class RecyclerTnDOneAdapter extends ListAdapter<TnDOneModel,RecyclerTnDOn
     }
     @Override
     public int getItemCount() {
-        return 10;
+        return getCurrentList().size();
     }
 }

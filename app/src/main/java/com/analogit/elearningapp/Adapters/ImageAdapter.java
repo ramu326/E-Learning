@@ -1,29 +1,27 @@
 package com.analogit.elearningapp.Adapters;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
+
 import android.content.Context;
-import android.media.Image;
+
 import android.media.MediaPlayer;
-import android.util.Log;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
+
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
 
 import androidx.annotation.NonNull;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.widget.NestedScrollView;
+
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager2.widget.ViewPager2;
+
 
 import com.analogit.elearningapp.Model.ImageModel;
-import com.analogit.elearningapp.Model.VideosModel;
+
 import com.analogit.elearningapp.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 
 import java.util.List;
 

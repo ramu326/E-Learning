@@ -34,7 +34,8 @@
             android:layout_height="40dp"
             android:id="@+id/iv_bsl_ic_clear"
             android:layout_alignParentRight="true"
-            android:src="@drawable/ic_clear"></ImageView>
+            android:src="@drawable/ic_close"
+            app:tint="@color/black"></ImageView>
     </RelativeLayout>
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"

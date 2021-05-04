@@ -11,7 +11,6 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.analogit.elearningapp.Fragments.ImagesBankFragment;
 import com.analogit.elearningapp.Fragments.WallPosterZoomFragment;
 import com.analogit.elearningapp.Model.WallPosterGridModel;
 import com.analogit.elearningapp.R;
@@ -43,9 +42,9 @@ public class RecyclerWallPosterGridAdapter extends ListAdapter<WallPosterGridMod
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    AppCompatActivity appCompatActivity=(AppCompatActivity)view.getContext();
-                    WallPosterZoomFragment imagesBankFragment=new WallPosterZoomFragment();
-                    appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content,imagesBankFragment).addToBackStack(null).commit();
+//                    AppCompatActivity appCompatActivity=(AppCompatActivity)view.getContext();
+//                    WallPosterZoomFragment imagesBankFragment=new WallPosterZoomFragment();
+//                    appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.content,imagesBankFragment).addToBackStack(null).commit();
                 }
             });
         }

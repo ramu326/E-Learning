@@ -22,38 +22,36 @@ import com.google.android.material.tabs.TabLayoutMediator;
 public class IcardsAllTabsFragment extends Fragment {
 
 
-        private  View v;
-        private TabLayout tabLayout;
-        private ViewPager2 viewPager;
+    private View v;
+    private TabLayout tabLayout;
+    private ViewPager2 viewPager;
 
-        public IcardsAllTabsFragment() {
+    public IcardsAllTabsFragment() {
 
     }
-
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v= inflater.inflate(R.layout.fragment_icards_all_tabs, container, false);
-        tabLayout=v.findViewById(R.id.fragment_icard_tab_layout);
-        viewPager=v.findViewById(R.id.fragment_icard_view_pager);
-        IcardsViewPager icardsViewPager=new IcardsViewPager(this);
+        v = inflater.inflate(R.layout.fragment_icards_all_tabs, container, false);
+        tabLayout = v.findViewById(R.id.fragment_icard_tab_layout);
+        viewPager = v.findViewById(R.id.fragment_icard_view_pager);
+        IcardsViewPager icardsViewPager = new IcardsViewPager(this);
         viewPager.setAdapter(icardsViewPager);
         viewPager.setUserInputEnabled(false);
-        Log.d("newcards","newcards");
-        ((MainActivity)(getActivity())).bottomNavigationView.setVisibility(View.GONE);
+
+        ((MainActivity) (getActivity())).bottomNavigationView.setVisibility(View.GONE);
 
         new TabLayoutMediator(tabLayout, viewPager, new TabLayoutMediator.TabConfigurationStrategy() {
             @SuppressLint("ResourceType")
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                switch (position){
+                switch (position) {
                     case 0:
-                     tab.setText("Cards");
-                     break;
+                        tab.setText("Cards");
+                        break;
 
                     case 1:
                         tab.setText("Audio");

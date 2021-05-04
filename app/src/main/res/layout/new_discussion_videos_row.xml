@@ -1,63 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginTop="8dp"
     android:id="@+id/new_discussion_video_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="12dp"
+    android:backgroundTint="@color/white"
+    android:elevation="0dp"
     android:orientation="vertical"
-   >
-    <LinearLayout
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:orientation="horizontal">
-        <ImageView
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_image"
             android:layout_width="120dp"
-            android:layout_height="85dp"
-            android:background="@drawable/dis_image"></ImageView>
-        <RelativeLayout
+            android:layout_height="90dp"
+            android:elevation="0dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_dis_video_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_discussion"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/discussion_image"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_dis_video_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/yantramanav"
+            android:text="Imaging: X-RAY IVP AND Chest"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card_image"
+            app:layout_constraintTop_toTopOf="@id/card_image"></TextView>
+
+        <TextView
+            android:id="@+id/subject"
             android:layout_width="wrap_content"
-            android:paddingHorizontal="16dp"
-            android:layout_height="80dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Imaging: X-RAY IVP AND Chest"
-                android:textSize="16dp"
-                android:layout_marginTop="8dp"
-                android:id="@+id/tv_dis_video_name"
-                android:lineHeight="20dp"
-                android:textColor="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/roboto_regular"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Syllabus "
-                android:textSize="12dp"
-                android:layout_below="@id/tv_dis_video_name"
-                android:layout_marginTop="6dp"
-                android:id="@+id/tv_dis_video_syllabus"
-                android:textColor="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/roboto_regular"></TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Anatomy "
-                android:textSize="12dp"
-                android:layout_toRightOf="@id/tv_dis_video_syllabus"
-                android:layout_below="@id/tv_dis_video_name"
-                android:layout_marginTop="4dp"
-                android:id="@+id/tv_dis_video_syllabus_name"
-                android:textColor="@color/black"
-                android:textAllCaps="false"
-                android:fontFamily="@font/roboto_regular"></TextView>
-        </RelativeLayout>
-    </LinearLayout>
-
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/yantramanav"
+            android:text="Syllabus: Anatomy"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_dis_video_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_dis_video_name"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.cardview.widget.CardView>

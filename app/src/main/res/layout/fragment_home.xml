@@ -7,75 +7,91 @@
     android:orientation="vertical"
     android:scrollbars="vertical"
     tools:context=".Fragments.HomeFragment">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:paddingVertical="6dp"
-    android:background="@color/barcolor"
-    android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/iv_fh_menu_style"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/ic_baseline_menu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white"></ImageView>
-
-    <TextView
-        android:id="@+id/tv_the_doctor"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="The Doctor"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/iv_fh_menu_style"
-        app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"></TextView>
+        android:background="@color/barcolor"
+        android:paddingVertical="6dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/baloo"
-        android:text="Anil Kumar"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/iv_fh_menu_style"
-        app:layout_constraintStart_toStartOf="@id/tv_the_doctor"
-        app:layout_constraintTop_toBottomOf="@id/tv_the_doctor"></TextView>
+        <ImageView
+            android:id="@+id/iv_fh_menu_style"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_baseline_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"></ImageView>
 
-    <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:src="@drawable/search"
-        android:id="@+id/iv_fh_searh"
-        app:layout_constraintBottom_toBottomOf="@id/iv_fh_menu_style"
-        app:layout_constraintEnd_toStartOf="@id/iv_fh_group"
-        app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"
-        app:tint="@color/white"></ImageView>
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:scaleType="fitXY"
-        android:id="@+id/iv_fh_group"
-        android:src="@drawable/group_white"
-        app:layout_constraintBottom_toBottomOf="@id/iv_fh_menu_style"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"></ImageView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/dr"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/dr"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/iv_fh_menu_style"
+            app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"></de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/tv_the_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="The Doctor"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/dr"
+            app:layout_constraintTop_toTopOf="@id/dr"></TextView>
+
+        <TextView
+            android:id="@+id/tv_doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text=""
+            android:visibility="gone"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/dr"
+            app:layout_constraintStart_toStartOf="@id/tv_the_doctor"
+            app:layout_constraintTop_toBottomOf="@id/tv_the_doctor"></TextView>
+
+        <ImageView
+            android:id="@+id/iv_fh_searh"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/search"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/iv_fh_menu_style"
+            app:layout_constraintEnd_toStartOf="@id/iv_fh_group"
+            app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"
+            app:tint="@color/white"></ImageView>
+
+        <ImageView
+            android:id="@+id/iv_fh_group"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/group_white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_fh_menu_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_fh_menu_style"></ImageView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.core.widget.NestedScrollView
@@ -90,68 +106,247 @@
             android:orientation="vertical">
 
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:background="@color/barcolor"
-    android:layout_height="230dp">
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="@style/CircularDeterminateProgressBar"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:indeterminate="false"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:progress="40"/>
-    <TextView
-        android:layout_width="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
-        app:layout_constraintEnd_toEndOf="@+id/progress_bar"
-        app:layout_constraintStart_toStartOf="@+id/progress_bar"
-        app:layout_constraintTop_toTopOf="@+id/progress_bar"
-        android:text="0.48%"
-        android:id="@+id/tv_progress_percent"
-        android:textSize="18sp"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:fontFamily="@font/roboto_medium"
-        android:layout_height="wrap_content"></TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:text="Videos"
-        app:layout_constraintTop_toBottomOf="@id/tv_progress_percent"
-        app:layout_constraintStart_toStartOf="@id/tv_progress_percent"
-        app:layout_constraintEnd_toEndOf="@id/tv_progress_percent"
-        android:textColor="@color/white"
-        android:textAllCaps="false"
-        android:textSize="14sp"
-        android:fontFamily="@font/roboto_medium"
-        android:layout_height="wrap_content"></TextView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/barcolor">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="@style/CircularDeterminateProgressBar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:indeterminate="false"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:progress="40" />
+
+                <TextView
+                    android:id="@+id/tv_progress_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="0.48%"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+                    app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+                    app:layout_constraintStart_toStartOf="@+id/progress_bar"
+                    app:layout_constraintTop_toTopOf="@+id/progress_bar"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Videos"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/tv_progress_percent"
+                    app:layout_constraintStart_toStartOf="@id/tv_progress_percent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_progress_percent"></TextView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/progress_bar_shape"
+                    android:paddingVertical="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/progress_bar">
+
+                    <TextView
+                        android:id="@+id/progress_bar_qbank_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="325 Qbank"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/progress_bar_test_num"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                    <TextView
+                        android:id="@+id/progress_bar_qbank_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Completed"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/progress_bar_qbank_num"
+                        app:layout_constraintTop_toBottomOf="@id/progress_bar_qbank_num"></TextView>
+
+                    <View
+                        android:id="@+id/progress_view_ver_one"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:background="#52c5c7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/progress_bar_qbank_num"
+                        app:layout_constraintTop_toTopOf="parent"></View>
+
+                    <TextView
+                        android:id="@+id/progress_bar_test_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="170 Tests"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toStartOf="@+id/progress_bar_time_num"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/progress_bar_qbank_num"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                    <TextView
+                        android:id="@+id/progress_bar_test_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Attempted"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/progress_bar_test_num"
+                        app:layout_constraintTop_toBottomOf="@id/progress_bar_qbank_num"></TextView>
+
+                    <View
+                        android:id="@+id/progress_view_ver_two"
+                        android:layout_width="1dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:background="#52c5c7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/progress_bar_test_num"
+                        app:layout_constraintTop_toTopOf="parent"></View>
+
+                    <TextView
+                        android:id="@+id/progress_bar_time_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="2:30 min"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/progress_bar_test_num"
+                        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                    <TextView
+                        android:id="@+id/progress_bar_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Daily usage"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@id/progress_bar_time_num"
+                        app:layout_constraintTop_toBottomOf="@id/progress_bar_time_num"></TextView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Todays Challenge"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_timer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_timer"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_end_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Ends in"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="23:59:59 left"
+                    android:textColor="@color/orange"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <ImageView
+                    android:id="@+id/todays_challenge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ndc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_timer"></ImageView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:paddingVertical="24dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="4dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="4dp"
                 android:layout_gravity="center"
-                app:cardUseCompatPadding="true"
-                android:outlineAmbientShadowColor="@color/black"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="4dp"
                 android:background="@drawable/card_back"
-                android:backgroundTint="@color/white">
+                android:backgroundTint="@color/white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:outlineAmbientShadowColor="@color/black"
+                android:paddingVertical="24dp"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:paddingBottom="20dp"
-                    android:layout_height="wrap_content">
+                    android:paddingBottom="20dp">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -165,10 +360,10 @@
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
                             android:layout_marginHorizontal="5dp"
-                            android:text="Question of the day"
-                            android:textSize="14sp"
                             android:fontFamily="@font/roboto_regular"
-                            android:textColor="@color/barcolor" />
+                            android:text="Question of the day"
+                            android:textColor="@color/barcolor"
+                            android:textSize="14sp" />
 
                         <View
                             android:layout_width="match_parent"
@@ -188,32 +383,34 @@
 
                     </RelativeLayout>
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="start"
-                                    android:layout_marginTop="10dp"
-                                    android:lineHeight="24dp"
-                                    android:paddingHorizontal="12dp"
-                                    android:fontFamily="@font/roboto_medium"
-                                    android:gravity="start"
-                                    android:textColor="#4d4d4d"
-                                    android:id="@+id/tv_question"
-                                    android:text=""
-                                    android:textAlignment="textStart"
-                                    android:textSize="16sp">
+                    <TextView
+                        android:id="@+id/tv_question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="start"
+                        android:lineHeight="24dp"
 
-                                </TextView>
+                        android:paddingHorizontal="12dp"
+                        android:text="Dummy Question"
+                        android:textAlignment="textStart"
+                        android:textColor="#4d4d4d"
+                        android:textSize="16sp">
+
+                    </TextView>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
                         android:id="@+id/constaraint_option_a"
-                        android:background="@drawable/ll_bg_tv_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
-                        android:layout_height="wrap_content">
+                        android:background="@drawable/question_of_theday">
 
                         <TextView
                             android:id="@+id/tv_opton_one"
@@ -221,8 +418,8 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/roboto_regular"
                             android:paddingVertical="8dp"
-                            android:text=""
                             android:paddingLeft="10dp"
+                            android:text="option 1"
                             android:textColor="#8c8c8c"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -231,15 +428,15 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
                         android:id="@+id/constaraint_option_b"
-                        android:background="@drawable/ll_bg_tv_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
-                        android:layout_height="wrap_content">
+                        android:background="@drawable/question_of_theday">
 
                         <TextView
                             android:id="@+id/tv_opton_two"
@@ -248,24 +445,25 @@
                             android:layout_gravity="left|center"
                             android:fontFamily="@font/roboto_regular"
                             android:paddingVertical="8dp"
-                            android:text=""
                             android:paddingLeft="10dp"
+                            android:text="option 2"
                             android:textColor="#8c8c8c"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"></TextView>
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
                         android:id="@+id/constaraint_option_c"
-                        android:background="@drawable/ll_bg_tv_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
-                        android:layout_height="wrap_content">
+                        android:background="@drawable/question_of_theday">
 
                         <TextView
                             android:id="@+id/tv_opton_three"
@@ -274,24 +472,25 @@
                             android:layout_gravity="left|center"
                             android:fontFamily="@font/roboto_regular"
                             android:paddingVertical="8dp"
-                            android:text=""
                             android:paddingLeft="10dp"
+                            android:text="option 3"
                             android:textColor="#8c8c8c"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"></TextView>
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
                         android:id="@+id/constaraint_option_d"
-                        android:background="@drawable/ll_bg_tv_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
-                        android:layout_height="wrap_content">
+                        android:background="@drawable/question_of_theday">
 
                         <TextView
                             android:id="@+id/tv_opton_four"
@@ -300,594 +499,411 @@
                             android:layout_gravity="left|center"
                             android:fontFamily="@font/roboto_regular"
                             android:paddingVertical="8dp"
-                            android:text=""
                             android:paddingLeft="10dp"
+                            android:text="opion 4"
                             android:textColor="#8c8c8c"
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"></TextView>
                     </androidx.constraintlayout.widget.ConstraintLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginHorizontal="24dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_height="wrap_content">
+                        android:layout_marginTop="24dp">
+
                         <TextView
+                            android:id="@+id/tv_see_explanation"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
-                            android:textColor="@color/barcolor"
                             android:fontFamily="@font/roboto_medium"
-                            android:textSize="16sp"
-                            android:id="@+id/tv_see_explanation"
-                            android:text="See Explantion"></TextView>
+                            android:text="See Explantion"
+                            android:textColor="@color/barcolor"
+                            android:textSize="16sp"></TextView>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/barcolor"
-                            android:fontFamily="@font/roboto_medium"
-                            android:textSize="16sp"
                             android:layout_alignParentRight="true"
-                            android:text="Related Module"></TextView>
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Related Module"
+                            android:textColor="@color/barcolor"
+                            android:textSize="16sp"></TextView>
                     </RelativeLayout>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginHorizontal="20dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                app:cardUseCompatPadding="true"
-                android:outlineAmbientShadowColor="@color/black"
-                android:background="@drawable/card_back"
-                android:backgroundTint="#eaf8f9">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tv_live_board"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:fontFamily="@font/roboto_medium"
-                        android:text="Live Board"
-                        android:textAllCaps="true"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"></TextView>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:weightSum="2"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tv_live_board">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="120dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:id="@+id/card_live_class"
-                            android:background="@drawable/card_back"
-                            android:backgroundTint="@color/white"
-                            app:cardCornerRadius="4dp"
-                            app:cardUseCompatPadding="true">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/roboto_medium"
-                                android:text="Live Class"
-                                android:textAllCaps="true"
-                                android:textColor="@color/black"
-                                android:textSize="16sp"></TextView>
-                        </androidx.cardview.widget.CardView>
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="120dp"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="1"
-                            android:background="@drawable/card_back"
-                            android:backgroundTint="@color/white"
-                            app:cardCornerRadius="4dp"
-                            app:cardUseCompatPadding="true">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:fontFamily="@font/roboto_medium"
-                                android:text="Live Test"
-                                android:textAllCaps="true"
-                                android:textColor="@color/black"
-                                android:textSize="16sp"></TextView>
-                        </androidx.cardview.widget.CardView>
-                    </LinearLayout>
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="12dp"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginTop="36dp">
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor=" #1a1a1a"
-        android:fontFamily="@font/roboto_medium"
-        android:layout_alignParentLeft="true"
-        android:text="Today's Challenge">
-
-    </TextView>
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textColor="@color/green"
-        android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:drawableTint="@color/green"
-        android:fontFamily="@font/roboto_regular"
-        android:layout_alignParentRight="true"
-        android:text="more"
-        android:drawableRight="@drawable/ic_double_arrow">
-
-    </TextView>
-</RelativeLayout>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/todays_challenge"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                app:cardUseCompatPadding="true"
-                android:outlineAmbientShadowColor="@color/black"
-                android:layout_marginTop="8dp"
-                android:layout_marginHorizontal="16dp"
-                android:background="@drawable/card_back"
-                android:backgroundTint="@color/white">
-                <androidx.coordinatorlayout.widget.CoordinatorLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/challeng_image"></ImageView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center"
-                        android:textAlignment="center"
-                        android:fontFamily="@font/roboto_regular"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:alpha="0.7"
-                        android:id="@+id/tv_daily_qiuz_share"
-                        android:drawableLeft="@drawable/ic_boost_share"
-                        android:drawableTint="@color/black"
-                        android:paddingVertical="8dp"
-                        android:background="@drawable/book_mark"
-                        android:text="@string/share_boost_with_friends"></TextView>
-                </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-            </androidx.cardview.widget.CardView>
-
-<!--            <RelativeLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/iv_fh_live"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:textSize="18sp"-->
-<!--                    android:layout_marginTop="36dp"-->
-<!--                    android:textColor=" #1a1a1a"-->
-<!--                    android:fontFamily="@font/roboto_medium"-->
-<!--                    android:layout_centerHorizontal="true"-->
-<!--                    android:text="Live Board">-->
-<!--                </TextView>-->
-<!--                <View-->
-<!--                    android:layout_width="24dp"-->
-<!--                    android:layout_height="4dp"-->
-<!--                    android:id="@+id/view_liveboard"-->
-<!--                    android:background="#5c5c5c"-->
-<!--                    android:layout_marginVertical="4dp"-->
-<!--                    android:layout_below="@id/iv_fh_live"-->
-<!--                    android:layout_centerHorizontal="true"></View>-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="40dp"-->
-<!--                    android:layout_alignParentRight="true"-->
-<!--                    android:fontFamily="@font/roboto_regular"-->
-<!--                    android:text="Schedule"-->
-<!--                    android:layout_marginRight="16dp"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:id="@+id/tv_fh_live_all"-->
-<!--                    android:textColor="@color/orange"-->
-<!--                    ></TextView>-->
-
-<!--                <androidx.recyclerview.widget.RecyclerView-->
-<!--                    android:id="@+id/rec_fh_live_rec"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@id/view_liveboard"></androidx.recyclerview.widget.RecyclerView>-->
-<!--            </RelativeLayout>-->
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="32dp"
-                android:paddingBottom="12dp"
-                android:textColor=" #1a1a1a"
-                android:fontFamily="@font/roboto_medium"
-                android:layout_alignParentLeft="true"
-                android:text="Icards in Podcasts">
-
-            </TextView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/card_fh"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                app:cardUseCompatPadding="true"
-                android:outlineAmbientShadowColor="@color/black"
-                android:layout_marginTop="8dp"
-                android:layout_marginHorizontal="16dp"
-                android:background="@drawable/card_back"
-                android:backgroundTint="@color/white"
-               >
-
-
-                    <ImageView
-                        android:id="@+id/fh_icard_head"
-                        android:layout_width="match_parent"
-                        android:layout_height="110dp"
-                        android:adjustViewBounds="true"
-                        android:src="@drawable/icards_head"></ImageView>
-
-
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="32dp"
-                android:paddingVertical="12dp"
-                android:textColor=" #1a1a1a"
-                android:fontFamily="@font/roboto_medium"
-                android:layout_alignParentLeft="true"
-                android:text="Images Bank">
-
-            </TextView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:foreground="?android:attr/selectableItemBackground"
-                app:cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                android:id="@+id/image_bank_card_view"
-                app:cardUseCompatPadding="true"
-                android:outlineAmbientShadowColor="@color/black"
-                android:layout_marginTop="8dp"
-                android:layout_marginHorizontal="16dp"
-                android:background="@drawable/card_back"
-                android:backgroundTint="@color/white">
-
-                <ImageView
-                    android:id="@+id/fh_card_image_bank"
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/vip"></ImageView>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="40dp"
-                android:textColor=" #1a1a1a"
-                android:paddingVertical="12dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:fontFamily="@font/roboto_medium"
-                android:text="WallPoster"></TextView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="1dp"
-                android:layout_marginHorizontal="16dp"
-                android:background="@drawable/card_back"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="4dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="213dp"
-                    android:id="@+id/wallposter_image"
-                    android:background="@drawable/wallposter_byjus"></ImageView>
-            </androidx.cardview.widget.CardView>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="36dp"
                 android:layout_height="wrap_content"
-                android:paddingBottom="16dp"
-                android:orientation="vertical"
-               >
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_height="wrap_content">
-                    <TextView
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="36dp"
+                android:orientation="vertical">
 
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor=" #1a1a1a"
-                        android:layout_centerInParent="true"
-                        android:id="@+id/tv_dr_wall"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:fontFamily="@font/roboto_medium"
-                        android:layout_alignParentLeft="true"
-                        android:text="DR Wall">
-
-                    </TextView>
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="14sp"
-                        android:textColor="@color/green"
-                        android:layout_centerInParent="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_centerVertical="true"
-                        android:drawableTint="@color/green"
-                        android:fontFamily="@font/roboto_regular"
-                        android:layout_alignParentRight="true"
-                        android:text="more"
-                        android:drawableRight="@drawable/ic_double_arrow">
-
-                    </TextView>
-                </RelativeLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
+                <TextView
                     android:layout_width="wrap_content"
-                    android:id="@+id/rec_dr_wall"
-                    android:layout_marginTop="18dp"
-
-                    android:layout_height="wrap_content">
-                </androidx.recyclerview.widget.RecyclerView>
-            </LinearLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="36dp"
-                android:paddingBottom="6dp"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="start"
-                android:text="Resume By Mahesh"
-                android:textColor="#666666"
-                android:textSize="16sp"></TextView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/card_back"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="0dp">
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Features"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"></TextView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:gravity="start|center"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
 
-                    <LinearLayout
+                    <ImageView
+                        android:id="@+id/card_live_class"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@color/white"
-                        android:gravity="start|center"
-                        android:orientation="vertical">
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0.5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/one"></ImageView>
 
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="10dp"
-                            android:background="@drawable/card_back"
-                            android:backgroundTint="@color/white"
-                            app:cardCornerRadius="10dp"
-                            app:cardElevation="0dp">
-
-                            <FrameLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center">
-
-                                <ImageView
-                                    android:id="@+id/MediaPreview"
-                                    android:layout_width="100dp"
-                                    android:layout_height="70dp"
-                                    android:scaleType="centerCrop"
-                                    android:src="@drawable/nurse_pic" />
-
-                                <ImageView
-                                    android:id="@+id/VideoPreviewPlayButton"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/ic_play"
-                                    android:visibility="visible" />
-
-
-                            </FrameLayout>
-
-                        </androidx.cardview.widget.CardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="3dp"
-                            android:fontFamily="@font/roboto_regular"
-                            android:text="Continue video"
-                            android:textAlignment="center"
-                            android:textAllCaps="false"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"></TextView>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="70dp"
-                        android:layout_marginLeft="15dp"
-                        android:background="@color/lightblack"></View>
-
-                    <LinearLayout
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start|center"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/home_qbank">
-
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start|center"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="15dp"
-                            android:fontFamily="@font/roboto_regular"
-                            android:text="Start Practice"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"></TextView>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="70dp"
-                        android:layout_marginLeft="15dp"
-                        android:background="@color/lightblack"></View>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"
-                            android:adjustViewBounds="true"
-                            android:src="@drawable/swt">
-
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="start"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="10dp"
-                            android:fontFamily="@font/roboto_regular"
-                            android:text="Take a Test"
-                            android:textColor="@color/black"
-                            android:textSize="12sp"></TextView>
-                    </LinearLayout>
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0.5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/two"></ImageView>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <LinearLayout
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/card_pearl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0.5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/three"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/card_pear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0.5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/four"></ImageView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ImageView
+                        android:id="@+id/values"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0.5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/five"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ask_doubts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="0.5"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/six"></ImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingBottom="12dp"
+                android:text="Icards in Podcasts"
+                android:textColor=" #1a1a1a"
+                android:textSize="18sp">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/fh_icard_head"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="32dp"
-                android:orientation="horizontal">
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/fcard"></ImageView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingVertical="12dp"
+                android:text="Images Bank"
+                android:textColor=" #1a1a1a"
+                android:textSize="18sp">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/fh_card_image_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ivip"></ImageView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:text="WallPoster"
+                android:textColor=" #1a1a1a"
+                android:textSize="18sp"></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/card_back"
+                android:elevation="0dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/wallposter_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="213dp"
+                    android:background="@drawable/wallposter_byjus"></ImageView>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
 
                 <TextView
 
-                    android:layout_width="match_parent"
+                    android:id="@+id/tv_dr_wall"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_regular"
-                    android:textSize="14dp"
-                    android:text="@string/meet_the_master_minds" />
+                    android:layout_marginHorizontal="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Suggested lectures"
+                    android:textColor="#1a1a1a"
+                    android:textSize="18sp">
+
+                </TextView>
 
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_suggested_rec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"></androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/resume_shape_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/card_back"
+                        android:backgroundTint="@color/white"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:id="@+id/MediaPreview"
+                                android:layout_width="100dp"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/album" />
+
+                            <ImageView
+                                android:id="@+id/VideoPreviewPlayButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_play"
+                                android:visibility="visible" />
+
+
+                        </FrameLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Continue video"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/lightblack"></View>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/home_qbank">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Start Practice"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/lightblack"></View>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/swt">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Take a Test"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/fh_rec_doctors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"></androidx.recyclerview.widget.RecyclerView>
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"></androidx.recyclerview.widget.RecyclerView>
+
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -895,7 +911,7 @@
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/card_back"
-                android:backgroundTint="#ededed"
+                android:backgroundTint="@color/white"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="0dp">
 
@@ -913,6 +929,7 @@
                         android:text="   Love the App?"
                         android:textColor="#8b8484"
                         android:textSize="22sp"></TextView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -926,14 +943,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
                         android:gravity="center"
-                        android:layout_marginHorizontal="18dp"
                         android:orientation="horizontal">
 
                         <de.hdodenhof.circleimageview.CircleImageView
 
+                            android:id="@+id/iv_whatsup"
                             android:layout_width="43dp"
                             android:layout_height="43dp"
                             android:layout_gravity="start|center"
@@ -942,6 +960,7 @@
                             tools:ignore="UnusedAttribute" />
 
                         <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_facebook"
                             android:layout_width="43dp"
                             android:layout_height="43dp"
                             android:layout_gravity="start|center"
@@ -951,6 +970,7 @@
                             tools:ignore="UnusedAttribute" />
 
                         <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_twitter"
                             android:layout_width="43dp"
                             android:layout_height="43dp"
                             android:layout_gravity="start|center"
@@ -960,6 +980,7 @@
                             tools:ignore="UnusedAttribute" />
 
                         <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_instagram"
                             android:layout_width="43dp"
                             android:layout_height="43dp"
                             android:layout_gravity="start|center"
@@ -969,6 +990,7 @@
                             tools:ignore="UnusedAttribute" />
 
                         <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_more"
                             android:layout_width="43dp"
                             android:layout_height="43dp"
                             android:layout_gravity="start|center"
@@ -979,6 +1001,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <ImageView
                 android:layout_width="match_parent"

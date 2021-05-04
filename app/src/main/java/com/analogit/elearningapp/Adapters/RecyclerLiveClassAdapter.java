@@ -3,8 +3,6 @@ package com.analogit.elearningapp.Adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,7 +13,6 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.analogit.elearningapp.Fragments.HomeLiveClassPartTwoFragment;
-import com.analogit.elearningapp.Fragments.LiveClassFragment;
 import com.analogit.elearningapp.Model.LiveClassModel;
 import com.analogit.elearningapp.R;
 

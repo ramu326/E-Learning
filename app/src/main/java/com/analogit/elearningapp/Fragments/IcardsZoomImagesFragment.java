@@ -53,11 +53,11 @@ public class IcardsZoomImagesFragment extends Fragment {
         imageModels.add(sec);
 
         ImageModel t = new ImageModel();
-        t.imageView = getActivity().getResources().getDrawable(R.drawable.image_zoom_two);
+        t.imageView = getActivity().getResources().getDrawable(R.drawable.image_zoom);
         imageModels.add(t);
 
         ImageModel f = new ImageModel();
-        f.imageView = getActivity().getResources().getDrawable(R.drawable.image_zoom_three);
+        f.imageView = getActivity().getResources().getDrawable(R.drawable.image_zoom_one);
         imageModels.add(f);
 
         viewPager.setAdapter(new ImageAdapter(imageModels));

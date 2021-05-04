@@ -49,13 +49,13 @@ public class RecyclerQuizAdapter extends RecyclerView.Adapter<RecyclerQuizAdapte
     String option2 = "";
     String option3 = "";
     String option4 = "";
-    String option="";
+    String option = "";
     int pos1 = -1;
     int suUser = 3;
     API REST_CLIENT = RestClient.get();
-String date="2021-01-28";
+    String date = "2021-01-28";
     int pos;
-    String pos2="0";
+    String pos2 = "0";
 
     public RecyclerQuizAdapter(Context context, List<DailyBoostModel> dailyBoostModelList, DailyChallengeFragment dailyChallengeFragment) {
         this.context = context;
@@ -86,10 +86,8 @@ String date="2021-01-28";
             fragment.tv_optD.setText(dailyBoostModelList.get(0).getOption4());
 
 
-
             OptionAtPostion();
-        }
-        else{
+        } else {
             holder.tv_question.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ffffff")));
 
         }
@@ -103,11 +101,11 @@ String date="2021-01-28";
             fragment.tv_optC.setText(dailyBoostModelList.get(position).getOption3());
             fragment.tv_optD.setText(dailyBoostModelList.get(position).getOption4());
 
-          AllWhiteColor();
+            AllWhiteColor();
 
 
         } else {
-            if(position!=0)
+            if (position != 0)
                 holder.tv_question.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#ffffff")));
         }
 
@@ -152,29 +150,29 @@ String date="2021-01-28";
 
                     } else {
 
-                        if(!option1.isEmpty()){
-                            option =option1;
+                        if (!option1.isEmpty()) {
+                            option = option1;
                             Toast.makeText(context, option, Toast.LENGTH_SHORT).show();
                         }
-                        if(!option2.isEmpty()){
-                            option =option2;
+                        if (!option2.isEmpty()) {
+                            option = option2;
                             Toast.makeText(context, option, Toast.LENGTH_SHORT).show();
                         }
-                        if(!option3.isEmpty()){
-                            option =option3;
+                        if (!option3.isEmpty()) {
+                            option = option3;
                             Toast.makeText(context, option, Toast.LENGTH_SHORT).show();
                         }
-                        if(!option4.isEmpty()){
-                            option=option4;
+                        if (!option4.isEmpty()) {
+                            option = option4;
                             Toast.makeText(context, option, Toast.LENGTH_SHORT).show();
 
                         }
-                            Log.d("selectedans",option);
-                            int questionId=dailyBoostModelList.get(pos).getQuestion_id();
-                            Log.d("questionmane",String.valueOf(questionId));
-                            String time = "20";
-                            QuestionResponse(suUser, questionId, option, time);
-                            AllWhiteColor();
+                        Log.d("selectedans", option);
+                        int questionId = dailyBoostModelList.get(pos).getQuestion_id();
+                        Log.d("questionmane", String.valueOf(questionId));
+                        String time = "20";
+                        QuestionResponse(suUser, questionId, option, time);
+                        AllWhiteColor();
 
 
                     }
@@ -190,7 +188,7 @@ String date="2021-01-28";
     }
 
     private void OptionAtPostion() {
-      //  Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
+
 
         fragment.tv_optA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -198,9 +196,9 @@ String date="2021-01-28";
 
                 option1 = dailyBoostModelList.get(0).getOption1();
 
-                option2="";
-                option4="";
-                option3="";
+                option2 = "";
+                option4 = "";
+                option3 = "";
                 //   Toast.makeText(context, option1, Toast.LENGTH_SHORT).show();
                 fragment.layout1.setBackgroundColor(Color.parseColor("#0da5af"));
                 fragment.layout2.setBackgroundColor(Color.WHITE);
@@ -216,9 +214,9 @@ String date="2021-01-28";
                 option2 = dailyBoostModelList.get(0).getOption2();
 
 
-                option1="";
-                option4="";
-                option3="";
+                option1 = "";
+                option4 = "";
+                option3 = "";
                 // Toast.makeText(context, option2, Toast.LENGTH_SHORT).show();
                 fragment.layout1.setBackgroundColor(Color.WHITE);
                 fragment.layout2.setBackgroundColor(Color.parseColor("#0da5af"));
@@ -230,9 +228,9 @@ String date="2021-01-28";
             @Override
             public void onClick(View v) {
                 option3 = dailyBoostModelList.get(0).getOption3();
-                option1="";
-                option4="";
-                option2="";
+                option1 = "";
+                option4 = "";
+                option2 = "";
                 //   Toast.makeText(context, option3, Toast.LENGTH_SHORT).show();
 
                 fragment.layout1.setBackgroundColor(Color.WHITE);
@@ -246,9 +244,9 @@ String date="2021-01-28";
             public void onClick(View v) {
                 option4 = dailyBoostModelList.get(0).getOption4();
 
-                option1="";
-                option3="";
-                option2="";
+                option1 = "";
+                option3 = "";
+                option2 = "";
                 //  Toast.makeText(context, option4, Toast.LENGTH_SHORT).show();
                 fragment.layout1.setBackgroundColor(Color.WHITE);
                 fragment.layout2.setBackgroundColor(Color.WHITE);
@@ -273,23 +271,24 @@ String date="2021-01-28";
         }
     }
 
-    public void AllWhiteColor(){
+    public void AllWhiteColor() {
         fragment.layout4.setBackgroundColor(Color.WHITE);
         fragment.layout1.setBackgroundColor(Color.WHITE);
         fragment.layout2.setBackgroundColor(Color.WHITE);
         fragment.layout3.setBackgroundColor(Color.WHITE);
 
     }
+
     public void Submit() {
 
         fragment.tv_submit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(final View v) {
-                Log.d("nanananan",String.valueOf(suUser));
+                Log.d("nanananan", String.valueOf(suUser));
 
 
-                Call<SubmitModel> submitModel = REST_CLIENT.submit(suUser,date);
+                Call<SubmitModel> submitModel = REST_CLIENT.submit(suUser, date);
                 submitModel.enqueue(new Callback<SubmitModel>() {
                     SubmitModel submitModelData;
 
@@ -307,9 +306,9 @@ String date="2021-01-28";
                             args.putInt("skip", submitModelData.getSkip());
                             args.putInt("accuracy", submitModelData.getAccuracy());
                             args.putInt("rank", submitModelData.getRank());
-                            args.putInt("daily_question",submitModelData.getDaily_question());
+                            args.putInt("daily_question", submitModelData.getDaily_question());
 
-                            Log.d("quizzzzz",String.valueOf(submitModelData.getRank()));
+                            Log.d("quizzzzz", String.valueOf(submitModelData.getRank()));
                             AppCompatActivity activity = (AppCompatActivity) v.getContext();
                             DailyChallngeAtempetdFragment dailyChallngeAtempetdFragment = new DailyChallngeAtempetdFragment();
                             dailyChallngeAtempetdFragment.setArguments(args);
@@ -322,7 +321,7 @@ String date="2021-01-28";
 
                     @Override
                     public void onFailure(Call<SubmitModel> call, Throwable t) {
-                        Log.d("failure",t.toString());
+                        Log.d("failure", t.toString());
                         Toast.makeText(context, "Please Check Your Internet Connection", Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -331,7 +330,8 @@ String date="2021-01-28";
         });
 
     }
-    public void Options(){
+
+    public void Options() {
 
         fragment.tv_optA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -339,9 +339,9 @@ String date="2021-01-28";
 
                 option1 = dailyBoostModelList.get(pos1).getOption1();
 
-                option2="";
-                option4="";
-                option3="";
+                option2 = "";
+                option4 = "";
+                option3 = "";
 
                 fragment.layout1.setBackgroundColor(Color.parseColor("#0da5af"));
                 fragment.layout2.setBackgroundColor(Color.WHITE);
@@ -357,10 +357,10 @@ String date="2021-01-28";
                 option2 = dailyBoostModelList.get(pos1).getOption2();
 
 
-                option1="";
-                option4="";
-                option3="";
-               // Toast.makeText(context, option2, Toast.LENGTH_SHORT).show();
+                option1 = "";
+                option4 = "";
+                option3 = "";
+                // Toast.makeText(context, option2, Toast.LENGTH_SHORT).show();
                 fragment.layout1.setBackgroundColor(Color.WHITE);
                 fragment.layout2.setBackgroundColor(Color.parseColor("#0da5af"));
                 fragment.layout3.setBackgroundColor(Color.WHITE);
@@ -371,10 +371,10 @@ String date="2021-01-28";
             @Override
             public void onClick(View v) {
                 option3 = dailyBoostModelList.get(pos1).getOption3();
-                option1="";
-                option4="";
-                option2="";
-             //   Toast.makeText(context, option3, Toast.LENGTH_SHORT).show();
+                option1 = "";
+                option4 = "";
+                option2 = "";
+                //   Toast.makeText(context, option3, Toast.LENGTH_SHORT).show();
 
                 fragment.layout1.setBackgroundColor(Color.WHITE);
                 fragment.layout2.setBackgroundColor(Color.WHITE);
@@ -387,10 +387,10 @@ String date="2021-01-28";
             public void onClick(View v) {
                 option4 = dailyBoostModelList.get(pos1).getOption4();
 
-                option1="";
-                option3="";
-                option2="";
-              //  Toast.makeText(context, option4, Toast.LENGTH_SHORT).show();
+                option1 = "";
+                option3 = "";
+                option2 = "";
+                //  Toast.makeText(context, option4, Toast.LENGTH_SHORT).show();
                 fragment.layout1.setBackgroundColor(Color.WHITE);
                 fragment.layout2.setBackgroundColor(Color.WHITE);
                 fragment.layout3.setBackgroundColor(Color.WHITE);
@@ -400,10 +400,10 @@ String date="2021-01-28";
 
     }
 
-    public void QuestionResponse(int user,int questionid,String option,String time) {
+    public void QuestionResponse(int user, int questionid, String option, String time) {
 
 
-        Log.d("loggsss: ", suUser + "    questionid is: " + questionid + "    time is: " + time+"answer is"+option);
+        Log.d("loggsss: ", suUser + "    questionid is: " + questionid + "    time is: " + time + "answer is" + option);
 
         JsonObject v1 = new JsonObject();
         v1.addProperty("user_id", user);
@@ -412,7 +412,6 @@ String date="2021-01-28";
         v1.addProperty("time", time);
 
 
-        Log.d("loggsss: ", suUser + "    questionid is: " + questionid + "    time is: " + time+"answer is"+option);
 
 
         Call<OptionSelectModel> optionresponce = REST_CLIENT.validateOption(v1);
@@ -452,7 +451,7 @@ String date="2021-01-28";
                 } else {
 
                     Log.d("quizzzzz", response.message());
-                   // Toast.makeText(context, response.toString(), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(context, response.toString(), Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -1,55 +1,86 @@
 package com.analogit.elearningapp.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DiffUtil;
+
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.analogit.elearningapp.ApiModel.QbankBookMarkModel;
+import com.analogit.elearningapp.Fragments.IcardsZoomImagesFragment;
+import com.analogit.elearningapp.Fragments.QbankBookmarkFargment;
+import com.analogit.elearningapp.Fragments.QbankModulesStartExamFragment;
+import com.analogit.elearningapp.Model.DoctorModel;
 import com.analogit.elearningapp.Model.GrandTestModel;
-import com.analogit.elearningapp.Model.SubjectsModel;
+
 import com.analogit.elearningapp.R;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerQbankBookmarkAdapter extends ListAdapter<GrandTestModel, RecyclerQbankBookmarkAdapter.MyViewholder> {
-    Fragment fragment;
-    public RecyclerQbankBookmarkAdapter(Fragment fragment) {
-        super(GrandTestModel.grandTestModelItemCallback);
-        this.fragment=fragment;
+import de.hdodenhof.circleimageview.CircleImageView;
+
+import static com.analogit.elearningapp.WebServices.RestClient.Image_Url;
+
+public class RecyclerQbankBookmarkAdapter extends RecyclerView.Adapter<RecyclerQbankBookmarkAdapter.BookmarkAdapter>{
+   Context context;
+   ArrayList<QbankBookMarkModel>arrayList;
+
+    public RecyclerQbankBookmarkAdapter(Context context, ArrayList<QbankBookMarkModel> arrayList) {
+        this.context = context;
+        this.arrayList = arrayList;
     }
 
     @NonNull
     @Override
-    public MyViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyViewholder(LayoutInflater.from(parent.getContext()).inflate(R.layout.qbnak_bookmark_row,parent,false));
+    public BookmarkAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new BookmarkAdapter(LayoutInflater.from(parent.getContext()).inflate(R.layout.qbnak_bookmark_row,parent,false));
+    }
 
+    @Override
+    public void onBindViewHolder(@NonNull BookmarkAdapter holder, int position) {
+
+        Glide.with(context).load(Image_Url+arrayList.get(position).getImage()).into(holder.imageView);
+        holder.subName.setText(arrayList.get(position).getName());
+        holder.bookMark.setText(String.valueOf(arrayList.get(position).getBookmark())+" BookMarks");
     }
 
     @Override
     public int getItemCount() {
-        return 20;
+        return arrayList.size();
     }
 
-    @Override
-    public void submitList(@Nullable List<GrandTestModel> list) {
-        super.submitList(list == null ? null : new ArrayList<GrandTestModel>(list));
-    }
-    @Override
-    public void onBindViewHolder(@NonNull MyViewholder holder, int position) {
+    public class BookmarkAdapter extends RecyclerView.ViewHolder{
 
-    }
-
-    class MyViewholder extends RecyclerView.ViewHolder{
-
-        public MyViewholder(@NonNull View itemView) {
+        ConstraintLayout constraintLayout;
+        TextView subName,bookMark;
+        CircleImageView imageView;
+        public BookmarkAdapter(@NonNull View itemView) {
             super(itemView);
+            constraintLayout=itemView.findViewById(R.id.constaraint_bookbark_qbank);
+            subName=itemView.findViewById(R.id.tv_bookbark_sub_name);
+            bookMark=itemView.findViewById(R.id.tv_bookbark_sub_work_status);
+            imageView=itemView.findViewById(R.id.iv_bookbark_sub_image);
+
+            constraintLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AppCompatActivity activity=(AppCompatActivity)v.getContext();
+                    activity.getSupportFragmentManager().beginTransaction().addToBackStack(null).replace(R.id.content, new QbankBookmarkFargment()).commit();
+
+                }
+            });
+
         }
     }
 }

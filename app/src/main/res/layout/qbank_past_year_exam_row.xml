@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/constaraint_all_exams_topic"
+    android:layout_marginTop="8dp"
+    android:paddingVertical="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_past_sub_image_topic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/anatomy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/tv_past_qbank_sub_name_topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="AIIMS"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/iv_past_sub_image_topic"
+        app:layout_constraintTop_toTopOf="@id/iv_past_sub_image_topic"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_past_sub_image_topic"
+        app:layout_constraintTop_toBottomOf="@id/tv_past_qbank_sub_name_topic"
+        app:layout_constraintStart_toStartOf="@id/tv_past_qbank_sub_name_topic"
+        android:text="200 Questions"
+        android:textColor="#979797"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/past_qbank_tv_sub_work_status_topic"
+        android:textAllCaps="false"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_height="wrap_content"></TextView>
+
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="#e6e6e6"
+        android:paddingTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/past_qbank_tv_sub_work_status_topic"
+        app:layout_constraintTop_toBottomOf="@id/past_qbank_tv_sub_work_status_topic"></View>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/barcolor"
+            android:paddingVertical="16dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_back_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white"></ImageView>
+
+            <TextView
+                android:id="@+id/head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Edit Profile"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_small"></TextView>
+
+            <View
+                android:id="@+id/view_all"
+                android:layout_width="0dp"
+                android:layout_height="0.6dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/head"></View>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edit_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/ic_round_person"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_all">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Dr.Anil Kumar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_image"></TextView>
+
+            <TextView
+                android:id="@+id/tv_target"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginStart="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Target"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_name"></TextView>
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/divider_layout"
+                android:backgroundTint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@id/tv_target"
+                app:layout_constraintStart_toStartOf="@id/tv_target"
+                app:layout_constraintTop_toBottomOf="@id/tv_target">
+
+                <Spinner
+                    android:id="@+id/sp_religion"
+                    style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/black" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_class"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Class"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_target"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_target"></TextView>
+
+            <RelativeLayout
+                android:id="@+id/relative_one"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider_layout"
+                android:backgroundTint="@color/grey"
+                app:layout_constraintEnd_toEndOf="@id/tv_class"
+                app:layout_constraintStart_toStartOf="@id/tv_class"
+                app:layout_constraintTop_toBottomOf="@id/tv_class">
+
+                <Spinner
+                    android:id="@+id/sp_religion_one"
+                    style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/black" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cons_edit">
+
+
+            <TextView
+                android:id="@+id/tv_register_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Name"
+                android:textColor="#999999"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/divider_layout"
+                android:backgroundTint="@color/grey"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textEmailAddress"
+                android:paddingVertical="6dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_register_name"></EditText>
+
+            <TextView
+                android:id="@+id/tv_register_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Mobile Number"
+                android:textColor="#999999"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_register_name"
+                app:layout_constraintStart_toStartOf="@id/tv_register_name"
+                app:layout_constraintTop_toBottomOf="@id/et_name"></TextView>
+
+            <EditText
+                android:id="@+id/et_name_mobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/divider_layout"
+                android:backgroundTint="@color/grey"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textEmailAddress"
+                android:paddingVertical="6dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_register_mobile"></EditText>
+
+            <TextView
+                android:id="@+id/tv_register_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Email"
+                android:textColor="#999999"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_register_name"
+                app:layout_constraintStart_toStartOf="@id/tv_register_name"
+                app:layout_constraintTop_toBottomOf="@id/et_name_mobile"></TextView>
+
+            <EditText
+                android:id="@+id/et_name_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/divider_layout"
+                android:backgroundTint="@color/grey"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textEmailAddress"
+                android:paddingVertical="6dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_register_email"></EditText>
+
+            <TextView
+                android:id="@+id/tv_register_college"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="College"
+                android:textColor="#999999"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_register_name"
+                app:layout_constraintStart_toStartOf="@id/tv_register_name"
+                app:layout_constraintTop_toBottomOf="@id/et_name_email"></TextView>
+
+            <EditText
+                android:id="@+id/et_name_college"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/divider_layout"
+                android:backgroundTint="@color/grey"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textEmailAddress"
+                android:paddingVertical="6dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_register_college"></EditText>
+
+            <TextView
+                android:id="@+id/tv_register_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Location"
+                android:textColor="#999999"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="@id/tv_register_name"
+                app:layout_constraintStart_toStartOf="@id/tv_register_name"
+                app:layout_constraintTop_toBottomOf="@id/et_name_college"></TextView>
+
+            <EditText
+                android:id="@+id/et_name_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:background="@drawable/divider_layout"
+                android:backgroundTint="@color/grey"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textEmailAddress"
+                android:paddingVertical="6dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_register_location"></EditText>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/barcolor"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingHorizontal="32dp"
+                android:text="Update profile"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_name_location"></Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

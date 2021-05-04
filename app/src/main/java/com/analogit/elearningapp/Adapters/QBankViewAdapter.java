@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.analogit.elearningapp.Fragments.QBankTabsFragment;
+import com.analogit.elearningapp.Fragments.QBankSubTopicsFragment;
 
 public class QBankViewAdapter extends FragmentStateAdapter{
     public QBankViewAdapter(@NonNull Fragment fragmentActivity) {
@@ -14,7 +14,7 @@ public class QBankViewAdapter extends FragmentStateAdapter{
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return new QBankTabsFragment();
+        return new QBankSubTopicsFragment();
     }
 
     @Override

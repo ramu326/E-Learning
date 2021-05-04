@@ -7,11 +7,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DiffUtil;
+
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.analogit.elearningapp.Model.AppwallModel;
+
 import com.analogit.elearningapp.Model.WallPosterModel;
 import com.analogit.elearningapp.R;
 

@@ -78,8 +78,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tv_child_video_star"
         app:layout_constraintTop_toBottomOf="@id/tv_child"
-        app:layout_constraintTop_toTopOf="@id/tv_child_video_star"
-        app:tint="@color/lightblack"></ImageView>
+        app:layout_constraintTop_toTopOf="@id/tv_child_video_star"></ImageView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

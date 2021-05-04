@@ -12,7 +12,10 @@ import android.view.ViewGroup;
 
 import com.analogit.elearningapp.Adapters.RecyclerAudioAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerVideosSubAdapter;
+import com.analogit.elearningapp.Model.AudioModel;
 import com.analogit.elearningapp.R;
+
+import java.util.ArrayList;
 
 
 public class IcardAudioFragment extends Fragment {
@@ -21,7 +24,7 @@ public class IcardAudioFragment extends Fragment {
     private RecyclerVideosSubAdapter recyclerVideosSubAdapter;
     private RecyclerAudioAdapter recyclerAudioAdapter;
     private RecyclerView rSub,rAudio;
-
+    ArrayList<AudioModel> arrayList=new ArrayList<>();
     public IcardAudioFragment() {
         // Required empty public constructor
     }
@@ -36,13 +39,13 @@ public class IcardAudioFragment extends Fragment {
         rSub=v.findViewById(R.id.ial_rec);
         rAudio=v.findViewById(R.id.ial_audios);
 
-        rSub.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
-        recyclerVideosSubAdapter=new RecyclerVideosSubAdapter(this);
-        rSub.setAdapter(recyclerVideosSubAdapter);
-
-        rAudio.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
-        recyclerAudioAdapter=new RecyclerAudioAdapter(this);
-        rAudio.setAdapter(recyclerAudioAdapter);
+//        rSub.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL,false));
+//        recyclerVideosSubAdapter=new RecyclerVideosSubAdapter(this);
+//        rSub.setAdapter(recyclerVideosSubAdapter);
+//
+//        rAudio.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
+//        recyclerAudioAdapter=new RecyclerAudioAdapter(getContext(),arrayList);
+//        rAudio.setAdapter(recyclerAudioAdapter);
         return v;
     }
 }

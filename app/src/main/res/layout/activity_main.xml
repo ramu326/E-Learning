@@ -47,9 +47,16 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/white"
+        android:background="@color/barcolor"
         android:fitsSystemWindows="true"
-
+        tools:override="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:itemHorizontalPadding="40dp"
+        android:theme="@style/NavigationTheme"
+        app:itemTextColor="@color/white"
+        app:itemBackground="@drawable/item_background"
+        app:itemTextAppearance="@style/menu_text_style"
         app:headerLayout="@layout/header"
         app:menu="@menu/side_menu"></com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

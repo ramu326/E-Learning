@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.analogit.elearningapp.ApiModel.IBSubImagesModel;
@@ -53,14 +54,33 @@ public class RecyclerIBSubImagesAdapter extends RecyclerView.Adapter<RecyclerIBS
 
     class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView tv_No,tv_Topic,tv_Dec;
+        TextView tv_No,tv_Topic,tv_Dec,tv_notes;
         ImageView iv_Image;
+        ConstraintLayout constraintLayout;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_No=itemView.findViewById(R.id.ib_sub_images_no);
             tv_Topic=itemView.findViewById(R.id.tv_ib_sub_images_topic);
             tv_Dec=itemView.findViewById(R.id.tv_ib_sub_image_dec);
             iv_Image=itemView.findViewById(R.id.ib_sub_image);
+            constraintLayout=itemView.findViewById(R.id.imagebank_dec);
+            tv_notes=itemView.findViewById(R.id.imagebank_notes);
+          constraintLayout.setVisibility(View.GONE);
+            tv_notes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    if(constraintLayout.getVisibility()==View.GONE){
+                        constraintLayout.setVisibility(View.VISIBLE);
+                        Log.d("hellotext", "onClick: ");
+                    }
+                 //   constraintLayout.setVisibility(View.GONE);
+                    else if(constraintLayout.getVisibility()==View.VISIBLE){
+                        constraintLayout.setVisibility(View.GONE);
+                    }
+
+                }
+            });
         }
     }
 }

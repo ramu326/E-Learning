@@ -10,7 +10,7 @@
         android:orientation="vertical">
         <ImageView
             android:layout_width="match_parent"
-            android:background="@drawable/imagbank"
+            android:background="@drawable/news_img"
             android:adjustViewBounds="true"
             android:layout_height="120dp"></ImageView>
         <androidx.recyclerview.widget.RecyclerView

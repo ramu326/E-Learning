@@ -59,7 +59,7 @@ private TextView next;
             @Override
             public void onClick(View view) {
                 FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
-                fr.replace(R.id.content,new QnAFragment());
+                fr.replace(R.id.content,new GrandTestFinalReportFragment());
                 fr.addToBackStack(null);
                 fr.commit();
             }

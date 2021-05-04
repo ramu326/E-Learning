@@ -15,6 +15,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/dr_second_tab_bg"
         android:scrollbars="none"
+
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:tabRippleColor="@android:color/transparent"

@@ -16,6 +16,9 @@ import com.analogit.elearningapp.Adapters.DrParentChlidAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerOverViewAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerSlideImagesAdapter;
 import com.analogit.elearningapp.Model.AllQuestionsModel;
+import com.analogit.elearningapp.Model.DoctorModel;
+import com.analogit.elearningapp.NewAdapter.RecyclerDrNotesAdapter;
+import com.analogit.elearningapp.NewAdapter.RecyclerDrVideosAdapter;
 import com.analogit.elearningapp.R;
 
 import java.util.ArrayList;
@@ -29,6 +32,8 @@ View v;
 RecyclerView recyclerView,transrecyclerview,recslides;
 ArrayList<AllQuestionsModel>arrayList;
     ExpandableListView expandableListView;
+    ArrayList<DoctorModel>arrayList1=new ArrayList<>();
+    ArrayList<DoctorModel>arrayList2=new ArrayList<>();
     ArrayList<String> drParentlist=new ArrayList<>();
     ArrayList<String>drChildlist=new ArrayList<>();
     Map<String, List<String>> hashmap=new HashMap<>();
@@ -47,9 +52,9 @@ int position;
             case 0:
                 v=inflater.inflate(R.layout.transcript_layout,container,false);
                 transrecyclerview=v.findViewById(R.id.trans_script_rec);
-                RecyclerOverViewAdapter recyclerOverViewAdapter=new RecyclerOverViewAdapter(this);
                 transrecyclerview.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
-                transrecyclerview.setAdapter(recyclerOverViewAdapter);
+                RecyclerDrNotesAdapter recyclerDrNotesAdapter=new RecyclerDrNotesAdapter(getContext(),arrayList2);
+                transrecyclerview.setAdapter(recyclerDrNotesAdapter);
                 ((MainActivity)(getActivity())).bottomNavigationView.setVisibility(View.GONE);
                 break;
             case 1:
@@ -63,36 +68,11 @@ int position;
 
                 v= inflater.inflate(R.layout.fragment_dr_parent_child_adapter_tab_created, container, false);
 
-                expandableListView=v.findViewById(R.id.expandable_listview_dr);
-                DrParentChlidAdapter drParentChlidAdapter=new DrParentChlidAdapter(drParentlist,hashmap);
+                recyclerView=v.findViewById(R.id.rec_listview_dr);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
+                RecyclerDrVideosAdapter recyclerDrVideosAdapter = new RecyclerDrVideosAdapter(getContext(), arrayList1);
+                recyclerView.setAdapter(recyclerDrVideosAdapter);
 
-                drParentlist.add("General Embbrylogy One");
-                drParentlist.add("General Embbrylogy Two");
-                drParentlist.add("General Embbrylogy Three");
-                drParentlist.add("General Embbrylogy Four");
-                for(int i=0;i<drParentlist.size();i++){
-                    ArrayList drchildlist=new ArrayList();
-                    drchildlist.add("General Anatomy One");
-                    drchildlist.add("General Anatomy Two");
-                    drchildlist.add("General Anatomy Three");
-                    drchildlist.add("General Anatomy Four");
-                    hashmap.put(drParentlist.get(i),drchildlist);
-
-                }
-                expandableListView.setAdapter(drParentChlidAdapter);
-                for (int i=0;i<drParentlist.size();i++)
-                    expandableListView.expandGroup(i);
-                expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-                    @Override
-                    public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-                        return true;
-                    }
-                });
-//                v= inflater.inflate(R.layout.fragment_dr_learn_tran_upnext, container, false);
-//                recyclerView=v.findViewById(R.id.fr_tran_upnext_rec);
-//                RecyclerMorningRoundDecAdapter recyclerMorningRoundDecAdapter=new RecyclerMorningRoundDecAdapter(this);
-//                recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
-//                recyclerView.setAdapter(recyclerMorningRoundDecAdapter);
                 ( (MainActivity)(getActivity())).bottomNavigationView.setVisibility(View.GONE);
 
                 break;

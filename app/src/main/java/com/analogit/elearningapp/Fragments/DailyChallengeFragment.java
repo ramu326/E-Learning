@@ -1,12 +1,7 @@
 package com.analogit.elearningapp.Fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.analogit.elearningapp.NewAdapter.RecyclerQuizAdapter;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.analogit.elearningapp.ApiModel.DailyBoostModel;
+import com.analogit.elearningapp.NewAdapter.RecyclerQuizAdapter;
 import com.analogit.elearningapp.R;
 import com.analogit.elearningapp.WebServices.API;
 import com.analogit.elearningapp.WebServices.RestClient;
@@ -31,21 +31,24 @@ import retrofit2.Response;
 
 public class DailyChallengeFragment extends Fragment {
 
-  View v;
-public RecyclerView recyclerView;
-public RecyclerQuizAdapter recyclerQuizAdapter;
-public ImageView Imagecal;
-public TextView tvSubmit,tv_optA,tv_optB,tv_optC,tv_optD,tv_question,tv_Total,tv_Next,tv_submit;
+    View v;
+    public RecyclerView recyclerView;
+    public RecyclerQuizAdapter recyclerQuizAdapter;
+    public ImageView Imagecal;
+    public TextView tvSubmit, tv_optA, tv_optB, tv_optC, tv_optD, tv_question, tv_Total, tv_Next, tv_submit;
 
-public CardView layout1,layout2,layout3,layout4;
-API REST_CLIENT;
-ArrayList<DailyBoostModel>dailyBoostModel=new ArrayList<>();
+    public CardView layout1, layout2, layout3, layout4;
+    private static final String PREF_NAME = "SharedPref";
+    SharedPreferences pref;
+    API REST_CLIENT;
+    SharedPreferences.Editor editor;
+    String  content = "application/json";
+    int PRIVATE_MODE = 0;
+    ArrayList<DailyBoostModel> dailyBoostModel = new ArrayList<>();
+
     public DailyChallengeFragment() {
         // Required empty public constructor
     }
-
-
-
 
 
     @Override
@@ -76,7 +79,10 @@ ArrayList<DailyBoostModel>dailyBoostModel=new ArrayList<>();
 
         REST_CLIENT = RestClient.get();
 
-        Call<List<DailyBoostModel>>dailyboost=REST_CLIENT.getDailyBoostQuestions();
+        pref = getActivity().getSharedPreferences(PREF_NAME, PRIVATE_MODE);
+        editor = pref.edit();
+        Log.d("jklfklnfdklfnd",pref.getString("token", "-1"));
+        Call<List<DailyBoostModel>>dailyboost=REST_CLIENT.getDailyBoostQuestions(pref.getString("token", "-1"),content);
         dailyboost.enqueue(new Callback<List<DailyBoostModel>>() {
             List<DailyBoostModel>dailyBoostModellist;
             DailyBoostModel dailyBoostModelData;
@@ -101,8 +107,10 @@ ArrayList<DailyBoostModel>dailyBoostModel=new ArrayList<>();
 
             @Override
             public void onFailure(Call<List<DailyBoostModel>> call, Throwable t) {
-                Log.d("failue",t.toString());
-                Toast.makeText(getContext(), "Please check your Internet Connection", Toast.LENGTH_SHORT).show();
+                if(getActivity()!=null)
+                 Toast.makeText(getContext(),"Please check Internet connection!",Toast.LENGTH_SHORT).show();
+
+
             }
         });
 

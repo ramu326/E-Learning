@@ -24,7 +24,7 @@
         android:id="@+id/iv_hir_two_image"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@drawable/home_three_image"></ImageView>
+        android:src="@drawable/news_img"></ImageView>
 </androidx.cardview.widget.CardView>
 
 

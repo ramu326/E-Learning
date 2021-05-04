@@ -8,15 +8,15 @@
     <string name="videos">Videos</string>
     <string name="anatomy">Anatomy</string>
     <string name="introduction">Introduction to Human Body</string>
-    <string name="followmoringround">Follow Morning Rounds</string>
+    <string name="followmoringround">Morning Rounds</string>
     <string name="golive">Go Live</string>
-    <string name="quizdailychallenge">Quiz-Daily Challenge</string>
-    <string name="hytdailytest">HYT-Daily Test</string>
+    <string name="quizdailychallenge">Daily Challenge</string>
+    <string name="hytdailytest">HYT Test</string>
     <string name="appwall">App Wall</string>
     <string name="wallposter">Wall Poster</string>
     <string name="mydoubts">My Doubts</string>
     <string name="groupdiscussion">Group Discussion</string>
-    <string name="extendyourvalidity">Extend Your validity</string>
+    <string name="extendyourvalidity">Subscribe now</string>
     <string name="share">Share</string>
     <string name="earncoins">Earn Coins</string>
     <string name="faqs">FAQS</string>
@@ -32,7 +32,7 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="home">Home</string>
-    <string name="reset">RESET-T&amp;D,Q-BANK,BOOKMARK</string>
+    <string name="reset">Reset</string>
     <string name="upsc">UPSC GRAND TEST1</string>
     <string name="test">Test</string>
     <string name="time">time</string>
@@ -85,7 +85,8 @@
     <string name="Rs">\u20B9</string>
     <string name="obstetrics_gynaecology"><![CDATA[obstetrics & gynaecology]]></string>
     <string name="share_boost_with_friends"><![CDATA[ Share & Boost with friends]]></string>
-
-    <!--    <string name="string_resource">This [img src=dra/] is an icon.</string>-->
+    <string name="question_dissection"><![CDATA[Question&Dissection]]></string>
+    <string name="hint_test">Enter your name <font color='#FF0000'>*</font></string>
+    <string name="hint_mail">Enter your gmail <font color='#FF0000'>*</font></string>
 
 </resources>

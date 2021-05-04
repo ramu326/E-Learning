@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.DrNotesWithTopicWiseFragment">
+<TextView
+    android:layout_width="match_parent"
+    android:text="Anatomy"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    android:fontFamily="@font/yantramanav_medium"
+    android:textAllCaps="false"
+    android:id="@+id/notes_topic"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:background="@color/barcolor"
+    android:paddingVertical="20dp"
+    android:gravity="center"
+    android:layout_height="wrap_content"></TextView>
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       app:layout_constraintTop_toBottomOf="@id/notes_topic"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:id="@+id/rec_notes_topic_wise"
+       android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

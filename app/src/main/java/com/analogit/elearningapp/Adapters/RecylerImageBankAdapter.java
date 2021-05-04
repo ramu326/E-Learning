@@ -8,12 +8,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DiffUtil;
+
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.analogit.elearningapp.Model.DiscussionModel;
-import com.analogit.elearningapp.Model.ImageModel;
+
 import com.analogit.elearningapp.R;
 
 public class RecylerImageBankAdapter  extends ListAdapter<DiscussionModel,RecylerImageBankAdapter.MyViewholder> {

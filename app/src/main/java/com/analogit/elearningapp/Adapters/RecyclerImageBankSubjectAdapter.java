@@ -97,7 +97,7 @@ public class RecyclerImageBankSubjectAdapter  extends ListAdapter<AllSubjectsMod
         public MyViewholder(@NonNull View itemView) {
             super(itemView);
             //  linearLayout=itemView.findViewById(R.id.asr_ll_one);
-            SubName=itemView.findViewById(R.id.tv_asr_subjects);
+            SubName=itemView.findViewById(R.id.tv_img_subjects);
         }
     }
 

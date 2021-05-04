@@ -1,110 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:background="@color/skyblue"
-    android:gravity="start|center_horizontal"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:background="@color/barcolor"
+    android:paddingTop="32dp"
+    android:id="@+id/edit_profile"
+    android:paddingBottom="8dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/ic_round_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/picture"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_gravity="center"
-            android:contentDescription="@string/nav_header_desc"
-            android:paddingTop="8dp"
-            android:src="@drawable/ic_round_person"
-            android:transitionName="picture"
-            tools:ignore="UnusedAttribute" />
+    </de.hdodenhof.circleimageview.CircleImageView>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:paddingBottom="10dp"
-            android:gravity="start"
-            android:orientation="vertical"
-            android:padding="8dp">
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="8dp"
-                android:singleLine="true"
-                android:text="Dr.Anil Kumar"
-                android:textSize="16sp"
-                android:textAlignment="textStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:gravity="start" />
-            <TextView
-                android:id="@+id/tv_mobile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="8dp"
-                android:singleLine="true"
-                android:text="+91-9676729431"
-                android:textAlignment="textStart"
-                android:textColor="@color/black"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:gravity="start" />
-            <TextView
-                android:id="@+id/tv_mail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="8dp"
-                android:singleLine="true"
-                android:text="anilanalogit@gmail.com"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:textAlignment="textStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:gravity="start" />
-
-        </LinearLayout>
-
-
-    </LinearLayout>
-<View
-    android:layout_width="match_parent"
-    android:layout_height="1dp"
-    android:background="@color/sblue">
-
-</View>
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/skyblue"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/yantramanav_medium"
+        android:text="Dr.AnalogIt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/profile_no"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toTopOf="@id/profile_image"></TextView>
+
+    <TextView
+        android:id="@+id/profile_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yantramanav_medium"
+        android:text="+91-9000000000"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/profile_mail"
+        app:layout_constraintStart_toStartOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/profile_name"></TextView>
+
+    <TextView
+        android:id="@+id/profile_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/yantramanav_medium"
+        android:text="anil@analogit.in"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_image"
+        app:layout_constraintStart_toStartOf="@id/profile_name"
+        app:layout_constraintTop_toBottomOf="@id/profile_no"></TextView>
+
+
+    <Spinner
+        android:id="@+id/spinner_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/spinner_course_bg"
+        android:backgroundTint="#10c8d5"
         android:gravity="start"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_medical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:singleLine="true"
-            android:textStyle="bold"
-            android:text="Medical PG"
-            android:textSize="14sp"
-            android:drawableRight="@drawable/ic_notifications"
-            android:textColor="@color/black"
-            android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:gravity="start" />
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="6dp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="@id/profile_image"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"></Spinner>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_notification"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/spinner_all"
+        app:tint="@color/white"></ImageView>
 
-    </LinearLayout>
-
-
-
-</LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_all"></View>
+</androidx.constraintlayout.widget.ConstraintLayout>

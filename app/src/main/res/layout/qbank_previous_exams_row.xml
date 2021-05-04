@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cons_all_exams_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/icards_corners_shapes"
+    android:paddingVertical="20dp">
+
+    <ImageView
+        android:id="@+id/iv_com_sub_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/anatomy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/tv_com_text_anatomy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/yantramanav_medium"
+        android:text="Anatomy"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/iv_com_sub_image"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/aiims"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:drawableLeft="@drawable/ic_baseline_dot"
+        android:fontFamily="@font/yantramanav"
+        android:text=" Aiims"
+        android:textAllCaps="true"
+        android:textColor="#8c8c8c"
+        android:textSize="8sp"
+        app:layout_constraintStart_toStartOf="@id/tv_com_text_anatomy"
+        app:layout_constraintTop_toBottomOf="@id/tv_com_text_anatomy"></TextView>
+
+    <TextView
+        android:id="@+id/jipmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+
+        android:drawableLeft="@drawable/ic_baseline_dot"
+        android:fontFamily="@font/yantramanav"
+        android:text=" Jipmer"
+        android:textAllCaps="true"
+        android:textColor="#8c8c8c"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@id/aiims"
+        app:layout_constraintStart_toEndOf="@id/aiims"
+        app:layout_constraintTop_toTopOf="@id/aiims"></TextView>
+
+    <TextView
+        android:id="@+id/inicet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:drawableLeft="@drawable/ic_baseline_dot"
+        android:fontFamily="@font/yantramanav"
+        android:text=" inicet"
+        android:textAllCaps="true"
+        android:textColor="#8c8c8c"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@id/aiims"
+        app:layout_constraintStart_toEndOf="@id/jipmer"
+        app:layout_constraintTop_toTopOf="@id/aiims"></TextView>
+
+    <TextView
+        android:id="@+id/neetpg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+
+        android:drawableLeft="@drawable/ic_baseline_dot"
+        android:fontFamily="@font/yantramanav"
+        android:text=" neetpg"
+        android:textAllCaps="true"
+        android:textColor="#8c8c8c"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@id/aiims"
+        app:layout_constraintStart_toEndOf="@id/inicet"
+        app:layout_constraintTop_toTopOf="@id/aiims"></TextView>
+
+    <TextView
+        android:id="@+id/fmge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+
+        android:drawableLeft="@drawable/ic_baseline_dot"
+        android:fontFamily="@font/yantramanav"
+        android:text=" fmge"
+        android:textAllCaps="true"
+        android:textColor="#8c8c8c"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@id/aiims"
+        app:layout_constraintStart_toEndOf="@id/neetpg"
+        app:layout_constraintTop_toTopOf="@id/aiims"></TextView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

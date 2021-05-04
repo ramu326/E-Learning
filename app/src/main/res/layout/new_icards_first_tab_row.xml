@@ -3,9 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
-    android:layout_marginTop="4dp"
-    android:paddingVertical="6dp"
+    android:background="@drawable/icards_corners_shapes"
+    android:layout_marginTop="12dp"
+    android:paddingVertical="20dp"
+    android:layout_marginHorizontal="12dp"
     android:id="@+id/cons_icards_view"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -39,6 +40,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
         android:text="31 Cards"
+        android:id="@+id/tv_total_cards"
         android:textAllCaps="false"
         android:textColor="#8c8c8c"
         android:textSize="12sp"

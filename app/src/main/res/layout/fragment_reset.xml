@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ResetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/barcolor"
+        android:paddingVertical="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_back_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"></ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_small"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="You can reset your activity and start with a clean state"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cons_reset"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Reset QBank "
+        android:textAllCaps="false"
+        android:id="@+id/rest"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/select_radio"
+        app:layout_constraintStart_toEndOf="@id/select_radio"></TextView>
+
+    <CheckBox
+        android:id="@+id/select_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:buttonTint="@color/barcolor"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tv_reset"
+        app:layout_constraintTop_toBottomOf="@id/tv_reset"></CheckBox>
+
+    <TextView
+        android:id="@+id/tv_qbank_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="This will clear your progress on the Qbank and subsequentl all your QBank scores"
+        android:textAllCaps="false"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/rest"
+        app:layout_constraintTop_toBottomOf="@id/select_radio"></TextView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Reset Bookmarks"
+        android:textAllCaps="false"
+        android:id="@+id/rest1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/select_radio_two"
+        app:layout_constraintStart_toEndOf="@id/select_radio_two"></TextView>
+
+    <CheckBox
+        android:id="@+id/select_radio_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:buttonTint="@color/barcolor"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tv_reset"
+        app:layout_constraintTop_toBottomOf="@id/tv_qbank_reset"></CheckBox>
+
+    <TextView
+        android:id="@+id/tv_bookmarks_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="This will clear your bookmarked MCQs and start afresh from the Database"
+        android:textAllCaps="false"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/rest1"
+        app:layout_constraintTop_toBottomOf="@id/select_radio_two"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Reset Tests"
+        android:textAllCaps="false"
+        android:id="@+id/rest2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/select_radio_three"
+        app:layout_constraintStart_toEndOf="@id/select_radio_three"></TextView>
+
+    <CheckBox
+        android:id="@+id/select_radio_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:buttonTint="@color/barcolor"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/tv_reset"
+        app:layout_constraintTop_toBottomOf="@id/tv_bookmarks_reset"></CheckBox>
+
+    <TextView
+        android:id="@+id/tv_qbank_bookmarks_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="This will clear your QBank and MCQ activity and start you off from square"
+        android:textAllCaps="false"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/rest2"
+        app:layout_constraintTop_toBottomOf="@id/select_radio_three"></TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/barcolor"
+        android:text="Reset"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingHorizontal="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

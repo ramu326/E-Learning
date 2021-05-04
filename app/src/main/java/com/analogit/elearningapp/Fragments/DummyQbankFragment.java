@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.analogit.elearningapp.Adapters.DummyQbankAdapter;
 import com.analogit.elearningapp.R;
@@ -24,7 +25,7 @@ public class DummyQbankFragment extends Fragment {
 View v;
 TabLayout tabLayout;
 ViewPager2 viewPager;
-LinearLayout llMegaQnD,llCustomMcq,llPast;
+TextView llMegaQnD;
     public DummyQbankFragment() {
         // Required empty public constructor
     }
@@ -38,8 +39,7 @@ LinearLayout llMegaQnD,llCustomMcq,llPast;
         v= inflater.inflate(R.layout.fragment_dummy_qbank, container, false);
 
         llMegaQnD=v.findViewById(R.id.ll_mega_qnd);
-        llCustomMcq=v.findViewById(R.id.ll_custom_mcq);
-        llPast=v.findViewById(R.id.ll_past_mcqs);
+
         tabLayout=v.findViewById(R.id.dummy_qbank_tablayout);
         viewPager=v.findViewById(R.id.dummy_qbank_view_pager);
 
@@ -68,7 +68,6 @@ LinearLayout llMegaQnD,llCustomMcq,llPast;
     }
 
     private void onclicks() {
-
         llMegaQnD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,14 +77,6 @@ LinearLayout llMegaQnD,llCustomMcq,llPast;
                 fr.commit();
             }
         });
-        llCustomMcq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fr=getActivity().getSupportFragmentManager().beginTransaction();
-                fr.replace(R.id.content,new CustomModuleFragment());
-                fr.addToBackStack(null);
-                fr.commit();
-            }
-        });
+
     }
 }

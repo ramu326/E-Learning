@@ -1,31 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/barcolor"
-    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_gravity="center"
     android:layout_height="match_parent"
     tools:context=".Fragments.TestDiscussionSessionStartFragment">
-    <RelativeLayout
+
+    <TextView
+        android:id="@+id/tv_discussion_sub_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/yantramanav_medium"
+        android:text="Anatomy"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+    <TextView
+        android:id="@+id/tv_discussion_sub_topic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/yantramanav"
+        android:text="Imaging: X-RAY IVP AND Chest"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_discussion_sub_name"></TextView>
+
+    <LinearLayout
+        android:id="@+id/ll_both"
         android:layout_width="match_parent"
-        android:paddingVertical="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginHorizontal="16dp"
-        android:background="@drawable/session_bg"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="72dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_discussion_sub_topic_name">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/relative_test"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Test And Discussion Start"
-            android:textColor="@color/white"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:id="@+id/tv_test_discussion_start"
-            android:layout_marginLeft="12dp"
-            android:fontFamily="@font/roboto_regular"
-            android:gravity="center"></TextView>
+            android:layout_marginHorizontal="16dp"
+            android:background="@drawable/session_bg"
+            android:paddingVertical="16dp">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_past_exam"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:paddingLeft="24dp"
+                android:text="  Test"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"></TextView>
 
-</LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_test_discussion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/session_bg"
+            android:paddingVertical="16dp">
+
+            <TextView
+                android:id="@+id/tv_test_discussion_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_video_view"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:paddingLeft="24dp"
+                android:text="  Discussion"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"></TextView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

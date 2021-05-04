@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 
 import com.analogit.elearningapp.Adapters.RecyclerAudioAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerLearnAudioAdapter;
+import com.analogit.elearningapp.Adapters.RecyclerLearnNotesAdapter;
+import com.analogit.elearningapp.Adapters.RecyclerLearnSavedAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerLearnVideoAdapter;
 import com.analogit.elearningapp.Model.DoctorModel;
 import com.analogit.elearningapp.R;
@@ -25,11 +27,14 @@ import java.util.ArrayList;
 public class DRHomePageFragment extends Fragment {
 
  View v;
- RecyclerView recyclerView,recAudio;
+ RecyclerView recyclerView,recAudio,recNotes,recSaved;
 
     RecyclerLearnVideoAdapter recyclerLearnVideoAdapter;
     int pos;
     ArrayList<DoctorModel>arrayList=new ArrayList<>();
+    ArrayList<DoctorModel>arrayListnotes=new ArrayList<>();
+    ArrayList<DoctorModel>arrayListsaved=new ArrayList<>();
+
     public DRHomePageFragment(int pos) {
         this.pos=pos;
         // Required empty public constructor
@@ -46,13 +51,30 @@ public class DRHomePageFragment extends Fragment {
                 recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
                 recyclerLearnVideoAdapter=new RecyclerLearnVideoAdapter(this);
                 recyclerView.setAdapter(recyclerLearnVideoAdapter);
+
                 break;
+
             case 1:
                 v=inflater.inflate(R.layout.learn_audio_layout,container,false);
                 recAudio=v.findViewById(R.id.learn_audio_rec);
                 recAudio.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
                 RecyclerLearnAudioAdapter recyclerAudioAdapter=new RecyclerLearnAudioAdapter(getContext(),arrayList);
                 recAudio.setAdapter(recyclerAudioAdapter);
+                break;
+
+            case 2:
+                v=inflater.inflate(R.layout.learn_notes_layout,container,false);
+                recNotes=v.findViewById(R.id.learn_notes_rec);
+                recNotes.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
+                RecyclerLearnNotesAdapter recyclerLearnNotesAdapter=new RecyclerLearnNotesAdapter(getContext(),arrayListnotes);
+                recNotes.setAdapter(recyclerLearnNotesAdapter);
+                break;
+            case 3:
+                v=inflater.inflate(R.layout.learn_saved_layout,container,false);
+                recSaved=v.findViewById(R.id.learn_saved_rec);
+                recSaved.setLayoutManager(new GridLayoutManager(getContext(),2,RecyclerView.VERTICAL,false));
+                RecyclerLearnSavedAdapter recyclerLearnSavedAdapter=new RecyclerLearnSavedAdapter(getContext(),arrayListsaved);
+                recSaved.setAdapter(recyclerLearnSavedAdapter);
                 break;
         }
 

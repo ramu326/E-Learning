@@ -7,19 +7,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DiffUtil;
-import androidx.recyclerview.widget.ListAdapter;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.analogit.elearningapp.ApiModel.TeachersModel;
-import com.analogit.elearningapp.Model.DoctorModel;
+
 import com.analogit.elearningapp.R;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 import de.hdodenhof.circleimageview.CircleImageView;
 

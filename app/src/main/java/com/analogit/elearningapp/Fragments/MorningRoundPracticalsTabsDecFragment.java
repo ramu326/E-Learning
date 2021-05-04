@@ -14,6 +14,8 @@ import com.analogit.elearningapp.Adapters.RecyclerMorningRoundPracticalAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerOverViewAdapter;
 import com.analogit.elearningapp.Adapters.RecyclerSlideImagesAdapter;
 import com.analogit.elearningapp.Model.AllQuestionsModel;
+import com.analogit.elearningapp.Model.DoctorModel;
+import com.analogit.elearningapp.NewAdapter.RecyclerDrNotesAdapter;
 import com.analogit.elearningapp.R;
 
 import java.util.ArrayList;
@@ -22,6 +24,7 @@ public class MorningRoundPracticalsTabsDecFragment extends Fragment {
         private  View v;
         RecyclerView rView,recslides,transrecyclerview;
     ArrayList<AllQuestionsModel> arrayList;
+    ArrayList<DoctorModel> arrayList1=new ArrayList();
 int pos;
         public MorningRoundPracticalsTabsDecFragment(int pos){
             this.pos=pos;
@@ -34,9 +37,9 @@ int pos;
             case 0:
                 v=inflater.inflate(R.layout.transcript_layout,container,false);
                 transrecyclerview=v.findViewById(R.id.trans_script_rec);
-                RecyclerOverViewAdapter recyclerOverViewAdapter=new RecyclerOverViewAdapter(this);
                 transrecyclerview.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
-                transrecyclerview.setAdapter(recyclerOverViewAdapter);
+                RecyclerDrNotesAdapter recyclerDrNotesAdapter=new RecyclerDrNotesAdapter(getContext(),arrayList1);
+                transrecyclerview.setAdapter(recyclerDrNotesAdapter);
                 break;
             case 1:
                 v=inflater.inflate(R.layout.slides_images,container,false);

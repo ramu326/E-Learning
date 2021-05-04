@@ -4,74 +4,45 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 
 public class NewIcardsModel {
-    int Id;
-    String fYearSub,sYearSub,tYearSub,foYearSub,fiYearSub;
+    int id,icard;
+    String subject,image;
+
+    public NewIcardsModel(int id, int icard, String subject, String image) {
+        this.id = id;
+        this.icard = icard;
+        this.subject = subject;
+        this.image = image;
+    }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        this.id = id;
     }
 
-    public String getfYearSub() {
-        return fYearSub;
+    public int getIcard() {
+        return icard;
     }
 
-    public void setfYearSub(String fYearSub) {
-        this.fYearSub = fYearSub;
+    public void setIcard(int icard) {
+        this.icard = icard;
     }
 
-    public String getsYearSub() {
-        return sYearSub;
+    public String getSubject() {
+        return subject;
     }
 
-    public void setsYearSub(String sYearSub) {
-        this.sYearSub = sYearSub;
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
-    public String gettYearSub() {
-        return tYearSub;
+    public String getImage() {
+        return image;
     }
 
-    public void settYearSub(String tYearSub) {
-        this.tYearSub = tYearSub;
+    public void setImage(String image) {
+        this.image = image;
     }
-
-    public String getFoYearSub() {
-        return foYearSub;
-    }
-
-    public void setFoYearSub(String foYearSub) {
-        this.foYearSub = foYearSub;
-    }
-
-    public String getFiYearSub() {
-        return fiYearSub;
-    }
-
-    public void setFiYearSub(String fiYearSub) {
-        this.fiYearSub = fiYearSub;
-    }
-
-    public NewIcardsModel(int id, String fYearSub, String sYearSub, String tYearSub, String foYearSub, String fiYearSub) {
-        Id = id;
-        this.fYearSub = fYearSub;
-        this.sYearSub = sYearSub;
-        this.tYearSub = tYearSub;
-        this.foYearSub = foYearSub;
-        this.fiYearSub = fiYearSub;
-    }
-    public static DiffUtil.ItemCallback<NewIcardsModel>newIcardsModelItemCallback=new DiffUtil.ItemCallback<NewIcardsModel>() {
-        @Override
-        public boolean areItemsTheSame(@NonNull NewIcardsModel oldItem, @NonNull NewIcardsModel newItem) {
-            return oldItem.Id==newItem.getId();
-        }
-
-        @Override
-        public boolean areContentsTheSame(@NonNull NewIcardsModel oldItem, @NonNull NewIcardsModel newItem) {
-            return oldItem.fiYearSub.equals(newItem.fiYearSub);
-        }
-    };
 }

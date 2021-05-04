@@ -6,7 +6,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_margin="12dp"
         android:id="@+id/trans_script_rec"></androidx.recyclerview.widget.RecyclerView>
 <!--    <TextView-->
 <!--        android:layout_width="match_parent"-->

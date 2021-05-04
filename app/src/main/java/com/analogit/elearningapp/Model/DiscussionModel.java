@@ -6,7 +6,29 @@ import androidx.recyclerview.widget.DiffUtil;
 public class DiscussionModel {
 
     int Id;
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    String imageUrl;
+
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
     String Videos;
+    String subject;
+
 
     public int getId() {
         return Id;
@@ -18,6 +40,13 @@ public class DiscussionModel {
 
     public String getVideos() {
         return Videos;
+    }
+
+    public DiscussionModel(int id, String imageUrl, String videos, String subject) {
+        Id = id;
+        this.imageUrl = imageUrl;
+        Videos = videos;
+        this.subject = subject;
     }
 
     public void setVideos(String videos) {

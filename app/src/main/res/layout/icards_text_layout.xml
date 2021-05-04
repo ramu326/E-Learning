@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#1b1b1b"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_album"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/black"
+        android:src="@drawable/album"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_music"
         android:layout_width="match_parent"
-       android:layout_marginTop="8dp"
-        android:background="#1b1b1b"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline6">
 
         <ImageView
             android:id="@+id/iv_arrow_small_back"
@@ -18,11 +35,12 @@
             android:layout_height="30dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/ic_back_small"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/white"></ImageView>
+            app:tint="@color/black"></ImageView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,9 +52,9 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_arrow_small_back"
             app:layout_constraintStart_toEndOf="@id/iv_arrow_small_back"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
+            app:layout_constraintTop_toTopOf="@id/iv_arrow_small_back"></TextView>
 
         <ImageView
             android:layout_width="30dp"
@@ -44,31 +62,38 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:src="@drawable/ic_index_num"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_arrow_small_back"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/white"></ImageView>
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:background="#616161"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_arrow_small_back"></View>
-
+            app:layout_constraintTop_toTopOf="@id/iv_arrow_small_back"
+            app:tint="@color/black"></ImageView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    <View-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="#616161"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/iv_album"></View>-->
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_marginTop="12dp"
         android:id="@+id/itl_rec"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_album">
 
     </androidx.recyclerview.widget.RecyclerView>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="0dp" />
 
 
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

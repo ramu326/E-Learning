@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#f0f0f2"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".Fragments.WallPosterFragment">
+    android:orientation="vertical">
 
    <androidx.recyclerview.widget.RecyclerView
        android:layout_width="match_parent"
-       android:layout_marginTop="16dp"
+       android:layout_margin="4dp"
        android:id="@+id/new_discussion_video_rec"
        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 

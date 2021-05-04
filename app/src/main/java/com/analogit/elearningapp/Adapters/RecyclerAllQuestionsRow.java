@@ -9,14 +9,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DiffUtil;
+
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.analogit.elearningapp.Fragments.QAViewpagerFragment;
-import com.analogit.elearningapp.Fragments.QnAFragment;
+
 import com.analogit.elearningapp.Model.AllQuestionsModel;
-import com.analogit.elearningapp.Model.RegularCourceModel;
+
 import com.analogit.elearningapp.R;
 
 import java.util.ArrayList;
