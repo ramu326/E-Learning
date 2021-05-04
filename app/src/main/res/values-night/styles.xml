@@ -1,0 +1,100 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/barcolor</item>
+        <item name="colorPrimaryDark">@color/barcolor</item>
+        <item name="colorAccent">@color/barcolor</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
+
+    </style>
+    <style name="NavigationView"  parent="Base.Theme.AppCompat">
+        <item name="android:listDivider">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/red</item>
+    </style>
+
+    <style name="Progressbar.antmycolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/antmycolor</item>
+    </style>
+    <style name="Progressbar.phylogycolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/phylogycolor</item>
+    </style>
+    <style name="Progressbar.microcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/microcolor</item>
+    </style>
+    <style name="Progressbar.opthocolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/opthocolor</item>
+    </style>
+    <style name="Progressbar.radiocolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/radiocolor</item>
+    </style>
+    <style name="Progressbar.biochecolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/biochecolor</item>
+    </style>
+    <style name="Progressbar.dermocolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/dermocolor</item>
+    </style>
+    <style name="Progressbar.entcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/entcolor</item>
+    </style>
+    <style name="Progressbar.psycolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/psycolor</item>
+    </style>
+    <style name="Progressbar.comcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/comcolor</item>
+    </style>
+
+    <style name="Progressbar.gencolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/gencolor</item>
+    </style>
+    <style name="Progressbar.forcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/forcolor</item>
+    </style>
+    <style name="Progressbar.pedcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/pedcolor</item>
+    </style>
+    <style name="Progressbar.obcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/obcolor</item>
+    </style>
+    <style name="Progressbar.anescolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/anescolor</item>
+    </style>
+    <style name="Progressbar.genmcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/genmcolor</item>
+    </style>
+    <style name="Progressbar.orthocolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/orthocolor</item>
+    </style>
+    <style name="Progressbar.pathcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/pathcolor</item>
+    </style>
+    <style name="Progressbar.pharmcolor" parent="AppTheme">
+        <item name="colorControlActivated">@color/pharmcolor</item>
+    </style>
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="elevation">30dp</item>
+    </style>
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+    <style name="Animation.Design.BottomSheetDialog."  parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomShestStyle</item>
+    </style>
+    <style name="BottomShestStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="BaseBottomSheetDialogThem" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>
